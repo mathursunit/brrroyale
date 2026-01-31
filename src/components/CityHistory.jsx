@@ -8,59 +8,66 @@ const CityHistory = ({ cityId, onClose }) => {
     const [cityMeta, setCityMeta] = useState(null);
 
     useEffect(() => {
-        if (historyData.cities[cityId]) {
-            // Find city name from the main list (passed or we could look it up)
-            // For now, let's just use the ID or look it up if we had the full list here.
-            setCityMeta({ name: cityId }); // Placeholder
+        // The cityId passed from Leaderboard is like "syracuse_ny" (from cities.json).
+        // public/data/history.json keys are also like "syracuse_ny".
+        // HOWEVER, we need to make sure they match exactly.
 
-            const rawSeasons = historyData.cities[cityId];
+        let dataKey = cityId;
+
+        // Debug check: console.log('Looking for history for:', cityId);
+
+        if (historyData.cities && historyData.cities[dataKey]) {
+            const rawSeasons = historyData.cities[dataKey];
             const processed = Object.keys(rawSeasons).map(year => ({
                 year,
                 snow: rawSeasons[year]
             }));
             setChartData(processed);
+        } else {
+            console.warn(`No history found for ID: ${cityId}`);
+            // Fallback: try finding by name if IDs drifted? (Not needed if cities.json IDs are stable)
         }
     }, [cityId]);
 
     if (!chartData.length) return null;
 
     return (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={onClose}>
-            <div className="glass-panel w-full max-w-3xl max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
-                <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
-                    <h2 className="text-2xl font-display text-white">
+        <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={onClose}>
+            <div className="glass-panel w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl" onClick={e => e.stopPropagation()}>
+                <div className="flex justify-between items-center mb-6 border-b border-slate-200 pb-4">
+                    <h2 className="text-2xl font-display text-slate-800">
                         Snowfall History
                     </h2>
-                    <button onClick={onClose} className="text-slate-400 hover:text-white">
+                    <button onClick={onClose} className="text-slate-500 hover:text-slate-800 font-bold">
                         ✕ Close
                     </button>
                 </div>
 
-                <div className="h-[400px] w-full">
+                <div style={{ height: '400px' }} className="w-full">
                     <ResponsiveContainer width="100%" height="100%">
                         <LineChart data={chartData}>
-                            <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
-                            <XAxis dataKey="year" stroke="#94a3b8" fontSize={12} />
-                            <YAxis stroke="#94a3b8" fontSize={12} />
+                            <CartesianGrid strokeDasharray="3 3" stroke="#cbd5e1" />
+                            <XAxis dataKey="year" stroke="#475569" fontSize={12} tick={{ fill: '#475569' }} />
+                            <YAxis stroke="#475569" fontSize={12} tick={{ fill: '#475569' }} />
                             <Tooltip
-                                contentStyle={{ backgroundColor: '#1e293b', borderColor: '#334155', color: '#f8fafc' }}
-                                itemStyle={{ color: '#38bdf8' }}
+                                contentStyle={{ backgroundColor: '#ffffff', borderColor: '#e2e8f0', color: '#1e293b', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
+                                itemStyle={{ color: '#0284c7' }}
                             />
-                            <Legend />
+                            <Legend wrapperStyle={{ paddingTop: '10px' }} />
                             <Line
                                 type="monotone"
                                 dataKey="snow"
                                 name="Total Snowfall (in)"
-                                stroke="#38bdf8"
+                                stroke="#0284c7"
                                 strokeWidth={3}
-                                dot={{ r: 4, fill: '#38bdf8' }}
-                                activeDot={{ r: 8 }}
+                                dot={{ r: 4, fill: '#0284c7' }}
+                                activeDot={{ r: 6, stroke: '#e0f2fe', strokeWidth: 4 }}
                             />
                         </LineChart>
                     </ResponsiveContainer>
                 </div>
 
-                <div className="mt-6 text-sm text-slate-400 text-center">
+                <div className="mt-6 text-sm text-slate-500 text-center">
                     20-Year Historical Data from Open-Meteo Archive
                 </div>
             </div>
