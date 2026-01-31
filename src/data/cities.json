@@ -1,541 +1,35 @@
 [
     {
-        "id": "new_york_ny",
-        "name": "New York",
+        "id": "syracuse_ny",
+        "name": "Syracuse",
         "state": "NY",
-        "lat": 40.66,
-        "lon": -73.94,
+        "lat": 43.111,
+        "lon": -76.104,
+        "station_id": "GHCND:USW00014771",
         "tags": [
-            "US_Top50",
-            "NY_Top10"
-        ]
-    },
-    {
-        "id": "los_angeles_ca",
-        "name": "Los Angeles",
-        "state": "CA",
-        "lat": 34.02,
-        "lon": -118.41,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "chicago_il",
-        "name": "Chicago",
-        "state": "IL",
-        "lat": 41.84,
-        "lon": -87.68,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "houston_tx",
-        "name": "Houston",
-        "state": "TX",
-        "lat": 29.79,
-        "lon": -95.39,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "phoenix_az",
-        "name": "Phoenix",
-        "state": "AZ",
-        "lat": 33.57,
-        "lon": -112.09,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "philadelphia_pa",
-        "name": "Philadelphia",
-        "state": "PA",
-        "lat": 40.01,
-        "lon": -75.13,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "san_antonio_tx",
-        "name": "San Antonio",
-        "state": "TX",
-        "lat": 29.46,
-        "lon": -98.52,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "san_diego_ca",
-        "name": "San Diego",
-        "state": "CA",
-        "lat": 32.81,
-        "lon": -117.14,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "dallas_tx",
-        "name": "Dallas",
-        "state": "TX",
-        "lat": 32.79,
-        "lon": -96.77,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "jacksonville_fl",
-        "name": "Jacksonville",
-        "state": "FL",
-        "lat": 30.34,
-        "lon": -81.66,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "fort_worth_tx",
-        "name": "Fort Worth",
-        "state": "TX",
-        "lat": 32.78,
-        "lon": -97.35,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "san_jose_ca",
-        "name": "San Jose",
-        "state": "CA",
-        "lat": 37.30,
-        "lon": -121.81,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "austin_tx",
-        "name": "Austin",
-        "state": "TX",
-        "lat": 30.30,
-        "lon": -97.75,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "charlotte_nc",
-        "name": "Charlotte",
-        "state": "NC",
-        "lat": 35.21,
-        "lon": -80.83,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "columbus_oh",
-        "name": "Columbus",
-        "state": "OH",
-        "lat": 39.99,
-        "lon": -82.99,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "indianapolis_in",
-        "name": "Indianapolis",
-        "state": "IN",
-        "lat": 39.78,
-        "lon": -86.15,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "san_francisco_ca",
-        "name": "San Francisco",
-        "state": "CA",
-        "lat": 37.73,
-        "lon": -123.03,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "seattle_wa",
-        "name": "Seattle",
-        "state": "WA",
-        "lat": 47.62,
-        "lon": -122.35,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "denver_co",
-        "name": "Denver",
-        "state": "CO",
-        "lat": 39.76,
-        "lon": -104.88,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "oklahoma_city_ok",
-        "name": "Oklahoma City",
-        "state": "OK",
-        "lat": 35.47,
-        "lon": -97.51,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "nashville_tn",
-        "name": "Nashville",
-        "state": "TN",
-        "lat": 36.17,
-        "lon": -86.79,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "washington_dc",
-        "name": "Washington",
-        "state": "DC",
-        "lat": 38.90,
-        "lon": -77.02,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "el_paso_tx",
-        "name": "El Paso",
-        "state": "TX",
-        "lat": 31.85,
-        "lon": -106.43,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "las_vegas_nv",
-        "name": "Las Vegas",
-        "state": "NV",
-        "lat": 36.23,
-        "lon": -115.26,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "boston_ma",
-        "name": "Boston",
-        "state": "MA",
-        "lat": 42.34,
-        "lon": -71.02,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "detroit_mi",
-        "name": "Detroit",
-        "state": "MI",
-        "lat": 42.38,
-        "lon": -83.10,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "louisville_ky",
-        "name": "Louisville",
-        "state": "KY",
-        "lat": 38.17,
-        "lon": -85.65,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "portland_or",
-        "name": "Portland",
-        "state": "OR",
-        "lat": 45.54,
-        "lon": -122.65,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "memphis_tn",
-        "name": "Memphis",
-        "state": "TN",
-        "lat": 35.11,
-        "lon": -89.97,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "baltimore_md",
-        "name": "Baltimore",
-        "state": "MD",
-        "lat": 39.30,
-        "lon": -76.61,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "milwaukee_wi",
-        "name": "Milwaukee",
-        "state": "WI",
-        "lat": 43.06,
-        "lon": -87.97,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "albuquerque_nm",
-        "name": "Albuquerque",
-        "state": "NM",
-        "lat": 35.10,
-        "lon": -106.65,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "tucson_az",
-        "name": "Tucson",
-        "state": "AZ",
-        "lat": 32.15,
-        "lon": -110.87,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "fresno_ca",
-        "name": "Fresno",
-        "state": "CA",
-        "lat": 36.78,
-        "lon": -119.79,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "sacramento_ca",
-        "name": "Sacramento",
-        "state": "CA",
-        "lat": 38.57,
-        "lon": -121.47,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "atlanta_ga",
-        "name": "Atlanta",
-        "state": "GA",
-        "lat": 33.76,
-        "lon": -84.42,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "mesa_az",
-        "name": "Mesa",
-        "state": "AZ",
-        "lat": 33.40,
-        "lon": -111.72,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "kansas_city_mo",
-        "name": "Kansas City",
-        "state": "MO",
-        "lat": 39.12,
-        "lon": -94.56,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "raleigh_nc",
-        "name": "Raleigh",
-        "state": "NC",
-        "lat": 35.82,
-        "lon": -78.66,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "virginia_beach_va",
-        "name": "Virginia Beach",
-        "state": "VA",
-        "lat": 36.74,
-        "lon": -76.04,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "long_beach_ca",
-        "name": "Long Beach",
-        "state": "CA",
-        "lat": 33.79,
-        "lon": -118.16,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "oakland_ca",
-        "name": "Oakland",
-        "state": "CA",
-        "lat": 37.77,
-        "lon": -122.22,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "minneapolis_mn",
-        "name": "Minneapolis",
-        "state": "MN",
-        "lat": 44.96,
-        "lon": -93.27,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "tulsa_ok",
-        "name": "Tulsa",
-        "state": "OK",
-        "lat": 36.13,
-        "lon": -95.92,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "bakersfield_ca",
-        "name": "Bakersfield",
-        "state": "CA",
-        "lat": 35.36,
-        "lon": -119.00,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "tampa_fl",
-        "name": "Tampa",
-        "state": "FL",
-        "lat": 27.96,
-        "lon": -82.48,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "arlington_tx",
-        "name": "Arlington",
-        "state": "TX",
-        "lat": 32.69,
-        "lon": -97.13,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "wichita_ks",
-        "name": "Wichita",
-        "state": "KS",
-        "lat": 37.69,
-        "lon": -97.34,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "aurora_co",
-        "name": "Aurora",
-        "state": "CO",
-        "lat": 39.71,
-        "lon": -104.73,
-        "tags": [
-            "US_Top50"
-        ]
-    },
-    {
-        "id": "new_orleans_la",
-        "name": "New Orleans",
-        "state": "LA",
-        "lat": 30.07,
-        "lon": -89.93,
-        "tags": [
-            "US_Top50"
+            "NY_Top10",
+            "Snow_Belt"
         ]
     },
     {
         "id": "buffalo_ny",
         "name": "Buffalo",
         "state": "NY",
-        "lat": 42.89,
-        "lon": -78.86,
+        "lat": 42.941,
+        "lon": -78.736,
+        "station_id": "GHCND:USW00014733",
         "tags": [
-            "NY_Top10"
-        ]
-    },
-    {
-        "id": "yonkers_ny",
-        "name": "Yonkers",
-        "state": "NY",
-        "lat": 40.93,
-        "lon": -73.89,
-        "tags": [
-            "NY_Top10"
+            "NY_Top10",
+            "Snow_Belt"
         ]
     },
     {
         "id": "rochester_ny",
         "name": "Rochester",
         "state": "NY",
-        "lat": 43.15,
-        "lon": -77.62,
-        "tags": [
-            "NY_Top10"
-        ]
-    },
-    {
-        "id": "syracuse_ny",
-        "name": "Syracuse",
-        "state": "NY",
-        "lat": 43.05,
-        "lon": -76.15,
+        "lat": 43.117,
+        "lon": -77.677,
+        "station_id": "GHCND:USW00014768",
         "tags": [
             "NY_Top10"
         ]
@@ -544,50 +38,123 @@
         "id": "albany_ny",
         "name": "Albany",
         "state": "NY",
-        "lat": 42.65,
-        "lon": -73.76,
+        "lat": 42.747,
+        "lon": -73.802,
+        "station_id": "GHCND:USW00014735",
         "tags": [
             "NY_Top10"
         ]
     },
     {
-        "id": "new_rochelle_ny",
-        "name": "New Rochelle",
+        "id": "binghamton_ny",
+        "name": "Binghamton",
         "state": "NY",
-        "lat": 40.91,
-        "lon": -73.78,
+        "lat": 42.209,
+        "lon": -75.980,
+        "station_id": "GHCND:USW00004725",
         "tags": [
             "NY_Top10"
         ]
     },
     {
-        "id": "cheektowaga_ny",
-        "name": "Cheektowaga",
+        "id": "new_york_ny",
+        "name": "New York (Central Park)",
         "state": "NY",
-        "lat": 42.90,
-        "lon": -78.75,
+        "lat": 40.779,
+        "lon": -73.969,
+        "station_id": "GHCND:USW00094728",
         "tags": [
-            "NY_Top10"
+            "NY_Top10",
+            "US_Top50"
         ]
     },
     {
-        "id": "mount_vernon_ny",
-        "name": "Mount Vernon",
-        "state": "NY",
-        "lat": 40.91,
-        "lon": -73.84,
+        "id": "boston_ma",
+        "name": "Boston",
+        "state": "MA",
+        "lat": 42.361,
+        "lon": -71.010,
+        "station_id": "GHCND:USW00014739",
         "tags": [
-            "NY_Top10"
+            "US_Top50"
         ]
     },
     {
-        "id": "schenectady_ny",
-        "name": "Schenectady",
-        "state": "NY",
-        "lat": 42.81,
-        "lon": -73.94,
+        "id": "chicago_il",
+        "name": "Chicago (O'Hare)",
+        "state": "IL",
+        "lat": 41.977,
+        "lon": -87.905,
+        "station_id": "GHCND:USW00094846",
         "tags": [
-            "NY_Top10"
+            "US_Top50"
+        ]
+    },
+    {
+        "id": "denver_co",
+        "name": "Denver",
+        "state": "CO",
+        "lat": 39.858,
+        "lon": -104.673,
+        "station_id": "GHCND:USW00003017",
+        "tags": [
+            "US_Top50"
+        ]
+    },
+    {
+        "id": "minneapolis_mn",
+        "name": "Minneapolis",
+        "state": "MN",
+        "lat": 44.883,
+        "lon": -93.229,
+        "station_id": "GHCND:USW00014922",
+        "tags": [
+            "US_Top50"
+        ]
+    },
+    {
+        "id": "detroit_mi",
+        "name": "Detroit",
+        "state": "MI",
+        "lat": 42.212,
+        "lon": -83.353,
+        "station_id": "GHCND:USW00094847",
+        "tags": [
+            "US_Top50"
+        ]
+    },
+    {
+        "id": "anchorage_ak",
+        "name": "Anchorage",
+        "state": "AK",
+        "lat": 61.169,
+        "lon": -149.992,
+        "station_id": "GHCND:USW00026451",
+        "tags": [
+            "US_Top50",
+            "Snow_Belt"
+        ]
+    },
+    {
+        "id": "salt_lake_city_ut",
+        "name": "Salt Lake City",
+        "state": "UT",
+        "lat": 40.778,
+        "lon": -111.969,
+        "station_id": "GHCND:USW00024127",
+        "tags": [
+            "US_Top50"
+        ]
+    },
+    {
+        "id": "pittsburgh_pa",
+        "name": "Pittsburgh",
+        "state": "PA",
+        "lat": 40.491,
+        "lon": -80.233,
+        "station_id": "GHCND:USW00094823",
+        "tags": [
+            "US_Top50"
         ]
     }
 ]

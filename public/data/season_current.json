@@ -1,7 +1,8 @@
 {
-  "last_updated": "2026-01-31T03:04:21.180Z",
+  "last_updated": "2026-01-31T03:31:11.165Z",
+  "source": "NOAA GHCN-Daily",
   "season_start": "2025-09-01",
-  "season_end": "2026-01-30",
+  "season_end": "2026-01-31",
   "rankings": [
     {
       "rank": 1,
@@ -9,10 +10,11 @@
       "state": "NY",
       "id": "syracuse_ny",
       "tags": [
-        "NY_Top10"
+        "NY_Top10",
+        "Snow_Belt"
       ],
-      "total_snow": 53.9,
-      "last_24h": 0.9,
+      "total_snow": 109.9,
+      "last_24h": 0,
       "history_20_years": []
     },
     {
@@ -23,692 +25,154 @@
       "tags": [
         "NY_Top10"
       ],
-      "total_snow": 43.6,
-      "last_24h": 0.4,
+      "total_snow": 77.2,
+      "last_24h": 0,
       "history_20_years": []
     },
     {
       "rank": 3,
-      "city": "Cheektowaga",
-      "state": "NY",
-      "id": "cheektowaga_ny",
-      "tags": [
-        "NY_Top10"
-      ],
-      "total_snow": 43.6,
-      "last_24h": 0.1,
-      "history_20_years": []
-    },
-    {
-      "rank": 4,
       "city": "Buffalo",
       "state": "NY",
       "id": "buffalo_ny",
       "tags": [
-        "NY_Top10"
+        "NY_Top10",
+        "Snow_Belt"
       ],
-      "total_snow": 40.5,
-      "last_24h": 0.1,
+      "total_snow": 63,
+      "last_24h": 0,
+      "history_20_years": []
+    },
+    {
+      "rank": 4,
+      "city": "Anchorage",
+      "state": "AK",
+      "id": "anchorage_ak",
+      "tags": [
+        "US_Top50",
+        "Snow_Belt"
+      ],
+      "total_snow": 57.3,
+      "last_24h": 0,
       "history_20_years": []
     },
     {
       "rank": 5,
+      "city": "Binghamton",
+      "state": "NY",
+      "id": "binghamton_ny",
+      "tags": [
+        "NY_Top10"
+      ],
+      "total_snow": 49.5,
+      "last_24h": 0,
+      "history_20_years": []
+    },
+    {
+      "rank": 6,
       "city": "Albany",
       "state": "NY",
       "id": "albany_ny",
       "tags": [
         "NY_Top10"
       ],
-      "total_snow": 27.6,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 6,
-      "city": "Schenectady",
-      "state": "NY",
-      "id": "schenectady_ny",
-      "tags": [
-        "NY_Top10"
-      ],
-      "total_snow": 27.1,
+      "total_snow": 44.4,
       "last_24h": 0,
       "history_20_years": []
     },
     {
       "rank": 7,
+      "city": "Pittsburgh",
+      "state": "PA",
+      "id": "pittsburgh_pa",
+      "tags": [
+        "US_Top50"
+      ],
+      "total_snow": 35.5,
+      "last_24h": 0,
+      "history_20_years": []
+    },
+    {
+      "rank": 8,
       "city": "Boston",
       "state": "MA",
       "id": "boston_ma",
       "tags": [
         "US_Top50"
       ],
-      "total_snow": 23.4,
+      "total_snow": 34.1,
       "last_24h": 0,
       "history_20_years": []
     },
     {
-      "rank": 8,
+      "rank": 9,
       "city": "Detroit",
       "state": "MI",
       "id": "detroit_mi",
       "tags": [
         "US_Top50"
       ],
-      "total_snow": 22.7,
+      "total_snow": 33.5,
       "last_24h": 0,
       "history_20_years": []
     },
     {
-      "rank": 9,
-      "city": "Chicago",
+      "rank": 10,
+      "city": "Chicago (O'Hare)",
       "state": "IL",
       "id": "chicago_il",
       "tags": [
         "US_Top50"
       ],
-      "total_snow": 22.1,
-      "last_24h": 0.7,
-      "history_20_years": []
-    },
-    {
-      "rank": 10,
-      "city": "Yonkers",
-      "state": "NY",
-      "id": "yonkers_ny",
-      "tags": [
-        "NY_Top10"
-      ],
-      "total_snow": 20.9,
+      "total_snow": 28.6,
       "last_24h": 0,
       "history_20_years": []
     },
     {
       "rank": 11,
-      "city": "Mount Vernon",
-      "state": "NY",
-      "id": "mount_vernon_ny",
-      "tags": [
-        "NY_Top10"
-      ],
-      "total_snow": 20.9,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 12,
-      "city": "Milwaukee",
-      "state": "WI",
-      "id": "milwaukee_wi",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 20.3,
-      "last_24h": 0.2,
-      "history_20_years": []
-    },
-    {
-      "rank": 13,
-      "city": "New York",
-      "state": "NY",
-      "id": "new_york_ny",
-      "tags": [
-        "US_Top50",
-        "NY_Top10"
-      ],
-      "total_snow": 20,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 14,
-      "city": "New Rochelle",
-      "state": "NY",
-      "id": "new_rochelle_ny",
-      "tags": [
-        "NY_Top10"
-      ],
-      "total_snow": 19.8,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 15,
       "city": "Minneapolis",
       "state": "MN",
       "id": "minneapolis_mn",
       "tags": [
         "US_Top50"
       ],
-      "total_snow": 18.7,
+      "total_snow": 27.9,
       "last_24h": 0,
       "history_20_years": []
     },
     {
-      "rank": 16,
-      "city": "Indianapolis",
-      "state": "IN",
-      "id": "indianapolis_in",
+      "rank": 12,
+      "city": "New York (Central Park)",
+      "state": "NY",
+      "id": "new_york_ny",
       "tags": [
+        "NY_Top10",
         "US_Top50"
       ],
-      "total_snow": 18,
+      "total_snow": 21.1,
       "last_24h": 0,
       "history_20_years": []
     },
     {
-      "rank": 17,
-      "city": "Columbus",
-      "state": "OH",
-      "id": "columbus_oh",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 16.9,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 18,
-      "city": "Philadelphia",
-      "state": "PA",
-      "id": "philadelphia_pa",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 12.9,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 19,
-      "city": "Louisville",
-      "state": "KY",
-      "id": "louisville_ky",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 12.3,
-      "last_24h": 0.2,
-      "history_20_years": []
-    },
-    {
-      "rank": 20,
-      "city": "Aurora",
-      "state": "CO",
-      "id": "aurora_co",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 10.6,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 21,
-      "city": "Baltimore",
-      "state": "MD",
-      "id": "baltimore_md",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 9.6,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 22,
-      "city": "Washington",
-      "state": "DC",
-      "id": "washington_dc",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 8.2,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 23,
+      "rank": 13,
       "city": "Denver",
       "state": "CO",
       "id": "denver_co",
       "tags": [
         "US_Top50"
       ],
-      "total_snow": 7.4,
+      "total_snow": 13.4,
       "last_24h": 0,
       "history_20_years": []
     },
     {
-      "rank": 24,
-      "city": "Tulsa",
-      "state": "OK",
-      "id": "tulsa_ok",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 6.5,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 25,
-      "city": "Oklahoma City",
-      "state": "OK",
-      "id": "oklahoma_city_ok",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 6.2,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 26,
-      "city": "Kansas City",
-      "state": "MO",
-      "id": "kansas_city_mo",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 5.5,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 27,
-      "city": "Wichita",
-      "state": "KS",
-      "id": "wichita_ks",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 5.1,
-      "last_24h": 0.1,
-      "history_20_years": []
-    },
-    {
-      "rank": 28,
-      "city": "Albuquerque",
-      "state": "NM",
-      "id": "albuquerque_nm",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 4.7,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 29,
-      "city": "Nashville",
-      "state": "TN",
-      "id": "nashville_tn",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 2.7,
-      "last_24h": 0.1,
-      "history_20_years": []
-    },
-    {
-      "rank": 30,
-      "city": "Virginia Beach",
-      "state": "VA",
-      "id": "virginia_beach_va",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 2.3,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 31,
-      "city": "Seattle",
-      "state": "WA",
-      "id": "seattle_wa",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 1.8,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 32,
-      "city": "Memphis",
-      "state": "TN",
-      "id": "memphis_tn",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 1.4,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 33,
-      "city": "Raleigh",
-      "state": "NC",
-      "id": "raleigh_nc",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 1.1,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 34,
-      "city": "El Paso",
-      "state": "TX",
-      "id": "el_paso_tx",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 1,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 35,
-      "city": "Dallas",
-      "state": "TX",
-      "id": "dallas_tx",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0.6,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 36,
-      "city": "Portland",
-      "state": "OR",
-      "id": "portland_or",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0.6,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 37,
-      "city": "Fort Worth",
-      "state": "TX",
-      "id": "fort_worth_tx",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0.5,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 38,
-      "city": "Arlington",
-      "state": "TX",
-      "id": "arlington_tx",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0.4,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 39,
-      "city": "Charlotte",
-      "state": "NC",
-      "id": "charlotte_nc",
+      "rank": 14,
+      "city": "Salt Lake City",
+      "state": "UT",
+      "id": "salt_lake_city_ut",
       "tags": [
         "US_Top50"
       ],
       "total_snow": 0.1,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 40,
-      "city": "Atlanta",
-      "state": "GA",
-      "id": "atlanta_ga",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0.1,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 41,
-      "city": "Los Angeles",
-      "state": "CA",
-      "id": "los_angeles_ca",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 42,
-      "city": "Houston",
-      "state": "TX",
-      "id": "houston_tx",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 43,
-      "city": "Phoenix",
-      "state": "AZ",
-      "id": "phoenix_az",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 44,
-      "city": "San Antonio",
-      "state": "TX",
-      "id": "san_antonio_tx",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 45,
-      "city": "San Diego",
-      "state": "CA",
-      "id": "san_diego_ca",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 46,
-      "city": "Jacksonville",
-      "state": "FL",
-      "id": "jacksonville_fl",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 47,
-      "city": "San Jose",
-      "state": "CA",
-      "id": "san_jose_ca",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 48,
-      "city": "Austin",
-      "state": "TX",
-      "id": "austin_tx",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 49,
-      "city": "San Francisco",
-      "state": "CA",
-      "id": "san_francisco_ca",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 50,
-      "city": "Las Vegas",
-      "state": "NV",
-      "id": "las_vegas_nv",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 51,
-      "city": "Tucson",
-      "state": "AZ",
-      "id": "tucson_az",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 52,
-      "city": "Fresno",
-      "state": "CA",
-      "id": "fresno_ca",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 53,
-      "city": "Sacramento",
-      "state": "CA",
-      "id": "sacramento_ca",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 54,
-      "city": "Mesa",
-      "state": "AZ",
-      "id": "mesa_az",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 55,
-      "city": "Long Beach",
-      "state": "CA",
-      "id": "long_beach_ca",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 56,
-      "city": "Oakland",
-      "state": "CA",
-      "id": "oakland_ca",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 57,
-      "city": "Bakersfield",
-      "state": "CA",
-      "id": "bakersfield_ca",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 58,
-      "city": "Tampa",
-      "state": "FL",
-      "id": "tampa_fl",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 59,
-      "city": "New Orleans",
-      "state": "LA",
-      "id": "new_orleans_la",
-      "tags": [
-        "US_Top50"
-      ],
-      "total_snow": 0,
       "last_24h": 0,
       "history_20_years": []
     }
