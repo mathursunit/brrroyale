@@ -3,8 +3,10 @@ import '../styles/index.css';
 import currentSeasonData from '../../public/data/season_current.json';
 // Helper removed - we now use official NOAA normals from the data property city.avg_annual
 import CityHistory from './CityHistory';
+import useTilt from '../hooks/useTilt';
 
 const Leaderboard = () => {
+    useTilt('.layout-table.glass-panel');
     const [data, setData] = useState(null);
     const [filter, setFilter] = useState('all'); // 'all', 'ny'
     const [selectedCityId, setSelectedCityId] = useState(null);
@@ -70,7 +72,7 @@ const Leaderboard = () => {
                             {filteredRankings.map((city, index) => (
                                 <tr
                                     key={city.id}
-                                    className={`${index < 3 && filter === 'all' ? 'top-3' : ''} cursor-pointer hover:bg-white/40 transition-colors ${selectedCityId === city.id ? 'bg-sky-50' : ''}`}
+                                    className={`${index < 3 && filter === 'all' ? 'top-3' : ''} cursor-pointer hover:bg-white/40 transition-colors ${desktopDisplayId === city.id ? 'selected-row' : ''}`}
                                     onClick={() => setSelectedCityId(city.id)}
                                 >
                                     <td>

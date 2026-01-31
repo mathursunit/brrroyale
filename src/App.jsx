@@ -11,7 +11,7 @@ function App() {
       <main className="main-content">
         <header className="hero">
           <h1 className="hero-title">
-            Battle <br /> <span className="highlight-fun">Brrr-oyale</span>
+            Battle <br /> <span className="highlight-fun">Brrr</span>-<span className="highlight-gold">oyale</span>
           </h1>
           <p className="hero-subtitle">
             The ultimate snowfall showdown. <br />
