@@ -1,0 +1,122 @@
+/* -- Mobile Responsiveness -- */
+@media (max-width: 768px) {
+
+    /* -- Top Banner & Header -- */
+    .top-banner {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    .header-logo {
+        max-width: 90%;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        max-width: 90%;
+        margin-bottom: 0.5rem;
+    }
+
+    /* -- Layout -- */
+    .app-container {
+        padding-bottom: 1rem;
+    }
+
+    .main-content {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+
+    .hero {
+        padding: 1.5rem 1rem;
+        border-radius: 1rem;
+    }
+
+    /* -- Leaderboard Component -- */
+    .glass-panel {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .lb-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .lb-title {
+        font-size: 1.25rem;
+    }
+
+    .filter-group {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 0.5rem;
+        justify-content: flex-start;
+    }
+
+    .filter-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* -- Table Adjustments -- */
+    .lb-table th,
+    .lb-table td {
+        padding: 0.5rem 0.25rem;
+    }
+
+    .lb-table th {
+        font-size: 0.65rem;
+    }
+
+    .city-name {
+        font-size: 0.95rem;
+    }
+
+    .city-state {
+        font-size: 0.75rem;
+    }
+
+    .val-total {
+        font-size: 1rem;
+    }
+
+    .rank-badge {
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 0.8rem;
+    }
+
+    .rank-1 {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    /* -- Modal -- */
+    .modal-content {
+        padding: 1.5rem 1rem;
+        max-height: 85vh;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .modal-title {
+        font-size: 1.25rem;
+    }
+
+    .stats-grid {
+        gap: 0.75rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+}
