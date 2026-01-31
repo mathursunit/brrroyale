@@ -8,7 +8,8 @@
         "station_id": "GHCND:USW00014771",
         "tags": [
             "NY_Top10",
-            "Snow_Belt"
+            "Snow_Belt",
+            "US_Top10"
         ],
         "annual_average": 127.8
     },
@@ -21,7 +22,8 @@
         "station_id": "GHCND:USW00014733",
         "tags": [
             "NY_Top10",
-            "Snow_Belt"
+            "Snow_Belt",
+            "US_Top10"
         ],
         "annual_average": 95.4
     },
@@ -33,21 +35,46 @@
         "lon": -77.677,
         "station_id": "GHCND:USW00014768",
         "tags": [
-            "NY_Top10"
+            "NY_Top10",
+            "US_Top10"
         ],
         "annual_average": 102.0
     },
     {
-        "id": "albany_ny",
-        "name": "Albany",
+        "id": "old_forge_ny",
+        "name": "Old Forge",
         "state": "NY",
-        "lat": 42.747,
-        "lon": -73.802,
-        "station_id": "GHCND:USW00014735",
+        "lat": 43.711,
+        "lon": -74.974,
+        "station_id": "GHCND:USC00306184",
         "tags": [
             "NY_Top10"
         ],
-        "annual_average": 59.2
+        "annual_average": 157.9
+    },
+    {
+        "id": "watertown_ny",
+        "name": "Watertown",
+        "state": "NY",
+        "lat": 43.991,
+        "lon": -76.021,
+        "station_id": "GHCND:USW00094790",
+        "tags": [
+            "NY_Top10"
+        ],
+        "annual_average": 116.4
+    },
+    {
+        "id": "jamestown_ny",
+        "name": "Jamestown",
+        "state": "NY",
+        "lat": 42.095,
+        "lon": -79.238,
+        "station_id": "GHCND:USC00304207",
+        "tags": [
+            "NY_Top10"
+        ],
+        "annual_average": 98.4
     },
     {
         "id": "binghamton_ny",
@@ -57,82 +84,46 @@
         "lon": -75.980,
         "station_id": "GHCND:USW00004725",
         "tags": [
-            "NY_Top10"
+            "NY_Top10",
+            "US_Top10"
         ],
         "annual_average": 86.5
     },
     {
-        "id": "new_york_ny",
-        "name": "New York (Central Park)",
+        "id": "lake_placid_ny",
+        "name": "Lake Placid",
         "state": "NY",
-        "lat": 40.779,
-        "lon": -73.969,
-        "station_id": "GHCND:USW00094728",
+        "lat": 44.279,
+        "lon": -73.980,
+        "station_id": "GHCND:USC00304555",
         "tags": [
-            "NY_Top10",
-            "US_Top50"
+            "NY_Top10"
         ],
-        "annual_average": 29.8
+        "annual_average": 104.1
     },
     {
-        "id": "boston_ma",
-        "name": "Boston",
-        "state": "MA",
-        "lat": 42.361,
-        "lon": -71.010,
-        "station_id": "GHCND:USW00014739",
+        "id": "auburn_ny",
+        "name": "Auburn",
+        "state": "NY",
+        "lat": 42.933,
+        "lon": -76.566,
+        "station_id": "GHCND:USC00300321",
         "tags": [
-            "US_Top50"
+            "NY_Top10"
         ],
-        "annual_average": 49.2
+        "annual_average": 109.4
     },
     {
-        "id": "chicago_il",
-        "name": "Chicago (O'Hare)",
-        "state": "IL",
-        "lat": 41.977,
-        "lon": -87.905,
-        "station_id": "GHCND:USW00094846",
+        "id": "sherman_ny",
+        "name": "Sherman",
+        "state": "NY",
+        "lat": 42.158,
+        "lon": -79.596,
+        "station_id": "GHCND:USC00307765",
         "tags": [
-            "US_Top50"
+            "NY_Top10"
         ],
-        "annual_average": 38.8
-    },
-    {
-        "id": "denver_co",
-        "name": "Denver",
-        "state": "CO",
-        "lat": 39.858,
-        "lon": -104.673,
-        "station_id": "GHCND:USW00003017",
-        "tags": [
-            "US_Top50"
-        ],
-        "annual_average": 49.0
-    },
-    {
-        "id": "minneapolis_mn",
-        "name": "Minneapolis",
-        "state": "MN",
-        "lat": 44.883,
-        "lon": -93.229,
-        "station_id": "GHCND:USW00014922",
-        "tags": [
-            "US_Top50"
-        ],
-        "annual_average": 51.2
-    },
-    {
-        "id": "detroit_mi",
-        "name": "Detroit",
-        "state": "MI",
-        "lat": 42.212,
-        "lon": -83.353,
-        "station_id": "GHCND:USW00094847",
-        "tags": [
-            "US_Top50"
-        ],
-        "annual_average": 45.0
+        "annual_average": 224.5
     },
     {
         "id": "anchorage_ak",
@@ -142,33 +133,95 @@
         "lon": -149.992,
         "station_id": "GHCND:USW00026451",
         "tags": [
-            "US_Top50",
+            "US_Top10",
             "Snow_Belt"
         ],
         "annual_average": 77.9
     },
     {
-        "id": "salt_lake_city_ut",
-        "name": "Salt Lake City",
-        "state": "UT",
-        "lat": 40.778,
-        "lon": -111.969,
-        "station_id": "GHCND:USW00024127",
+        "id": "tower_mn",
+        "name": "Tower",
+        "state": "MN",
+        "lat": 47.815,
+        "lon": -92.271,
+        "station_id": "GHCND:USC00218290",
         "tags": [
-            "US_Top50"
+            "Coldest_Cities"
         ],
-        "annual_average": 51.9
+        "all_time_low": -60
     },
     {
-        "id": "pittsburgh_pa",
-        "name": "Pittsburgh",
-        "state": "PA",
-        "lat": 40.491,
-        "lon": -80.233,
-        "station_id": "GHCND:USW00094823",
+        "id": "intl_falls_mn",
+        "name": "International Falls",
+        "state": "MN",
+        "lat": 48.566,
+        "lon": -93.403,
+        "station_id": "GHCND:USW00014918",
         "tags": [
+            "Coldest_Cities",
             "US_Top50"
         ],
-        "annual_average": 44.1
+        "all_time_low": -55
+    },
+    {
+        "id": "fairbanks_ak",
+        "name": "Fairbanks",
+        "state": "AK",
+        "lat": 64.815,
+        "lon": -147.855,
+        "station_id": "GHCND:USW00026411",
+        "tags": [
+            "Coldest_Cities"
+        ],
+        "all_time_low": -66
+    },
+    {
+        "id": "grand_forks_nd",
+        "name": "Grand Forks",
+        "state": "ND",
+        "lat": 47.949,
+        "lon": -97.176,
+        "station_id": "GHCND:USW00024921",
+        "tags": [
+            "Coldest_Cities"
+        ],
+        "all_time_low": -43
+    },
+    {
+        "id": "fargo_nd",
+        "name": "Fargo",
+        "state": "ND",
+        "lat": 46.920,
+        "lon": -96.815,
+        "station_id": "GHCND:USW00014914",
+        "tags": [
+            "Coldest_Cities"
+        ],
+        "all_time_low": -39
+    },
+    {
+        "id": "marquette_mi",
+        "name": "Marquette",
+        "state": "MI",
+        "lat": 46.533,
+        "lon": -87.395,
+        "station_id": "GHCND:USW00014838",
+        "tags": [
+            "US_Top10",
+            "Snow_Belt"
+        ],
+        "annual_average": 141.2
+    },
+    {
+        "id": "caribou_me",
+        "name": "Caribou",
+        "state": "ME",
+        "lat": 46.866,
+        "lon": -68.017,
+        "station_id": "GHCND:USW00014607",
+        "tags": [
+            "US_Top10"
+        ],
+        "annual_average": 108.6
     }
 ]
