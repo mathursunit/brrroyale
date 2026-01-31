@@ -284,7 +284,7 @@ body {
 }
 
 .lb-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--color-text-primary);
     font-family: var(--font-family-display);
@@ -328,11 +328,11 @@ body {
 }
 
 .lb-table th {
-    padding: 1rem;
+    padding: 0.75rem 1rem;
     border-bottom: 2px solid rgba(0, 93, 171, 0.1);
     color: var(--color-text-muted);
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: left;
@@ -343,9 +343,9 @@ body {
 }
 
 .lb-table td {
-    padding: 1.25rem 1rem;
+    padding: 0.75rem 1rem;
     border-bottom: 1px solid rgba(14, 165, 233, 0.05);
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .lb-table tbody tr {
@@ -427,7 +427,7 @@ body {
 .val-total {
     font-weight: 800;
     color: var(--color-accent-blue);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .val-recent {

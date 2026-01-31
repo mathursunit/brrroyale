@@ -90,27 +90,34 @@ const Leaderboard = () => {
                                     </div>
                                 </td>
                                 <td className="text-right">
-                                    <span className={`font-mono font-bold ${!isSnow && 'text-blue-700'}`}>
-                                        {isSnow ? `${city.total_snow}"` : `${city.lowest_temp}°F`}
-                                    </span>
-                                    {isSnow && (() => {
-                                        const avg = city.avg_annual;
-                                        if (avg > 0) {
-                                            const pct = ((city.total_snow / avg) * 100).toFixed(0);
-                                            let progressColor = 'text-slate-400';
-                                            if (pct >= 100) progressColor = 'text-emerald-600 font-bold';
-                                            else if (pct >= 80) progressColor = 'text-sky-600';
+                                    <div className="flex flex-col">
+                                        <span className={`font-mono font-bold ${!isSnow && 'text-blue-700'}`}>
+                                            {isSnow ? `${city.total_snow}"` : `${city.lowest_temp}°F`}
+                                        </span>
+                                        {!isSnow && city.all_time_low !== undefined && (
+                                            <span className="text-[10px] text-slate-400 font-medium">
+                                                Ever: {city.all_time_low}°F
+                                            </span>
+                                        )}
+                                        {isSnow && (() => {
+                                            const avg = city.avg_annual;
+                                            if (avg > 0) {
+                                                const pct = ((city.total_snow / avg) * 100).toFixed(0);
+                                                let progressColor = 'text-slate-400';
+                                                if (pct >= 100) progressColor = 'text-emerald-600 font-bold';
+                                                else if (pct >= 80) progressColor = 'text-sky-600';
 
-                                            return (
-                                                <div className="text-xs mt-1 font-medium flex justify-end gap-1">
-                                                    <span className="text-slate-500">Avg: {avg}"</span>
-                                                    <span className={progressColor}>
-                                                        ({pct}%)
-                                                    </span>
-                                                </div>
-                                            )
-                                        }
-                                    })()}
+                                                return (
+                                                    <div className="text-[10px] mt-0.5 font-medium flex justify-end gap-1">
+                                                        <span className="text-slate-500">Avg: {avg}"</span>
+                                                        <span className={progressColor}>
+                                                            ({pct}%)
+                                                        </span>
+                                                    </div>
+                                                )
+                                            }
+                                        })()}
+                                    </div>
                                 </td>
                                 <td className="text-right">
                                     {isSnow ? (
