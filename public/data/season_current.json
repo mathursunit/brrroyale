@@ -1,194 +1,97 @@
 {
-  "last_updated": "2026-01-31T04:06:26.069Z",
-  "source": "NOAA GHCN-Daily",
-  "season_start": "2025-09-01",
-  "season_end": "2026-01-31",
+  "last_updated": "2026-01-31T11:25:53.844Z",
   "rankings": [
     {
-      "rank": 1,
+      "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
-      "id": "syracuse_ny",
-      "tags": [
-        "NY_Top10",
-        "Snow_Belt"
-      ],
-      "avg_annual": 127.8,
       "total_snow": 109.9,
       "last_24h": 0,
-      "history_20_years": []
+      "avg_annual": 127.8,
+      "tags": [
+        "NY_Top10",
+        "Snow_Belt",
+        "US_Top10"
+      ],
+      "rank": 1
     },
     {
-      "rank": 2,
+      "id": "rochester_ny",
       "city": "Rochester",
       "state": "NY",
-      "id": "rochester_ny",
-      "tags": [
-        "NY_Top10"
-      ],
-      "avg_annual": 102,
       "total_snow": 77.2,
       "last_24h": 0,
-      "history_20_years": []
+      "avg_annual": 102,
+      "tags": [
+        "NY_Top10",
+        "US_Top10"
+      ],
+      "rank": 2
     },
     {
-      "rank": 3,
+      "id": "buffalo_ny",
       "city": "Buffalo",
       "state": "NY",
-      "id": "buffalo_ny",
-      "tags": [
-        "NY_Top10",
-        "Snow_Belt"
-      ],
-      "avg_annual": 95.4,
       "total_snow": 63,
       "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 4,
-      "city": "Anchorage",
-      "state": "AK",
-      "id": "anchorage_ak",
-      "tags": [
-        "US_Top50",
-        "Snow_Belt"
-      ],
-      "avg_annual": 77.9,
-      "total_snow": 57.3,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 5,
-      "city": "Binghamton",
-      "state": "NY",
-      "id": "binghamton_ny",
-      "tags": [
-        "NY_Top10"
-      ],
-      "avg_annual": 86.5,
-      "total_snow": 49.5,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 6,
-      "city": "Albany",
-      "state": "NY",
-      "id": "albany_ny",
-      "tags": [
-        "NY_Top10"
-      ],
-      "avg_annual": 59.2,
-      "total_snow": 44.4,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 7,
-      "city": "Pittsburgh",
-      "state": "PA",
-      "id": "pittsburgh_pa",
-      "tags": [
-        "US_Top50"
-      ],
-      "avg_annual": 44.1,
-      "total_snow": 35.5,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 8,
-      "city": "Boston",
-      "state": "MA",
-      "id": "boston_ma",
-      "tags": [
-        "US_Top50"
-      ],
-      "avg_annual": 49.2,
-      "total_snow": 34.1,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 9,
-      "city": "Detroit",
-      "state": "MI",
-      "id": "detroit_mi",
-      "tags": [
-        "US_Top50"
-      ],
-      "avg_annual": 45,
-      "total_snow": 33.5,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 10,
-      "city": "Chicago (O'Hare)",
-      "state": "IL",
-      "id": "chicago_il",
-      "tags": [
-        "US_Top50"
-      ],
-      "avg_annual": 38.8,
-      "total_snow": 28.6,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 11,
-      "city": "Minneapolis",
-      "state": "MN",
-      "id": "minneapolis_mn",
-      "tags": [
-        "US_Top50"
-      ],
-      "avg_annual": 51.2,
-      "total_snow": 27.9,
-      "last_24h": 0,
-      "history_20_years": []
-    },
-    {
-      "rank": 12,
-      "city": "New York (Central Park)",
-      "state": "NY",
-      "id": "new_york_ny",
+      "avg_annual": 95.4,
       "tags": [
         "NY_Top10",
-        "US_Top50"
+        "Snow_Belt",
+        "US_Top10"
       ],
-      "avg_annual": 29.8,
-      "total_snow": 21.1,
-      "last_24h": 0,
-      "history_20_years": []
+      "rank": 3
     },
     {
-      "rank": 13,
-      "city": "Denver",
-      "state": "CO",
-      "id": "denver_co",
-      "tags": [
-        "US_Top50"
-      ],
-      "avg_annual": 49,
-      "total_snow": 13.4,
+      "id": "marquette_mi",
+      "city": "Marquette",
+      "state": "MI",
+      "total_snow": 58.7,
       "last_24h": 0,
-      "history_20_years": []
+      "avg_annual": 141.2,
+      "tags": [
+        "US_Top10",
+        "Snow_Belt"
+      ],
+      "rank": 4
     },
     {
-      "rank": 14,
-      "city": "Salt Lake City",
-      "state": "UT",
-      "id": "salt_lake_city_ut",
-      "tags": [
-        "US_Top50"
-      ],
-      "avg_annual": 51.9,
-      "total_snow": 0.1,
+      "id": "caribou_me",
+      "city": "Caribou",
+      "state": "ME",
+      "total_snow": 58.3,
       "last_24h": 0,
-      "history_20_years": []
+      "avg_annual": 108.6,
+      "tags": [
+        "US_Top10"
+      ],
+      "rank": 5
+    },
+    {
+      "id": "anchorage_ak",
+      "city": "Anchorage",
+      "state": "AK",
+      "total_snow": 57.3,
+      "last_24h": 0,
+      "avg_annual": 77.9,
+      "tags": [
+        "US_Top10",
+        "Snow_Belt"
+      ],
+      "rank": 6
+    },
+    {
+      "id": "binghamton_ny",
+      "city": "Binghamton",
+      "state": "NY",
+      "total_snow": 49.5,
+      "last_24h": 0,
+      "avg_annual": 86.5,
+      "tags": [
+        "NY_Top10",
+        "US_Top10"
+      ],
+      "rank": 7
     }
   ]
 }

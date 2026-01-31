@@ -1,225 +1,210 @@
 {
-    "last_updated": "2026-01-31T00:55:00Z",
-    "rankings": [
-        {
-            "id": "seagull-mn",
-            "city": "Seagull",
-            "state": "MN",
-            "rank": 1,
-            "lowest_temp": -43,
-            "lowest_windchill": -58,
-            "record_date": "Jan 20, 2026",
-            "all_time_low": -43,
-            "all_time_windchill": -58
-        },
-        {
-            "id": "tower-mn",
-            "city": "Tower",
-            "state": "MN",
-            "rank": 2,
-            "lowest_temp": -41,
-            "lowest_windchill": -55,
-            "record_date": "Jan 18, 2026",
-            "all_time_low": -60,
-            "all_time_windchill": -71
-        },
-        {
-            "id": "fairbanks-ak",
-            "city": "Fairbanks",
-            "state": "AK",
-            "rank": 3,
-            "lowest_temp": -40,
-            "lowest_windchill": -52,
-            "record_date": "Jan 12, 2026",
-            "all_time_low": -66,
-            "all_time_windchill": -75
-        },
-        {
-            "id": "grand-forks-nd",
-            "city": "Grand Forks",
-            "state": "ND",
-            "rank": 4,
-            "lowest_temp": -35,
-            "lowest_windchill": -50,
-            "record_date": "Jan 21, 2026",
-            "all_time_low": -43,
-            "all_time_windchill": -65
-        },
-        {
-            "id": "fargo-nd",
-            "city": "Fargo",
-            "state": "ND",
-            "rank": 5,
-            "lowest_temp": -33,
-            "lowest_windchill": -48,
-            "record_date": "Dec 14, 2025",
-            "all_time_low": -39,
-            "all_time_windchill": -55
-        },
-        {
-            "id": "embarrass-mn",
-            "city": "Embarrass",
-            "state": "MN",
-            "rank": 6,
-            "lowest_temp": -32,
-            "lowest_windchill": -45,
-            "record_date": "Jan 19, 2026",
-            "all_time_low": -64,
-            "all_time_windchill": -71
-        },
-        {
-            "id": "intl-falls-mn",
-            "city": "International Falls",
-            "state": "MN",
-            "rank": 7,
-            "lowest_temp": -30,
-            "lowest_windchill": -42,
-            "record_date": "Jan 22, 2026",
-            "all_time_low": -55,
-            "all_time_windchill": -65
-        },
-        {
-            "id": "bismarck-nd",
-            "city": "Bismarck",
-            "state": "ND",
-            "rank": 8,
-            "lowest_temp": -28,
-            "lowest_windchill": -45,
-            "record_date": "Jan 20, 2026",
-            "all_time_low": -45,
-            "all_time_windchill": -60
-        },
-        {
-            "id": "minneapolis-mn",
-            "city": "Minneapolis",
-            "state": "MN",
-            "rank": 9,
-            "lowest_temp": -26,
-            "lowest_windchill": -41,
-            "record_date": "Jan 21, 2026",
-            "all_time_low": -34,
-            "all_time_windchill": -67
-        },
-        {
-            "id": "flint-mi",
-            "city": "Flint",
-            "state": "MI",
-            "rank": 10,
-            "lowest_temp": -24,
-            "lowest_windchill": -38,
-            "record_date": "Jan 24, 2026",
-            "all_time_low": -25,
-            "all_time_windchill": -45
-        },
-        {
-            "id": "casper-wy",
-            "city": "Casper",
-            "state": "WY",
-            "rank": 11,
-            "lowest_temp": -22,
-            "lowest_windchill": -40,
-            "record_date": "Jan 15, 2026",
-            "all_time_low": -42,
-            "all_time_windchill": -63
-        },
-        {
-            "id": "bozeman-mt",
-            "city": "Bozeman",
-            "state": "MT",
-            "rank": 12,
-            "lowest_temp": -21,
-            "lowest_windchill": -35,
-            "record_date": "Jan 14, 2026",
-            "all_time_low": -46,
-            "all_time_windchill": -55
-        },
-        {
-            "id": "grand-rapids-mi",
-            "city": "Grand Rapids",
-            "state": "MI",
-            "rank": 13,
-            "lowest_temp": -19,
-            "lowest_windchill": -33,
-            "record_date": "Jan 24, 2026",
-            "all_time_low": -24,
-            "all_time_windchill": -40
-        },
-        {
-            "id": "milwaukee-wi",
-            "city": "Milwaukee",
-            "state": "WI",
-            "rank": 14,
-            "lowest_temp": -15,
-            "lowest_windchill": -30,
-            "record_date": "Jan 21, 2026",
-            "all_time_low": -26,
-            "all_time_windchill": -58
-        },
-        {
-            "id": "burlington-vt",
-            "city": "Burlington",
-            "state": "VT",
-            "rank": 15,
-            "lowest_temp": -14,
-            "lowest_windchill": -32,
-            "record_date": "Jan 25, 2026",
-            "all_time_low": -30,
-            "all_time_windchill": -45
-        },
-        {
-            "id": "syracuse-ny",
-            "city": "Syracuse",
-            "state": "NY",
-            "rank": 16,
-            "lowest_temp": -12,
-            "lowest_windchill": -28,
-            "record_date": "Jan 29, 2026",
-            "all_time_low": -29,
-            "all_time_windchill": -38
-        },
-        {
-            "id": "cleveland-oh",
-            "city": "Cleveland",
-            "state": "OH",
-            "rank": 17,
-            "lowest_temp": -10,
-            "lowest_windchill": -25,
-            "record_date": "Jan 30, 2026",
-            "all_time_low": -20,
-            "all_time_windchill": -35
-        },
-        {
-            "id": "erie-pa",
-            "city": "Erie",
-            "state": "PA",
-            "rank": 18,
-            "lowest_temp": -8,
-            "lowest_windchill": -22,
-            "record_date": "Jan 30, 2026",
-            "all_time_low": -18,
-            "all_time_windchill": -35
-        },
-        {
-            "id": "chicago-il",
-            "city": "Chicago",
-            "state": "IL",
-            "rank": 19,
-            "lowest_temp": -7,
-            "lowest_windchill": -20,
-            "record_date": "Jan 21, 2026",
-            "all_time_low": -27,
-            "all_time_windchill": -60
-        },
-        {
-            "id": "denver-co",
-            "city": "Denver",
-            "state": "CO",
-            "rank": 20,
-            "lowest_temp": -5,
-            "lowest_windchill": -18,
-            "record_date": "Jan 15, 2026",
-            "all_time_low": -25,
-            "all_time_windchill": -35
-        }
-    ]
+  "last_updated": "2026-01-31T11:25:53.849Z",
+  "rankings": [
+    {
+      "id": "fairbanks_ak",
+      "city": "Fairbanks",
+      "state": "AK",
+      "lowest_temp": -50,
+      "lowest_windchill": -55,
+      "record_date": "Jan 4, 2026",
+      "all_time_low": -66,
+      "all_time_windchill": -76,
+      "tags": [
+        "Coldest_Cities"
+      ],
+      "rank": 1
+    },
+    {
+      "id": "intl_falls_mn",
+      "city": "International Falls",
+      "state": "MN",
+      "lowest_temp": -36,
+      "lowest_windchill": -41,
+      "record_date": "Jan 24, 2026",
+      "all_time_low": -55,
+      "all_time_windchill": -65,
+      "tags": [
+        "Coldest_Cities",
+        "US_Top50"
+      ],
+      "rank": 2
+    },
+    {
+      "id": "watertown_ny",
+      "city": "Watertown",
+      "state": "NY",
+      "lowest_temp": -34,
+      "lowest_windchill": -39,
+      "record_date": "Jan 24, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10"
+      ],
+      "rank": 3
+    },
+    {
+      "id": "lake_placid_ny",
+      "city": "Lake Placid",
+      "state": "NY",
+      "lowest_temp": -29,
+      "lowest_windchill": -34,
+      "record_date": "Jan 25, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10"
+      ],
+      "rank": 4
+    },
+    {
+      "id": "fargo_nd",
+      "city": "Fargo",
+      "state": "ND",
+      "lowest_temp": -20,
+      "lowest_windchill": -25,
+      "record_date": "Jan 22, 2026",
+      "all_time_low": -39,
+      "all_time_windchill": -49,
+      "tags": [
+        "Coldest_Cities"
+      ],
+      "rank": 5
+    },
+    {
+      "id": "caribou_me",
+      "city": "Caribou",
+      "state": "ME",
+      "lowest_temp": -19,
+      "lowest_windchill": -24,
+      "record_date": "Jan 25, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "US_Top10"
+      ],
+      "rank": 6
+    },
+    {
+      "id": "anchorage_ak",
+      "city": "Anchorage",
+      "state": "AK",
+      "lowest_temp": -17,
+      "lowest_windchill": -22,
+      "record_date": "Jan 8, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "US_Top10",
+        "Snow_Belt"
+      ],
+      "rank": 7
+    },
+    {
+      "id": "marquette_mi",
+      "city": "Marquette",
+      "state": "MI",
+      "lowest_temp": -13,
+      "lowest_windchill": -18,
+      "record_date": "Jan 24, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "US_Top10",
+        "Snow_Belt"
+      ],
+      "rank": 8
+    },
+    {
+      "id": "syracuse_ny",
+      "city": "Syracuse",
+      "state": "NY",
+      "lowest_temp": -9,
+      "lowest_windchill": -14,
+      "record_date": "Jan 24, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10",
+        "Snow_Belt",
+        "US_Top10"
+      ],
+      "rank": 9
+    },
+    {
+      "id": "jamestown_ny",
+      "city": "Jamestown",
+      "state": "NY",
+      "lowest_temp": -7,
+      "lowest_windchill": -12,
+      "record_date": "Dec 9, 2025",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10"
+      ],
+      "rank": 10
+    },
+    {
+      "id": "rochester_ny",
+      "city": "Rochester",
+      "state": "NY",
+      "lowest_temp": -6,
+      "lowest_windchill": -11,
+      "record_date": "Jan 24, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10",
+        "US_Top10"
+      ],
+      "rank": 11
+    },
+    {
+      "id": "buffalo_ny",
+      "city": "Buffalo",
+      "state": "NY",
+      "lowest_temp": -4,
+      "lowest_windchill": -9,
+      "record_date": "Jan 24, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10",
+        "Snow_Belt",
+        "US_Top10"
+      ],
+      "rank": 12
+    },
+    {
+      "id": "binghamton_ny",
+      "city": "Binghamton",
+      "state": "NY",
+      "lowest_temp": -3,
+      "lowest_windchill": -8,
+      "record_date": "Jan 24, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10",
+        "US_Top10"
+      ],
+      "rank": 13
+    },
+    {
+      "id": "auburn_ny",
+      "city": "Auburn",
+      "state": "NY",
+      "lowest_temp": -1,
+      "lowest_windchill": -6,
+      "record_date": "Jan 24, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10"
+      ],
+      "rank": 14
+    }
+  ]
 }
