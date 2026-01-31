@@ -133,15 +133,18 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* Center horizontally */
+    justify-content: center;
+    /* This was missing! */
+    align-items: flex-start;
+    /* Allow scrolling */
+    padding-bottom: 2rem;
 }
 
 /* Center Content vertically/horizontally if content is small, otherwise top flow */
 .main-content {
     width: 100%;
     max-width: 900px;
-    margin: 0 auto;
+    /* margin: 0 auto; removed redundant if parent centers */
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
