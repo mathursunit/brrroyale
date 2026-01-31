@@ -48,7 +48,7 @@ body {
     overflow-x: hidden;
 }
 
-/* -- Dynamic Wallpaper (Atmospheric Portal) -- */
+/* -- Dynamic Wallpaper -- */
 .wallpaper {
     position: fixed;
     top: 0;
@@ -56,41 +56,52 @@ body {
     width: 100%;
     height: 100%;
     z-index: -2;
-    /* Wallpaper at the very bottom */
-    background: #e2e8f0;
-    /* Base light slate */
-    background: radial-gradient(circle at top left, #f1f5f9 0%, #cbd5e1 100%);
-    overflow: hidden;
+    transition: background 1.5s ease;
 }
 
-/* Floating "Portal Glows" */
+.wallpaper.snow {
+    background: radial-gradient(circle at top left, #f1f5f9 0%, #cbd5e1 100%);
+}
+
+.wallpaper.cold {
+    background: linear-gradient(180deg, #020617 0%, #1e1b4b 50%, #312e81 100%);
+}
+
 .wallpaper::before,
 .wallpaper::after {
     content: '';
     position: absolute;
-    width: 50vw;
-    height: 50vw;
+    width: 60vw;
+    height: 60vw;
     border-radius: 50%;
-    background: rgba(0, 93, 171, 0.15);
-    /* Portal Blue glow */
     filter: blur(100px);
+    transition: background 2s ease, opacity 2s ease;
+    mix-blend-mode: soft-light;
     animation: float 20s infinite ease-in-out alternate;
 }
 
-.wallpaper::before {
-    top: -20%;
+.wallpaper.snow::before {
+    top: -10%;
     left: -10%;
-    background: rgba(0, 93, 171, 0.1);
-    animation-duration: 40s;
+    background: rgba(0, 93, 171, 0.15);
 }
 
-.wallpaper::after {
-    bottom: -20%;
+.wallpaper.snow::after {
+    bottom: -10%;
     right: -10%;
-    background: rgba(255, 255, 255, 0.6);
-    filter: blur(120px);
-    animation-duration: 50s;
-    animation-direction: alternate-reverse;
+    background: white;
+}
+
+.wallpaper.cold::before {
+    top: 20%;
+    left: -20%;
+    background: rgba(99, 102, 241, 0.2);
+}
+
+.wallpaper.cold::after {
+    bottom: 20%;
+    right: -20%;
+    background: rgba(30, 64, 175, 0.3);
 }
 
 @keyframes float {
@@ -110,21 +121,52 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
 }
 
 .particle {
     position: absolute;
-    background: rgba(255, 255, 255, 0.4);
+    background: white;
     border-radius: 50%;
-    filter: blur(1px);
-    animation: drift linear infinite;
+    top: -50px;
 }
 
-@keyframes drift {
-    from {
+.particle.snow {
+    animation: snowfall linear infinite;
+    filter: blur(1px);
+}
+
+.particle.frost {
+    animation: frostFall linear infinite;
+    background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
+    border-radius: 2px;
+}
+
+@keyframes snowfall {
+    0% {
         transform: translateY(-10vh) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes frostFall {
+    0% {
+        transform: translateY(-10vh) translateX(0) scale(1);
         opacity: 0;
     }
 
@@ -132,12 +174,12 @@ body {
         opacity: 0.8;
     }
 
-    90% {
-        opacity: 0.8;
+    50% {
+        transform: translateY(50vh) translateX(-20px) scale(1.2);
     }
 
-    to {
-        transform: translateY(110vh) translateX(150px) rotate(360deg);
+    100% {
+        transform: translateY(110vh) translateX(10px) scale(0.8);
         opacity: 0;
     }
 }
@@ -156,23 +198,17 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     z-index: 100;
-    animation: bannerPulse 4s infinite ease-in-out;
+    transition: background 1s ease;
 }
 
-@keyframes bannerPulse {
-
-    0%,
-    100% {
-        background: rgba(0, 61, 112, 0.9);
-    }
-
-    50% {
-        background: rgba(0, 80, 140, 0.9);
-    }
+.cold-mode .top-banner {
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom-color: rgba(99, 102, 241, 0.2);
 }
 
 .top-banner span {
     color: var(--color-accent-gold);
+    font-weight: 800;
 }
 
 .header-logo {
@@ -185,36 +221,6 @@ body {
     object-fit: contain;
 }
 
-/* Falling Snow Animation */
-.snowflake {
-    position: absolute;
-    top: -10px;
-    color: white;
-    font-size: 1em;
-    font-family: Arial, sans-serif;
-    text-shadow: 0 0 5px #000;
-    user-select: none;
-    z-index: 0;
-    animation-name: snowfall;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    opacity: 0.8;
-}
-
-@keyframes snowfall {
-    0% {
-        transform: translateY(-10vh) translateX(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(110vh) translateX(20px);
-        opacity: 0;
-    }
-}
-
-/* -- Layout -- */
 /* -- Layout -- */
 .app-container {
     min-height: 100vh;
@@ -223,21 +229,16 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 2rem;
-    /* overflow-x: hidden; REMOVED to fix sticky */
 }
 
-/* Center Content vertically/horizontally if content is small, otherwise top flow */
-/* Center Content vertically/horizontally if content is small, otherwise top flow */
 .main-content {
     width: 100%;
     max-width: 1100px;
-    /* Snugger layout */
     margin: 0 auto;
     padding: 1rem 1rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    /* Force same width for children */
     gap: 1.5rem;
     position: relative;
     z-index: 1;
@@ -254,7 +255,7 @@ body {
 .hero {
     padding: 2rem;
     text-align: center;
-    /* width: 100% handles by stretch */
+    transition: background 1s ease, box-shadow 1s ease;
     background: linear-gradient(135deg, #005DAB 0%, #003D70 100%);
     color: white;
     box-shadow: 0 10px 30px rgba(0, 40, 80, 0.2);
@@ -263,6 +264,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.cold-mode .hero {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.05);
 }
 
 .hero-subtitle {

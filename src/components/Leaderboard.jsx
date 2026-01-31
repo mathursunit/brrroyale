@@ -4,8 +4,7 @@ import snowyData from '../../public/data/season_current.json';
 import coldData from '../../public/data/coldest_cities.json';
 import CityHistory from './CityHistory';
 
-const Leaderboard = () => {
-    const [dataset, setDataset] = useState('snow'); // 'snow' or 'cold'
+const Leaderboard = ({ dataset, setDataset }) => {
     const [filter, setFilter] = useState('all'); // 'all', 'ny'
     const [selectedCityId, setSelectedCityId] = useState(null);
 
