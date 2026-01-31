@@ -37,9 +37,9 @@ const Leaderboard = () => {
                             COLDEST
                         </button>
                     </div>
-                    <h2 className="lb-title">{isSnow ? 'Current Snowfall Standings' : 'The 30-Year Deep Freeze'}</h2>
+                    <h2 className="lb-title">{isSnow ? 'Current Snowfall Standings' : '2025-2026 Season Lows'}</h2>
                     <div className="text-xs text-slate-500 font-medium">
-                        Source: NOAA NCEI • Updated: {new Date(data.last_updated).toLocaleString()}
+                        Source: NOAA NCEI • Live Data Stream
                     </div>
                 </div>
 
