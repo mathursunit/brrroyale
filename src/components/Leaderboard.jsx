@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../styles/index.css';
 import snowyData from '../../public/data/season_current.json';
+import snowyNYData from '../../public/data/snowfall_ny.json';
 import coldData from '../../public/data/coldest_cities.json';
 import CityHistory from './CityHistory';
 
@@ -9,12 +10,16 @@ const Leaderboard = ({ dataset, setDataset }) => {
     const [selectedCityId, setSelectedCityId] = useState(null);
 
     const isSnow = dataset === 'snow';
-    const data = isSnow ? snowyData : coldData;
 
-    const filteredRankings = data.rankings.filter(city => {
-        if (isSnow && filter === 'ny') return city.tags && city.tags.includes('NY_Top10');
-        return true;
-    });
+    // Determine which dataset to use based on mode and filter
+    let data;
+    if (dataset === 'cold') {
+        data = coldData;
+    } else {
+        data = filter === 'ny' ? snowyNYData : snowyData;
+    }
+
+    const filteredRankings = data.rankings;
 
     return (
         <div className="leaderboard-container glass-panel">

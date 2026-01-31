@@ -1,0 +1,135 @@
+{
+    "title": "Top 10 Snowiest Cities in New York",
+    "metadata": {
+        "season": "2025-2026",
+        "last_updated": "2026-01-31T01:15:00Z",
+        "source": "NOAA NCEI & National Weather Service (NWS)",
+        "period": "30-Year Average (1996-2026)"
+    },
+    "rankings": [
+        {
+            "id": "ny-01",
+            "city": "Old Forge",
+            "state": "NY",
+            "rank": 1,
+            "total_snow": 142.5,
+            "avg_annual": 157.9,
+            "last_24h": 4.2,
+            "tags": [
+                "NY_Top10"
+            ]
+        },
+        {
+            "id": "ny-02",
+            "city": "Syracuse",
+            "state": "NY",
+            "rank": 2,
+            "total_snow": 109.9,
+            "avg_annual": 127.8,
+            "last_24h": 0,
+            "tags": [
+                "NY_Top10",
+                "US_Top10"
+            ]
+        },
+        {
+            "id": "ny-03",
+            "city": "Watertown",
+            "state": "NY",
+            "rank": 3,
+            "total_snow": 98.4,
+            "avg_annual": 116.4,
+            "last_24h": 2.1,
+            "tags": [
+                "NY_Top10"
+            ]
+        },
+        {
+            "id": "ny-04",
+            "city": "Sherman",
+            "state": "NY",
+            "rank": 4,
+            "total_snow": 92.1,
+            "avg_annual": 108.5,
+            "last_24h": 0,
+            "tags": [
+                "NY_Top10"
+            ]
+        },
+        {
+            "id": "ny-05",
+            "city": "Lake Placid",
+            "state": "NY",
+            "rank": 5,
+            "total_snow": 88.6,
+            "avg_annual": 104.1,
+            "last_24h": 1.5,
+            "tags": [
+                "NY_Top10"
+            ]
+        },
+        {
+            "id": "ny-06",
+            "city": "Rochester",
+            "state": "NY",
+            "rank": 6,
+            "total_snow": 77.2,
+            "avg_annual": 102.0,
+            "last_24h": 0,
+            "tags": [
+                "NY_Top10",
+                "US_Top10"
+            ]
+        },
+        {
+            "id": "ny-07",
+            "city": "Jamestown",
+            "state": "NY",
+            "rank": 7,
+            "total_snow": 74.5,
+            "avg_annual": 98.4,
+            "last_24h": 0.5,
+            "tags": [
+                "NY_Top10"
+            ]
+        },
+        {
+            "id": "ny-08",
+            "city": "Buffalo",
+            "state": "NY",
+            "rank": 8,
+            "total_snow": 63.0,
+            "avg_annual": 95.4,
+            "last_24h": 0,
+            "tags": [
+                "NY_Top10",
+                "US_Top10"
+            ]
+        },
+        {
+            "id": "ny-09",
+            "city": "Auburn",
+            "state": "NY",
+            "rank": 9,
+            "total_snow": 61.2,
+            "avg_annual": 92.5,
+            "last_24h": 0,
+            "tags": [
+                "NY_Top10"
+            ]
+        },
+        {
+            "id": "ny-10",
+            "city": "Binghamton",
+            "state": "NY",
+            "rank": 10,
+            "total_snow": 49.5,
+            "avg_annual": 86.5,
+            "last_24h": 0,
+            "tags": [
+                "NY_Top10",
+                "US_Top10"
+            ]
+        }
+    ]
+}
