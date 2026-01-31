@@ -120,7 +120,7 @@ const Leaderboard = () => {
             </div>
 
             {/* Right Column (Desktop Only - Sticky) */}
-            <div className="layout-detail hidden lg:block">
+            <div className="layout-detail desktop-only">
                 {desktopDisplayId && (
                     <CityHistory
                         cityId={desktopDisplayId}
@@ -132,7 +132,7 @@ const Leaderboard = () => {
             </div>
 
             {/* Mobile Modal (Only if selected explicitly) */}
-            <div className="block lg:hidden">
+            <div className="mobile-only">
                 {selectedCityId && (
                     <CityHistory
                         cityId={selectedCityId}
