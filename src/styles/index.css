@@ -480,9 +480,65 @@ body {
 }
 
 /* -- Footer -- */
-.footer {
-    text-align: center;
-    padding: 3rem 0;
+
+/* -- Utilities -- */
+.text-emerald-600 {
+    color: #059669;
+}
+
+.text-sky-600 {
+    color: #0284c7;
+}
+
+.text-slate-400 {
+    color: #94a3b8;
+}
+
+.text-slate-500 {
+    color: #64748b;
+}
+
+.text-rose-500 {
+    color: #f43f5e;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-medium {
     font-weight: 500;
-    color: var(--color-text-muted);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.gap-1 {
+    gap: 0.25rem;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.text-right {
+    text-align: right;
 }
