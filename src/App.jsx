@@ -7,14 +7,14 @@ const DynamicBackground = ({ mode }) => {
 
   useEffect(() => {
     const isCold = mode === 'cold';
-    const count = isCold ? 40 : 80;
+    const count = isCold ? 50 : 100;
     const p = Array.from({ length: count }).map((_, i) => ({
       id: i,
-      size: isCold ? Math.random() * 2 + 0.5 : Math.random() * 4 + 1,
+      size: isCold ? Math.random() * 3 + 1 : Math.random() * 6 + 2,
       left: Math.random() * 100,
-      duration: isCold ? Math.random() * 20 + 20 : Math.random() * 15 + 15,
+      duration: isCold ? Math.random() * 15 + 15 : Math.random() * 10 + 10,
       delay: Math.random() * 10,
-      opacity: isCold ? 0.2 + Math.random() * 0.3 : 0.4 + Math.random() * 0.4
+      opacity: isCold ? 0.3 + Math.random() * 0.4 : 0.5 + Math.random() * 0.4
     }));
     setParticles(p);
   }, [mode]);
