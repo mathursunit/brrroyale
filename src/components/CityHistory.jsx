@@ -32,13 +32,13 @@ const CityHistory = ({ cityId, onClose }) => {
     if (!chartData.length) return null;
 
     return (
-        <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={onClose}>
-            <div className="glass-panel w-full max-w-3xl max-h-[90vh] overflow-y-auto shadow-2xl" onClick={e => e.stopPropagation()}>
-                <div className="flex justify-between items-center mb-6 border-b border-slate-200 pb-4">
-                    <h2 className="text-2xl font-display text-slate-800">
+        <div className="modal-overlay" onClick={onClose}>
+            <div className="modal-content" onClick={e => e.stopPropagation()}>
+                <div className="modal-header">
+                    <h2 className="modal-title">
                         Snowfall History
                     </h2>
-                    <button onClick={onClose} className="text-slate-500 hover:text-slate-800 font-bold">
+                    <button onClick={onClose} className="modal-close">
                         ✕ Close
                     </button>
                 </div>
