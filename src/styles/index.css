@@ -1,38 +1,41 @@
 :root {
-    /* -- Color Palette -- */
-    --color-bg-dark: #0f172a;
-    /* Slate 900 */
-    --color-bg-card: rgba(30, 41, 59, 0.7);
-    /* Slate 800 with opacity */
-    --color-bg-card-hover: rgba(255, 255, 255, 0.05);
-
-    --color-text-primary: #f8fafc;
-    /* Slate 50 */
-    --color-text-secondary: #94a3b8;
-    /* Slate 400 */
-    --color-text-muted: #64748b;
-    /* Slate 500 */
-
-    --color-accent-blue: #38bdf8;
-    /* Sky 400 */
-    --color-accent-frost: #e0f2fe;
+    /* -- Light Theme Palette -- */
+    --color-bg-primary: #e0f2fe;
+    /* Sky 100 */
+    --color-bg-secondary: #f0f9ff;
     /* Sky 50 */
-    --color-accent-gold: #fbbf24;
-    /* Amber 400 (for winners) */
-    --color-success: #34d399;
-    /* Emerald 400 */
 
-    --color-border: rgba(255, 255, 255, 0.1);
+    --color-text-primary: #1e293b;
+    /* Slate 800 */
+    --color-text-secondary: #475569;
+    /* Slate 600 */
+    --color-text-muted: #94a3b8;
+    /* Slate 400 */
+
+    --color-accent-blue: #0ea5e9;
+    /* Sky 500 */
+    --color-accent-frost: #ffffff;
+    /* White */
+    --color-accent-gold: #fbbf24;
+    /* Amber 400 */
+    --color-success: #10b981;
+    /* Emerald 500 */
+
+    --color-card-bg: rgba(255, 255, 255, 0.65);
+    --color-card-border: rgba(255, 255, 255, 0.8);
+    --color-card-hover: rgba(255, 255, 255, 0.85);
 
     /* -- Glassmorphism -- */
-    --glass-border: 1px solid var(--color-border);
-    --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --glass-blur: blur(12px);
+    --glass-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 10px 15px -3px rgba(14, 165, 233, 0.1);
+    /* Blue-tinted shadow */
+    --glass-blur: blur(16px);
+    --glass-border: 1px solid var(--color-card-border);
 
     /* -- Typography -- */
     --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
-    --font-family-display: 'Arial Black', sans-serif;
-    /* Fallback for now */
+    --font-family-display: 'Arial Rounded MT Bold', 'Fredoka One', cursive, sans-serif;
     --font-mono: 'Consolas', 'Monaco', monospace;
 }
 
@@ -40,14 +43,88 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-family-sans);
-    background-color: var(--color-bg-dark);
-    background-image:
-        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(56, 189, 248, 0.10) 0px, transparent 50%);
-    background-attachment: fixed;
+    background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
     min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* -- Dynamic Wallpaper (CSS Clouds/Snow) -- */
+.wallpaper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg, #bae6fd 0%, #f0f9ff 100%);
+    overflow: hidden;
+}
+
+/* Floating "Clouds" or soft blobs */
+.wallpaper::before,
+.wallpaper::after {
+    content: '';
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    filter: blur(80px);
+    animation: float 20s infinite ease-in-out alternate;
+}
+
+.wallpaper::before {
+    top: -10%;
+    left: -10%;
+    animation-duration: 25s;
+}
+
+.wallpaper::after {
+    bottom: -10%;
+    right: -10%;
+    background: rgba(186, 230, 253, 0.4);
+    animation-duration: 30s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
+}
+
+/* Falling Snow Animation */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+    user-select: none;
+    z-index: 0;
+    animation-name: snowfall;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0.8;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-10vh) translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(20px);
+        opacity: 0;
+    }
 }
 
 /* -- Layout -- */
@@ -55,86 +132,88 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    /* Center horizontally */
 }
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 1rem;
+/* Center Content vertically/horizontally if content is small, otherwise top flow */
+.main-content {
     width: 100%;
+    max-width: 900px;
+    /* Tighter container for centering focus */
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 /* -- Header -- */
 .hero {
-    padding: 5rem 1rem;
+    padding: 4rem 1rem 2rem;
     text-align: center;
-    position: relative;
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     line-height: 1.1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-weight: 800;
     font-family: var(--font-family-display);
-
-    background: linear-gradient(to right, var(--color-accent-frost), var(--color-accent-blue));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-@media (min-width: 768px) {
-    .hero-title {
-        font-size: 5rem;
-    }
+    color: #0284c7;
+    /* Sky 600 */
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--color-text-secondary);
-    max-width: 40rem;
-    margin: 0 auto 2rem;
-    line-height: 1.5;
+    max-width: 30rem;
+    margin: 0 auto;
 }
 
-.highlight-gold {
-    color: var(--color-accent-blue);
+.highlight-fun {
+    color: #e11d48;
+    /* Rose 600 for contrast/fun */
 }
-
-/* Changed to blue per design */
 
 /* -- Leaderboard Component -- */
 .glass-panel {
-    background: var(--color-bg-card);
+    background: var(--color-card-bg);
     backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
     border: var(--glass-border);
-    border-radius: 1rem;
+    border-radius: 1.5rem;
+    /* Rounder corners = more fun */
     box-shadow: var(--glass-shadow);
-    padding: 1.5rem;
+    padding: 2rem;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .lb-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgba(14, 165, 233, 0.1);
+    padding-bottom: 1rem;
 }
 
 .lb-title {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
     font-family: var(--font-family-display);
-    margin: 0;
 }
 
 .filter-group {
-    background: rgba(15, 23, 42, 0.5);
-    padding: 0.25rem;
-    border-radius: 0.5rem;
+    background: #ffffff;
+    padding: 0.3rem;
+    border-radius: 999px;
+    /* Pill shape */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     display: flex;
     gap: 0.25rem;
 }
@@ -143,103 +222,115 @@ body {
     background: transparent;
     border: none;
     color: var(--color-text-secondary);
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
     cursor: pointer;
-    transition: all 0.2s;
-    font-weight: 500;
+    font-weight: 600;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover {
-    color: var(--color-text-primary);
+    color: var(--color-accent-blue);
+    background: #f0f9ff;
 }
 
 .filter-btn.active {
     background-color: var(--color-accent-blue);
     color: #fff;
+    box-shadow: 0 2px 4px rgba(14, 165, 233, 0.3);
 }
 
 /* -- Table -- */
-.table-container {
-    overflow-x: auto;
-}
-
-.lb-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-}
-
 .lb-table th {
     padding: 1rem;
-    border-bottom: 1px solid var(--color-border);
-    color: var(--color-text-secondary);
-    font-size: 0.875rem;
-    text-transform: uppercase;
+    border-bottom: 2px solid rgba(14, 165, 233, 0.1);
+    color: var(--color-text-muted);
+    font-weight: 700;
+    font-size: 0.8rem;
     letter-spacing: 0.05em;
-    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .lb-table td {
-    padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid rgba(14, 165, 233, 0.05);
+    font-size: 1rem;
+}
+
+.lb-table tr:last-child td {
+    border-bottom: none;
 }
 
 .lb-table tr:hover td {
-    background-color: var(--color-bg-card-hover);
+    background-color: var(--color-card-hover);
 }
 
-.lb-table tr.top-3 td {
-    font-weight: 700;
-}
-
-.rank-cell {
-    display: flex;
+/* Fun Rank Badges */
+.rank-badge {
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
-.rank-icon {
-    margin-right: 0.5rem;
+.rank-1 {
+    background: #fee2e2;
+    color: #ef4444;
+    border: 2px solid #fecaca;
+    font-size: 1.2rem;
 }
+
+/* Red/Pink for #1 */
+.rank-2 {
+    background: #fef3c7;
+    color: #d97706;
+    border: 2px solid #fde68a;
+}
+
+/* Gold */
+.rank-3 {
+    background: #f1f5f9;
+    color: #64748b;
+    border: 2px solid #cbd5e1;
+}
+
+/* Silver/Grey */
 
 .city-name {
-    display: block;
-    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 1.1rem;
 }
 
 .city-state {
-    display: block;
-    font-size: 0.875rem;
-    color: var(--color-text-secondary);
-    font-weight: 400;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.font-mono {
-    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
 }
 
 .val-total {
-    font-size: 1.25rem;
+    font-weight: 800;
     color: var(--color-accent-blue);
+    font-size: 1.4rem;
 }
 
 .val-recent {
-    color: var(--color-success);
-}
-
-.val-zero {
-    color: var(--color-text-muted);
+    background: #dcfce7;
+    color: #166534;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    font-size: 0.85rem;
 }
 
 /* -- Footer -- */
 .footer {
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 0;
+    font-weight: 500;
     color: var(--color-text-muted);
-    font-size: 0.875rem;
-    margin-top: auto;
 }

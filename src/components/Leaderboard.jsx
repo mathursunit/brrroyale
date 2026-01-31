@@ -60,11 +60,8 @@ const Leaderboard = () => {
                                     title="Click to view history"
                                 >
                                     <td>
-                                        <span className="rank-cell">
-                                            {city.rank === 1 && <span className="rank-icon">👑</span>}
-                                            {city.rank === 2 && <span className="rank-icon">🥈</span>}
-                                            {city.rank === 3 && <span className="rank-icon">🥉</span>}
-                                            {city.rank > 3 && <span>#{city.rank}</span>}
+                                        <span className={`rank-badge ${city.rank <= 3 ? 'rank-' + city.rank : ''}`}>
+                                            {city.rank}
                                         </span>
                                     </td>
                                     <td>
