@@ -1,0 +1,43 @@
+name: Daily Snow Update
+
+on:
+  schedule:
+    - cron: '0 11 * * *' # 6:00 AM EST (11:00 UTC)
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write # Needed if we wanted to deploy directly but we just push
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Fetch Snow Data
+        run: node scripts/fetch_snow.js
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # Check for changes in the data file
+          if [[ -n $(git status -s public/data/season_current.json) ]]; then
+            git add public/data/season_current.json
+            git commit -m "❄️ Daily Snow Update: $(date +'%Y-%m-%d')"
+            git push
+          else
+            echo "No changes in snowfall data so skipping commit."
+          fi
