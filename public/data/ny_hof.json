@@ -1,0 +1,77 @@
+{
+    "title": "New York Snowfall Hall of Fame",
+    "description": "The all-time heaviest winter seasons ever recorded in New York State.",
+    "records": [
+        {
+            "rank": 1,
+            "city": "Hooker (Montague)",
+            "region": "Tug Hill Plateau",
+            "total_snow": 466.9,
+            "season": "1976-1977",
+            "is_state_record": true
+        },
+        {
+            "rank": 2,
+            "city": "Redfield",
+            "region": "Tug Hill Plateau",
+            "total_snow": 424.5,
+            "season": "1996-1997"
+        },
+        {
+            "rank": 3,
+            "city": "Mayville",
+            "region": "Chautauqua Ridge",
+            "total_snow": 290.0,
+            "season": "1976-1977"
+        },
+        {
+            "rank": 4,
+            "city": "Old Forge",
+            "region": "Adirondacks",
+            "total_snow": 285.0,
+            "season": "1970-1971"
+        },
+        {
+            "rank": 5,
+            "city": "Constantia",
+            "region": "Oneida Lake",
+            "total_snow": 226.5,
+            "season": "1992-1993"
+        },
+        {
+            "rank": 6,
+            "city": "Buffalo",
+            "region": "Western NY",
+            "total_snow": 199.4,
+            "season": "1976-1977"
+        },
+        {
+            "rank": 7,
+            "city": "Syracuse",
+            "region": "Central NY",
+            "total_snow": 192.1,
+            "season": "1992-1993"
+        },
+        {
+            "rank": 8,
+            "city": "Watertown",
+            "region": "North Country",
+            "total_snow": 178.5,
+            "season": "1976-1977"
+        },
+        {
+            "rank": 9,
+            "city": "Rochester",
+            "region": "Finger Lakes",
+            "total_snow": 161.7,
+            "season": "1959-1960"
+        },
+        {
+            "rank": 10,
+            "city": "Binghamton",
+            "region": "Southern Tier",
+            "total_snow": 135.2,
+            "season": "2016-2017"
+        }
+    ]
+}

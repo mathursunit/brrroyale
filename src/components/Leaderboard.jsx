@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import '../styles/index.css';
 import snowyData from '../../public/data/season_current.json';
 import snowyNYData from '../../public/data/snowfall_ny.json';
+import nyHofData from '../../public/data/ny_hof.json';
 import coldData from '../../public/data/coldest_cities.json';
 import CityHistory from './CityHistory';
 
@@ -10,16 +11,21 @@ const Leaderboard = ({ dataset, setDataset }) => {
     const [selectedCityId, setSelectedCityId] = useState(null);
 
     const isSnow = dataset === 'snow';
+    const isHof = isSnow && filter === 'hof';
 
     // Determine which dataset to use based on mode and filter
     let data;
     if (dataset === 'cold') {
         data = coldData;
+    } else if (filter === 'ny') {
+        data = snowyNYData;
+    } else if (filter === 'hof') {
+        data = nyHofData;
     } else {
-        data = filter === 'ny' ? snowyNYData : snowyData;
+        data = snowyData;
     }
 
-    const filteredRankings = data.rankings;
+    const filteredRankings = isHof ? data.records : data.rankings;
 
     return (
         <div className="leaderboard-container glass-panel">
@@ -40,11 +46,15 @@ const Leaderboard = ({ dataset, setDataset }) => {
                         </button>
                     </div>
                     <div className="flex items-center gap-2">
-                        <h2 className="lb-title">{isSnow ? 'Current Snowfall Standings' : '2025-2026 Season Lows'}</h2>
+                        <h2 className="lb-title">
+                            {isHof ? 'NY Snowfall Hall of Fame' : (isSnow ? 'Current Snowfall Standings' : '2025-2026 Season Lows')}
+                        </h2>
                         <div className="info-trigger">
                             <span className="info-icon">ⓘ</span>
                             <div className="info-tooltip">
-                                Source: NOAA NCEI • Live Data Stream • Updated: {new Date(data.last_updated).toLocaleTimeString()}
+                                {isHof
+                                    ? 'All-Time Multi-Decadal Records • Updated: 2026'
+                                    : `Source: NOAA NCEI • Live Data • Updated: ${new Date(data.last_updated).toLocaleTimeString()}`}
                             </div>
                         </div>
                     </div>
@@ -63,6 +73,12 @@ const Leaderboard = ({ dataset, setDataset }) => {
                             className={`filter-btn ${filter === 'ny' ? 'active' : ''}`}
                         >
                             NY
+                        </button>
+                        <button
+                            onClick={() => setFilter('hof')}
+                            className={`filter-btn ${filter === 'hof' ? 'active' : ''}`}
+                        >
+                            🏆 Hall of Fame
                         </button>
                     </div>
                 )}
@@ -92,9 +108,9 @@ const Leaderboard = ({ dataset, setDataset }) => {
                                 </td>
                                 <td>
                                     <div className="flex flex-col">
-                                        <span className="city-name">{city.city}</span>
-                                        <span className="city-state text-[10px] opacity-60 font-medium">
-                                            {city.state} {!isSnow && `• ${city.record_date}`}
+                                        <span className="city-name">{isHof ? city.city : city.city}</span>
+                                        <span className="city-state text-[10px] opacity-60 font-medium lowercase italic">
+                                            {isHof ? city.region : (city.state + (!isSnow ? ` • ${city.record_date}` : ''))}
                                         </span>
                                     </div>
                                 </td>
@@ -108,7 +124,12 @@ const Leaderboard = ({ dataset, setDataset }) => {
                                                 Ever: {city.all_time_low}°F
                                             </span>
                                         )}
-                                        {isSnow && (() => {
+                                        {isHof && (
+                                            <span className="text-[10px] text-amber-600 font-bold uppercase tracking-tight">
+                                                {city.is_state_record ? 'Official State Record' : 'Legendary Season'}
+                                            </span>
+                                        )}
+                                        {isSnow && !isHof && (() => {
                                             const avg = city.avg_annual;
                                             if (avg > 0) {
                                                 const pct = ((city.total_snow / avg) * 100).toFixed(0);
@@ -130,21 +151,25 @@ const Leaderboard = ({ dataset, setDataset }) => {
                                 </td>
                                 <td className="text-right">
                                     <div className="flex flex-col items-end">
-                                        {isSnow ? (
-                                            city.last_24h > 0 ? (
-                                                <span className="font-mono val-recent">+{city.last_24h}"</span>
-                                            ) : (
-                                                <span className="font-mono val-zero">-</span>
-                                            )
+                                        {isHof ? (
+                                            <span className="font-mono text-slate-600 font-bold">{city.season}</span>
                                         ) : (
-                                            <>
-                                                <span className="font-mono text-blue-900 font-bold">{city.lowest_windchill}°F</span>
-                                                {city.all_time_windchill !== undefined && (
-                                                    <span className="text-[10px] text-slate-500 font-semibold uppercase tracking-tight">
-                                                        Ever: {city.all_time_windchill}°F
-                                                    </span>
-                                                )}
-                                            </>
+                                            isSnow ? (
+                                                city.last_24h > 0 ? (
+                                                    <span className="font-mono val-recent">+{city.last_24h}"</span>
+                                                ) : (
+                                                    <span className="font-mono val-zero">-</span>
+                                                )
+                                            ) : (
+                                                <>
+                                                    <span className="font-mono text-blue-900 font-bold">{city.lowest_windchill}°F</span>
+                                                    {city.all_time_windchill !== undefined && (
+                                                        <span className="text-[10px] text-slate-500 font-semibold uppercase tracking-tight">
+                                                            Ever: {city.all_time_windchill}°F
+                                                        </span>
+                                                    )}
+                                                </>
+                                            )
                                         )}
                                     </div>
                                 </td>
