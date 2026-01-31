@@ -171,12 +171,11 @@ body {
 
 .header-logo {
     width: 100%;
-    max-width: 500px;
-    /* Wider for the banner style */
+    max-width: 650px;
     height: auto;
     margin: 0 auto;
     display: block;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
     object-fit: contain;
 }
 
