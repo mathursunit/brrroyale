@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import '../styles/index.css';
 import historyData from '../../public/data/history.json'; // Direct import for now
@@ -111,13 +112,15 @@ const CityHistory = ({ cityId, onClose, inline = false, cityName = '' }) => {
         );
     }
 
-    return (
+    const modalContent = (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
                 <Content />
             </div>
         </div>
     );
+
+    return createPortal(modalContent, document.body);
 };
 
 export default CityHistory;
