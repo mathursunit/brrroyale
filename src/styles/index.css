@@ -235,32 +235,10 @@ body {
     z-index: 1;
 }
 
-/* -- Dashboard Layout -- */
-.dashboard-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+/* -- Leaderboard Container -- */
+.leaderboard-container {
     width: 100%;
-}
-
-@media (min-width: 1024px) {
-    .dashboard-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        /* Table wider than detail */
-        gap: 2rem;
-        align-items: start;
-    }
-
-    .layout-table {
-        grid-column: 1;
-    }
-
-    .layout-detail {
-        grid-column: 2;
-        position: sticky;
-        top: 2rem;
-    }
+    margin: 0 auto;
 }
 
 
@@ -661,23 +639,12 @@ body {
     text-align: right;
 }
 
-/* -- Visibility Control (Responsive) -- */
-.mobile-only {
-    display: block;
-}
-
-.desktop-only {
-    display: none;
-}
-
-@media (min-width: 1024px) {
-    .mobile-only {
-        display: none !important;
-    }
-
-    .desktop-only {
-        display: block !important;
-    }
+/* -- Final Polish -- */
+.loading {
+    padding: 3rem;
+    text-align: center;
+    font-weight: 700;
+    color: var(--color-accent-blue);
 }
 
 /* -- Footer -- */
