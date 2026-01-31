@@ -2,10 +2,8 @@ import { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import '../styles/index.css';
 import historyData from '../../public/data/history.json'; // Direct import for now
-import useTilt from '../hooks/useTilt';
 
 const CityHistory = ({ cityId, onClose, inline = false, cityName = '' }) => {
-    useTilt('.layout-detail .glass-panel');
     const [chartData, setChartData] = useState([]);
     const [cityMeta, setCityMeta] = useState(null);
 

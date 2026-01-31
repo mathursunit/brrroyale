@@ -3,10 +3,8 @@ import '../styles/index.css';
 import snowyData from '../../public/data/season_current.json';
 import coldData from '../../public/data/coldest_cities.json';
 import CityHistory from './CityHistory';
-import useTilt from '../hooks/useTilt';
 
 const Leaderboard = () => {
-    useTilt('.leaderboard-container.glass-panel');
     const [dataset, setDataset] = useState('snow'); // 'snow' or 'cold'
     const [filter, setFilter] = useState('all'); // 'all', 'ny'
     const [selectedCityId, setSelectedCityId] = useState(null);
