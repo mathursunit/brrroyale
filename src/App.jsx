@@ -51,7 +51,7 @@ function App() {
       <main className="main-content">
         <header className="hero">
           <img src="assets/logo-banner-trans.png" alt="Battle Brrr-oyale Logo" className="header-logo" />
-          <p className="hero-subtitle mt-4">
+          <p className="hero-subtitle">
             The ultimate snowfall showdown. Tracking the top US cities to see who freezes first.
           </p>
         </header>
