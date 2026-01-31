@@ -37,7 +37,7 @@ const Leaderboard = ({ dataset, setDataset }) => {
                             onClick={() => { setDataset('snow'); setFilter('all'); }}
                             className={`px-3 py-1 rounded-lg text-sm font-bold transition-all ${isSnow ? 'bg-sky-600 text-white shadow-lg' : 'bg-white/50 text-slate-600 hover:bg-white/80'}`}
                         >
-                            SNOWFALL
+                            SNOWIEST
                         </button>
                         <button
                             onClick={() => { setDataset('cold'); setFilter('all'); }}
@@ -89,7 +89,7 @@ const Leaderboard = ({ dataset, setDataset }) => {
                             onClick={() => setFilter('hof')}
                             className={`filter-btn ${filter === 'hof' ? 'active' : ''}`}
                         >
-                            🏆 Hall of Fame
+                            🏆 NY Hall of Fame
                         </button>
                     </div>
                 )}
