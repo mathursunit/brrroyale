@@ -128,14 +128,15 @@ body {
 }
 
 /* -- Layout -- */
+/* -- Layout -- */
 .app-container {
     min-height: 100vh;
     width: 100vw;
-    display: grid;
-    place-items: center;
-    align-content: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 2rem;
-    overflow-x: hidden;
+    /* overflow-x: hidden; REMOVED to fix sticky */
 }
 
 /* Center Content vertically/horizontally if content is small, otherwise top flow */
