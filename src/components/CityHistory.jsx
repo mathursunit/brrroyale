@@ -29,6 +29,14 @@ const CityHistory = ({ cityId, onClose }) => {
         }
     }, [cityId]);
 
+    // Calculate stats - added outside useEffect
+    const values = chartData.map(d => d.snow);
+    const maxSnow = values.length ? Math.max(...values) : 0;
+    const maxYear = chartData.find(d => d.snow === maxSnow)?.year;
+    const minSnow = values.length ? Math.min(...values) : 0;
+    const minYear = chartData.find(d => d.snow === minSnow)?.year;
+    const avgSnow = values.length ? (values.reduce((a, b) => a + b, 0) / values.length).toFixed(1) : 0;
+
     if (!chartData.length) return null;
 
     return (
@@ -36,14 +44,33 @@ const CityHistory = ({ cityId, onClose }) => {
             <div className="modal-content" onClick={e => e.stopPropagation()}>
                 <div className="modal-header">
                     <h2 className="modal-title">
-                        Snowfall History
+                        Snowfall History <span className="text-slate-400 text-lg font-normal ml-2">(2005-2025)</span>
                     </h2>
                     <button onClick={onClose} className="modal-close">
                         ✕ Close
                     </button>
                 </div>
 
-                <div style={{ height: '400px' }} className="w-full">
+                {/* Stats Grid */}
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
+                        <div className="text-xs text-slate-500 uppercase font-bold tracking-wider">Record High</div>
+                        <div className="text-2xl font-bold text-sky-600 my-1">{maxSnow}"</div>
+                        <div className="text-sm text-slate-400">{maxYear} Season</div>
+                    </div>
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
+                        <div className="text-xs text-slate-500 uppercase font-bold tracking-wider">Record Low</div>
+                        <div className="text-2xl font-bold text-rose-500 my-1">{minSnow}"</div>
+                        <div className="text-sm text-slate-400">{minYear} Season</div>
+                    </div>
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
+                        <div className="text-xs text-slate-500 uppercase font-bold tracking-wider">20-Year Avg</div>
+                        <div className="text-2xl font-bold text-slate-700 my-1">{avgSnow}"</div>
+                        <div className="text-sm text-slate-400">Annual</div>
+                    </div>
+                </div>
+
+                <div style={{ height: '350px' }} className="w-full">
                     <ResponsiveContainer width="100%" height="100%">
                         <LineChart data={chartData}>
                             <CartesianGrid strokeDasharray="3 3" stroke="#cbd5e1" />
@@ -67,8 +94,9 @@ const CityHistory = ({ cityId, onClose }) => {
                     </ResponsiveContainer>
                 </div>
 
-                <div className="mt-6 text-sm text-slate-500 text-center">
-                    20-Year Historical Data from Open-Meteo Archive
+                <div className="mt-6 text-sm text-slate-400 text-center flex flex-col gap-1">
+                    <p>Official Ground Station Data via <a href="https://www.ncdc.noaa.gov/cdo-web/" target="_blank" className="underline hover:text-sky-600">NOAA NCEI (GHCND)</a></p>
+                    <p className="text-xs opacity-70">Station ID: {cityId ? historyData.cities[cityId]?.station_id || 'Primary Ground Station' : ''}</p>
                 </div>
             </div>
         </div>
