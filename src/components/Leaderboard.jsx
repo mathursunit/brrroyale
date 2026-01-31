@@ -105,11 +105,17 @@ const Leaderboard = () => {
                                         {(() => {
                                             const stats = getHistoricalComparison(city.id, city.total_snow);
                                             if (stats) {
-                                                const isAbove = city.total_snow > stats.avgSeason;
-                                                // Only show if meaningful (e.g. > 10% of season finished)
+                                                const diffVal = parseFloat(stats.diff);
+                                                const isAhead = diffVal >= 0;
+                                                const colorClass = isAhead ? 'text-emerald-600' : 'text-rose-500';
+                                                const sign = isAhead ? '+' : '';
+
                                                 return (
-                                                    <div className="text-xs text-slate-500 mt-1 font-medium">
-                                                        Target: {stats.avgSeason}"
+                                                    <div className="text-xs text-slate-500 mt-1 font-medium flex justify-end gap-2">
+                                                        <span>Avg: {stats.avgSeason}"</span>
+                                                        <span className={colorClass}>
+                                                            ({sign}{stats.diff}")
+                                                        </span>
                                                     </div>
                                                 )
                                             }

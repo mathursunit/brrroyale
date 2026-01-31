@@ -130,21 +130,23 @@ body {
 /* -- Layout -- */
 .app-container {
     min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* This was missing! */
-    align-items: flex-start;
-    /* Allow scrolling */
+    width: 100vw;
+    /* Force full viewport width */
+    display: grid;
+    /* Grid is often more reliable for centering a single main column */
+    place-items: center;
+    /* Shortcuts align-items & justify-items to center */
+    align-content: start;
+    /* But keep content at top when scrolling */
     padding-bottom: 2rem;
+    overflow-x: hidden;
 }
 
 /* Center Content vertically/horizontally if content is small, otherwise top flow */
 .main-content {
     width: 100%;
     max-width: 900px;
-    /* margin: 0 auto; removed redundant if parent centers */
+    /* margin: 0 auto; handled by grid */
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
