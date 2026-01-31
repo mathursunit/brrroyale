@@ -119,10 +119,20 @@ body {
 @keyframes drift {
     from {
         transform: translateY(-10vh) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.8;
     }
 
     to {
-        transform: translateY(110vh) translateX(100px) rotate(360deg);
+        transform: translateY(110vh) translateX(150px) rotate(360deg);
+        opacity: 0;
     }
 }
 
@@ -160,13 +170,14 @@ body {
 }
 
 .header-logo {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    /* Wider for the banner style */
+    height: auto;
+    margin: 0 auto;
     display: block;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-    border-radius: 20%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Falling Snow Animation */
@@ -267,34 +278,11 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.hero-title {
-    font-size: 3rem;
-    line-height: 1.1;
-    margin-bottom: 0.25rem;
-    font-weight: 800;
-    font-family: var(--font-family-display);
-    color: #FFFFFF;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
 .hero-subtitle {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.8);
     max-width: 30rem;
     margin: 0 auto;
-}
-
-.highlight-gold {
-    background: linear-gradient(120deg, #fbbf24 0%, #FFFFFF 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
-.highlight-fun {
-    color: #fbbf24;
-    text-shadow: 0 0 10px rgba(251, 191, 36, 0.4);
 }
 
 /* -- Leaderboard Component -- */

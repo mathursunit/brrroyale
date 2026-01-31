@@ -7,12 +7,12 @@ const DynamicBackground = () => {
   const [particles, setParticles] = useState([]);
 
   useEffect(() => {
-    const p = Array.from({ length: 30 }).map((_, i) => ({
+    const p = Array.from({ length: 80 }).map((_, i) => ({
       id: i,
-      size: Math.random() * 4 + 2,
+      size: Math.random() * 4 + 1,
       left: Math.random() * 100,
-      duration: Math.random() * 10 + 10,
-      delay: Math.random() * 5
+      duration: Math.random() * 15 + 15,
+      delay: Math.random() * 10
     }));
     setParticles(p);
   }, []);
@@ -50,11 +50,8 @@ function App() {
       {/* Main Content (Centered) */}
       <main className="main-content">
         <header className="hero">
-          <img src="/assets/logo.png" alt="Battle Brrr-oyale Logo" className="header-logo" />
-          <h2 className="hero-title">
-            Battle <br /> <span className="highlight-fun">Brrr</span>-<span className="highlight-gold">oyale</span>
-          </h2>
-          <p className="hero-subtitle">
+          <img src="assets/logo-banner.png" alt="Battle Brrr-oyale Logo" className="header-logo" />
+          <p className="hero-subtitle mt-4">
             The ultimate snowfall showdown. Tracking the top US cities to see who freezes first.
           </p>
         </header>
