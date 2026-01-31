@@ -268,7 +268,76 @@ body {
     border-bottom: none;
 }
 
-/* -- Modal / History -- */
+
+/* -- Stats Grid (Modal) -- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: #f8fafc;
+    /* Slate 50 */
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    font-family: var(--font-family-display);
+}
+
+.stat-sub {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* Value Colors */
+.text-high {
+    color: #0ea5e9;
+}
+
+/* Sky */
+.text-low {
+    color: #f43f5e;
+}
+
+/* Rose */
+.text-avg {
+    color: #334155;
+}
+
+/* Slate */
+
+/* Responsive Modal Grid */
+@media (max-width: 640px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
 .modal-overlay {
     position: fixed;
     top: 0;

@@ -52,21 +52,21 @@ const CityHistory = ({ cityId, onClose }) => {
                 </div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
-                        <div className="text-xs text-slate-500 uppercase font-bold tracking-wider">Record High</div>
-                        <div className="text-2xl font-bold text-sky-600 my-1">{maxSnow}"</div>
-                        <div className="text-sm text-slate-400">{maxYear} Season</div>
+                <div className="stats-grid">
+                    <div className="stat-card">
+                        <div className="stat-label">Record High</div>
+                        <div className="stat-value text-high">{maxSnow}"</div>
+                        <div className="stat-sub">{maxYear} Season</div>
                     </div>
-                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
-                        <div className="text-xs text-slate-500 uppercase font-bold tracking-wider">Record Low</div>
-                        <div className="text-2xl font-bold text-rose-500 my-1">{minSnow}"</div>
-                        <div className="text-sm text-slate-400">{minYear} Season</div>
+                    <div className="stat-card">
+                        <div className="stat-label">Record Low</div>
+                        <div className="stat-value text-low">{minSnow}"</div>
+                        <div className="stat-sub">{minYear} Season</div>
                     </div>
-                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center">
-                        <div className="text-xs text-slate-500 uppercase font-bold tracking-wider">20-Year Avg</div>
-                        <div className="text-2xl font-bold text-slate-700 my-1">{avgSnow}"</div>
-                        <div className="text-sm text-slate-400">Annual</div>
+                    <div className="stat-card">
+                        <div className="stat-label">20-Year Avg</div>
+                        <div className="stat-value text-avg">{avgSnow}"</div>
+                        <div className="stat-sub">Annual</div>
                     </div>
                 </div>
 
