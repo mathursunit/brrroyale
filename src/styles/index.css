@@ -1,42 +1,42 @@
 :root {
-    /* -- Professional Theme Palette (NOAA Inspired) -- */
-    --color-bg-primary: #ffffff;
-    /* White Background */
-    --color-bg-secondary: #f1f5f9;
-    /* Slate 100 */
+    /* -- Light Fun Theme Palette -- */
+    --color-bg-primary: #e0f2fe;
+    /* Sky 100 */
+    --color-bg-secondary: #f0f9ff;
+    /* Sky 50 */
 
     --color-text-primary: #1e293b;
     /* Slate 800 */
     --color-text-secondary: #475569;
     /* Slate 600 */
-    --color-text-muted: #64748b;
-    /* Slate 500 */
+    --color-text-muted: #94a3b8;
+    /* Slate 400 */
 
-    --color-accent-blue: #1e407c;
-    /* Federal Blue (Darker, Official) */
-    --color-accent-light-blue: #0077c8;
-    /* NOAA Blue */
-    --color-accent-frost: #f8fafc;
-    /* Slate 50 */
-    --color-accent-gold: #d97706;
-    /* Amber 600 (Darker Gold) */
-    --color-success: #15803d;
-    /* Green 700 */
+    --color-accent-blue: #0ea5e9;
+    /* Sky 500 */
+    --color-accent-frost: #ffffff;
+    /* White */
+    --color-accent-gold: #fbbf24;
+    /* Amber 400 */
+    --color-success: #10b981;
+    /* Emerald 500 */
 
-    --color-card-bg: #ffffff;
-    --color-card-border: #e2e8f0;
-    --color-card-hover: #f8fafc;
+    --color-card-bg: rgba(255, 255, 255, 0.65);
+    --color-card-border: rgba(255, 255, 255, 0.8);
+    --color-card-hover: rgba(255, 255, 255, 0.85);
 
-    /* -- Professional Clean Look (No Glass) -- */
-    --glass-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    --glass-blur: none;
+    /* -- Glassmorphism -- */
+    --glass-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 10px 15px -3px rgba(14, 165, 233, 0.1);
+    /* Blue-tinted shadow */
+    --glass-blur: blur(16px);
     --glass-border: 1px solid var(--color-card-border);
 
     /* -- Typography -- */
-    --font-family-sans: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    --font-family-display: 'Georgia', 'Times New Roman', serif;
-    /* Serif for titles like NOAA */
-    --font-mono: 'Menlo', 'Monaco', 'Courier New', monospace;
+    --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-family-display: 'Arial Rounded MT Bold', 'Fredoka One', cursive, sans-serif;
+    --font-mono: 'Consolas', 'Monaco', monospace;
 }
 
 body {
@@ -49,7 +49,7 @@ body {
     overflow-x: hidden;
 }
 
-/* -- Professional Background -- */
+/* -- Dynamic Wallpaper (CSS Clouds/Snow) -- */
 .wallpaper {
     position: fixed;
     top: 0;
@@ -57,17 +57,83 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: #f1f5f9;
-    /* Slate 100 */
+    background: linear-gradient(180deg, #bae6fd 0%, #f0f9ff 100%);
+    overflow: hidden;
+}
+
+/* Floating "Clouds" or soft blobs */
+.wallpaper::before,
+.wallpaper::after {
+    content: '';
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    filter: blur(80px);
+    animation: float 20s infinite ease-in-out alternate;
+}
+
+.wallpaper::before {
+    top: -10%;
+    left: -10%;
+    animation-duration: 25s;
+}
+
+.wallpaper::after {
+    bottom: -10%;
+    right: -10%;
+    background: rgba(186, 230, 253, 0.4);
+    animation-duration: 30s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
+}
+
+/* Falling Snow Animation */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+    user-select: none;
+    z-index: 0;
+    animation-name: snowfall;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0.8;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-10vh) translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(20px);
+        opacity: 0;
+    }
 }
 
 /* -- Layout -- */
 .app-container {
     min-height: 100vh;
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    place-items: center;
+    align-content: start;
     padding-bottom: 2rem;
     overflow-x: hidden;
 }
@@ -76,7 +142,6 @@ body {
 .main-content {
     width: 100%;
     max-width: 900px;
-    /* margin: 0 auto; handled by grid */
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
@@ -111,6 +176,13 @@ body {
     margin: 0 auto;
 }
 
+.highlight-gold {
+    background: linear-gradient(120deg, #fbbf24 0%, #d97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
 .highlight-fun {
     color: #e11d48;
     /* Rose 600 for contrast/fun */
@@ -123,7 +195,6 @@ body {
     -webkit-backdrop-filter: var(--glass-blur);
     border: var(--glass-border);
     border-radius: 1.5rem;
-    /* Rounder corners = more fun */
     box-shadow: var(--glass-shadow);
     padding: 2rem;
     width: 100%;
@@ -149,7 +220,6 @@ body {
     background: #ffffff;
     padding: 0.3rem;
     border-radius: 999px;
-    /* Pill shape */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     display: flex;
     gap: 0.25rem;
@@ -178,6 +248,11 @@ body {
 }
 
 /* -- Table -- */
+.lb-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
 .lb-table th {
     padding: 1rem;
     border-bottom: 2px solid rgba(14, 165, 233, 0.1);
@@ -186,6 +261,11 @@ body {
     font-size: 0.8rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    text-align: left;
+}
+
+.lb-table th.text-right {
+    text-align: right;
 }
 
 .lb-table td {
@@ -198,6 +278,70 @@ body {
     border-bottom: none;
 }
 
+.lb-table tr:hover td {
+    background-color: var(--color-card-hover);
+}
+
+/* Fun Rank Badges */
+.rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.9rem;
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.rank-1 {
+    background: #fee2e2;
+    color: #ef4444;
+    border: 2px solid #fecaca;
+    font-size: 1.2rem;
+}
+
+.rank-2 {
+    background: #fef3c7;
+    color: #d97706;
+    border: 2px solid #fde68a;
+}
+
+.rank-3 {
+    background: #f1f5f9;
+    color: #64748b;
+    border: 2px solid #cbd5e1;
+}
+
+.city-name {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    font-size: 1.1rem;
+    display: block;
+}
+
+.city-state {
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.val-total {
+    font-weight: 800;
+    color: var(--color-accent-blue);
+    font-size: 1.4rem;
+}
+
+.val-recent {
+    background: #dcfce7;
+    color: #166534;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
 
 /* -- Stats Grid (Modal) -- */
 .stats-grid {
@@ -209,7 +353,6 @@ body {
 
 .stat-card {
     background: #f8fafc;
-    /* Slate 50 */
     border: 1px solid #e2e8f0;
     border-radius: 1rem;
     padding: 1.5rem;
@@ -248,19 +391,14 @@ body {
     color: #0ea5e9;
 }
 
-/* Sky */
 .text-low {
     color: #f43f5e;
 }
 
-/* Rose */
 .text-avg {
     color: #334155;
 }
 
-/* Slate */
-
-/* Responsive Modal Grid */
 @media (max-width: 640px) {
     .stats-grid {
         grid-template-columns: 1fr;
@@ -268,6 +406,7 @@ body {
     }
 }
 
+/* -- Modal / History -- */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -275,10 +414,8 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: rgba(15, 23, 42, 0.6);
-    /* Slate 900 / 60% */
     backdrop-filter: blur(4px);
     z-index: 1000;
-    /* High z-index */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,74 +480,6 @@ body {
     color: #0f172a;
 }
 
-.lb-table tr:hover td {
-    background-color: var(--color-card-hover);
-}
-
-/* Fun Rank Badges */
-.rank-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-.rank-1 {
-    background: #fee2e2;
-    color: #ef4444;
-    border: 2px solid #fecaca;
-    font-size: 1.2rem;
-}
-
-/* Red/Pink for #1 */
-.rank-2 {
-    background: #fef3c7;
-    color: #d97706;
-    border: 2px solid #fde68a;
-}
-
-/* Gold */
-.rank-3 {
-    background: #f1f5f9;
-    color: #64748b;
-    border: 2px solid #cbd5e1;
-}
-
-/* Silver/Grey */
-
-.city-name {
-    font-weight: 600;
-    color: var(--color-text-primary);
-    font-size: 1.1rem;
-}
-
-.city-state {
-    font-weight: 500;
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-}
-
-.val-total {
-    font-weight: 800;
-    color: var(--color-accent-blue);
-    font-size: 1.4rem;
-}
-
-.val-recent {
-    background: #dcfce7;
-    color: #166534;
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.25rem;
-    font-weight: 700;
-    font-size: 0.85rem;
-}
-
-/* -- Footer -- */
-
 /* -- Utilities -- */
 .text-emerald-600 {
     color: #059669;
@@ -471,4 +540,12 @@ body {
 
 .text-right {
     text-align: right;
+}
+
+/* -- Footer -- */
+.footer {
+    text-align: center;
+    padding: 3rem 0;
+    font-weight: 500;
+    color: var(--color-text-muted);
 }
