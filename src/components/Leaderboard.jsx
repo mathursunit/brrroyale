@@ -97,16 +97,16 @@ const Leaderboard = () => {
                                             {(() => {
                                                 const avg = city.avg_annual;
                                                 if (avg > 0) {
-                                                    const diff = (city.total_snow - avg).toFixed(1);
-                                                    const isAhead = diff >= 0;
-                                                    const colorClass = isAhead ? 'text-emerald-600' : 'text-rose-500';
-                                                    const sign = isAhead ? '+' : '';
+                                                    const pct = ((city.total_snow / avg) * 100).toFixed(0);
+                                                    let progressColor = 'text-slate-400';
+                                                    if (pct >= 100) progressColor = 'text-emerald-600 font-bold';
+                                                    else if (pct >= 80) progressColor = 'text-sky-600';
 
                                                     return (
-                                                        <div className="text-xs text-slate-500 mt-1 font-medium flex justify-end gap-2">
-                                                            <span>Avg: {avg}"</span>
-                                                            <span className={colorClass}>
-                                                                ({sign}{diff}")
+                                                        <div className="text-xs mt-1 font-medium flex justify-end gap-1">
+                                                            <span className="text-slate-500">Avg: {avg}"</span>
+                                                            <span className={progressColor}>
+                                                                ({pct}%)
                                                             </span>
                                                         </div>
                                                     )
