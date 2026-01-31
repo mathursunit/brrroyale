@@ -11,7 +11,7 @@ function App() {
         </h1>
         <p className="hero-subtitle">
           The ultimate snowfall showdown. <br />
-          Tracking the top US cities in a fight for the Golden Snowball.
+          Tracking the top US cities to see who freezes first.
         </p>
       </header>
 
