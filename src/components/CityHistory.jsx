@@ -3,7 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import '../styles/index.css';
 import historyData from '../../public/data/history.json'; // Direct import for now
 
-const CityHistory = ({ cityId, onClose, inline = false }) => {
+const CityHistory = ({ cityId, onClose, inline = false, cityName = '' }) => {
     const [chartData, setChartData] = useState([]);
     const [cityMeta, setCityMeta] = useState(null);
 
@@ -43,7 +43,7 @@ const CityHistory = ({ cityId, onClose, inline = false }) => {
         <>
             <div className={`modal-header ${inline ? 'border-0 pb-0 mb-4' : ''}`}>
                 <h2 className="modal-title text-xl">
-                    {inline ? 'City Analysis' : 'Snowfall History'}
+                    {cityName ? `${cityName} Analysis` : (inline ? 'City Analysis' : 'Snowfall History')}
                     <span className="text-slate-400 text-sm font-normal ml-2 block sm:inline">(2005-2025)</span>
                 </h2>
                 {!inline && (

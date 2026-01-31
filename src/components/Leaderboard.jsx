@@ -124,6 +124,7 @@ const Leaderboard = () => {
                 {desktopDisplayId && (
                     <CityHistory
                         cityId={desktopDisplayId}
+                        cityName={data.rankings.find(c => c.id === desktopDisplayId)?.city}
                         inline={true}
                         onClose={() => { }}
                     />
@@ -135,6 +136,7 @@ const Leaderboard = () => {
                 {selectedCityId && (
                     <CityHistory
                         cityId={selectedCityId}
+                        cityName={data.rankings.find(c => c.id === selectedCityId)?.city}
                         inline={false}
                         onClose={() => setSelectedCityId(null)}
                     />
