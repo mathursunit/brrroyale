@@ -5,6 +5,7 @@ import snowyNYData from '../../public/data/snowfall_ny.json';
 import nyHofData from '../../public/data/ny_hof.json';
 import coldData from '../../public/data/coldest_cities.json';
 import CityHistory from './CityHistory';
+import CityInfoModal from './CityInfoModal';
 
 const Leaderboard = ({ dataset, setDataset }) => {
     const [filter, setFilter] = useState('all'); // 'all', 'ny'
@@ -107,9 +108,9 @@ const Leaderboard = ({ dataset, setDataset }) => {
                     <tbody>
                         {filteredRankings.map((city, index) => (
                             <tr
-                                key={city.id}
-                                className={`${isSnow && index < 3 && filter === 'all' ? 'top-3' : ''} cursor-pointer hover:bg-white/40 transition-colors ${selectedCityId === city.id ? 'selected-row' : ''}`}
-                                onClick={() => setSelectedCityId(city.id)}
+                                key={isHof ? city.rank : city.id}
+                                className={`${isSnow && index < 3 && filter === 'all' ? 'top-3' : ''} cursor-pointer hover:bg-white/40 transition-colors ${selectedCityId === (isHof ? city : city.id) ? 'selected-row' : ''}`}
+                                onClick={() => setSelectedCityId(isHof ? city : city.id)}
                             >
                                 <td>
                                     <span className={`rank-badge ${city.rank <= 3 ? 'rank-' + city.rank : ''}`}>
@@ -190,12 +191,19 @@ const Leaderboard = ({ dataset, setDataset }) => {
             </div>
 
             {selectedCityId && (
-                <CityHistory
-                    cityId={selectedCityId}
-                    cityName={data.rankings.find(c => c.id === selectedCityId)?.city}
-                    inline={false}
-                    onClose={() => setSelectedCityId(null)}
-                />
+                isHof ? (
+                    <CityInfoModal
+                        city={selectedCityId}
+                        onClose={() => setSelectedCityId(null)}
+                    />
+                ) : (
+                    <CityHistory
+                        cityId={selectedCityId}
+                        cityName={data.rankings.find(c => c.id === selectedCityId)?.city}
+                        inline={false}
+                        onClose={() => setSelectedCityId(null)}
+                    />
+                )
             )}
         </div>
     );

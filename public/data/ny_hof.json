@@ -8,70 +8,220 @@
             "region": "Tug Hill Plateau",
             "total_snow": 466.9,
             "season": "1976-1977",
-            "is_state_record": true
+            "is_state_record": true,
+            "fun_facts": [
+                "Holds the New York State record for seasonal snowfall.",
+                "Located on the Tug Hill Plateau, famous for extreme lake-effect snow.",
+                "Once recorded 77 inches of snow in a single 24-hour period (Jan '97)."
+            ],
+            "links": [
+                {
+                    "label": "Tug Hill Region Guide",
+                    "url": "https://visittughill.com"
+                },
+                {
+                    "label": "Lewis County Winter Rec",
+                    "url": "https://discoverlewiscounty.com"
+                }
+            ]
         },
         {
             "rank": 2,
             "city": "Redfield",
             "region": "Tug Hill Plateau",
             "total_snow": 424.5,
-            "season": "1996-1997"
+            "season": "1996-1997",
+            "fun_facts": [
+                "Received 141 inches of snow in just 10 days in Feb 2007.",
+                "Known as the snowiest town in the Great Lakes region in 2018 (384 inches).",
+                "Largest township in Oswego County by acreage."
+            ],
+            "links": [
+                {
+                    "label": "Oswego County Tourism",
+                    "url": "https://visitoswegocounty.com"
+                },
+                {
+                    "label": "Salmon River Falls",
+                    "url": "https://www.dec.ny.gov/lands/63566.html"
+                }
+            ]
         },
         {
             "rank": 3,
             "city": "Mayville",
             "region": "Chautauqua Ridge",
             "total_snow": 290.0,
-            "season": "1976-1977"
+            "season": "1976-1977",
+            "fun_facts": [
+                "Located at the northern end of Chautauqua Lake.",
+                "Consistently rivals Buffalo for total annual snowfall.",
+                "Home to the famous Ice Castle Festival (when ice allows!)."
+            ],
+            "links": [
+                {
+                    "label": "Tour Chautauqua",
+                    "url": "https://www.tourchautauqua.com"
+                },
+                {
+                    "label": "Chautauqua Institution",
+                    "url": "https://chq.org"
+                }
+            ]
         },
         {
             "rank": 4,
             "city": "Old Forge",
             "region": "Adirondacks",
             "total_snow": 285.0,
-            "season": "1970-1971"
+            "season": "1970-1971",
+            "fun_facts": [
+                "Known as the 'Snowmobile Capital of the East'.",
+                "Holds the unofficial NY state record low temp of -52°F (1979).",
+                "Home to McCauley Mountain and its 120-inch average base."
+            ],
+            "links": [
+                {
+                    "label": "Experience Old Forge",
+                    "url": "https://experienceoldforge.com"
+                },
+                {
+                    "label": "McCauley Mountain Ski",
+                    "url": "https://mccauleyny.com"
+                }
+            ]
         },
         {
             "rank": 5,
             "city": "Constantia",
             "region": "Oneida Lake",
             "total_snow": 226.5,
-            "season": "1992-1993"
+            "season": "1992-1993",
+            "fun_facts": [
+                "Situated on the north shore of Oneida Lake.",
+                "Its snowy season lasts over 5 months on average.",
+                "Originally known as 'Rotterdam' when settled in 1793."
+            ],
+            "links": [
+                {
+                    "label": "Oneida Lake Association",
+                    "url": "http://www.oneidalakeassociation.org"
+                },
+                {
+                    "label": "Oswego County Guide",
+                    "url": "https://visitoswegocounty.com"
+                }
+            ]
         },
         {
             "rank": 6,
             "city": "Buffalo",
             "region": "Western NY",
             "total_snow": 199.4,
-            "season": "1976-1977"
+            "season": "1976-1977",
+            "fun_facts": [
+                "Famous for the 'Blizzard of 77' which had 30-foot drifts.",
+                "Birthplace of the Buffalo Wing (Anchor Bar).",
+                "Often competes for the 'Golden Snowball Award'."
+            ],
+            "links": [
+                {
+                    "label": "Visit Buffalo Niagara",
+                    "url": "https://www.visitbuffaloniagara.com"
+                },
+                {
+                    "label": "Buffalo AKG Art Museum",
+                    "url": "https://buffaloakg.org"
+                }
+            ]
         },
         {
             "rank": 7,
             "city": "Syracuse",
             "region": "Central NY",
             "total_snow": 192.1,
-            "season": "1992-1993"
+            "season": "1992-1993",
+            "fun_facts": [
+                "Officially the snowiest major city in the United States.",
+                "Home to Syracuse University and the Orange.",
+                "Historically a major hub for salt production ('Salt City')."
+            ],
+            "links": [
+                {
+                    "label": "Visit Syracuse",
+                    "url": "https://www.visitsyracuse.com"
+                },
+                {
+                    "label": "Destiny USA",
+                    "url": "https://www.destinyusa.com"
+                }
+            ]
         },
         {
             "rank": 8,
             "city": "Watertown",
             "region": "North Country",
             "total_snow": 178.5,
-            "season": "1976-1977"
+            "season": "1976-1977",
+            "fun_facts": [
+                "Birthplace of the safety pin and the Five-and-Dime store.",
+                "Gateway to the Thousand Islands region.",
+                "Known for extremely cold winters near Fort Drum."
+            ],
+            "links": [
+                {
+                    "label": "Visit 1000 Islands",
+                    "url": "https://visit1000islands.com"
+                },
+                {
+                    "label": "Thompson Park Zoo",
+                    "url": "https://nyszoo.org"
+                }
+            ]
         },
         {
             "rank": 9,
             "city": "Rochester",
             "region": "Finger Lakes",
             "total_snow": 161.7,
-            "season": "1959-1960"
+            "season": "1959-1960",
+            "fun_facts": [
+                "Known as both the 'Flour City' and 'Flower City'.",
+                "Home to the Strong National Museum of Play.",
+                "Famous for the 'Garbage Plate' culinary dish."
+            ],
+            "links": [
+                {
+                    "label": "Visit Rochester",
+                    "url": "https://www.visitrochester.com"
+                },
+                {
+                    "label": "The Strong Museum",
+                    "url": "https://www.museumofplay.org"
+                }
+            ]
         },
         {
             "rank": 10,
             "city": "Binghamton",
             "region": "Southern Tier",
             "total_snow": 135.2,
-            "season": "2016-2017"
+            "season": "2016-2017",
+            "fun_facts": [
+                "Carousel Capital of the World (home to 6 antique carousels).",
+                "Childhood home of Twilight Zone creator Rod Serling.",
+                "Birthplace of the 'Spiedie' sandwich."
+            ],
+            "links": [
+                {
+                    "label": "Visit Binghamton",
+                    "url": "https://visitbinghamton.org"
+                },
+                {
+                    "label": "Ross Park Zoo",
+                    "url": "https://rossparkzoo.org"
+                }
+            ]
         }
     ]
 }
