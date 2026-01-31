@@ -283,6 +283,60 @@ body {
     padding-bottom: 1rem;
 }
 
+/* -- Info Icon Tooltip -- */
+.info-trigger {
+    position: relative;
+    cursor: help;
+    display: inline-flex;
+    align-items: center;
+}
+
+.info-icon {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.info-trigger:hover .info-icon {
+    opacity: 1;
+    color: var(--color-accent-blue);
+}
+
+.info-tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e293b;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.info-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+}
+
+.info-trigger:hover .info-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
 .lb-title {
     font-size: 1.5rem;
     font-weight: 800;

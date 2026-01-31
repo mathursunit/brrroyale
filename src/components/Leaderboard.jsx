@@ -35,9 +35,14 @@ const Leaderboard = () => {
                             COLDEST
                         </button>
                     </div>
-                    <h2 className="lb-title">{isSnow ? 'Current Snowfall Standings' : '2025-2026 Season Lows'}</h2>
-                    <div className="text-xs text-slate-500 font-medium">
-                        Source: NOAA NCEI • Live Data Stream
+                    <div className="flex items-center gap-2">
+                        <h2 className="lb-title">{isSnow ? 'Current Snowfall Standings' : '2025-2026 Season Lows'}</h2>
+                        <div className="info-trigger">
+                            <span className="info-icon">ⓘ</span>
+                            <div className="info-tooltip">
+                                Source: NOAA NCEI • Live Data Stream • Updated: {new Date(data.last_updated).toLocaleTimeString()}
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -84,7 +89,7 @@ const Leaderboard = () => {
                                 <td>
                                     <div className="flex flex-col">
                                         <span className="city-name">{city.city}</span>
-                                        <span className="city-state text-xs opacity-60">
+                                        <span className="city-state text-[10px] opacity-60 font-medium">
                                             {city.state} {!isSnow && `• ${city.record_date}`}
                                         </span>
                                     </div>
@@ -120,15 +125,24 @@ const Leaderboard = () => {
                                     </div>
                                 </td>
                                 <td className="text-right">
-                                    {isSnow ? (
-                                        city.last_24h > 0 ? (
-                                            <span className="font-mono val-recent">+{city.last_24h}"</span>
+                                    <div className="flex flex-col">
+                                        {isSnow ? (
+                                            city.last_24h > 0 ? (
+                                                <span className="font-mono val-recent">+{city.last_24h}"</span>
+                                            ) : (
+                                                <span className="font-mono val-zero">-</span>
+                                            )
                                         ) : (
-                                            <span className="font-mono val-zero">-</span>
-                                        )
-                                    ) : (
-                                        <span className="font-mono text-blue-900 font-bold">{city.lowest_windchill}°F</span>
-                                    )}
+                                            <>
+                                                <span className="font-mono text-blue-900 font-bold">{city.lowest_windchill}°F</span>
+                                                {city.all_time_windchill !== undefined && (
+                                                    <span className="text-[10px] text-slate-400 font-medium">
+                                                        Ever: {city.all_time_windchill}°F
+                                                    </span>
+                                                )}
+                                            </>
+                                        )}
+                                    </div>
                                 </td>
                             </tr>
                         ))}

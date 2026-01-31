@@ -1,5 +1,5 @@
 {
-    "last_updated": "2026-01-31T00:50:00Z",
+    "last_updated": "2026-01-31T00:55:00Z",
     "rankings": [
         {
             "id": "seagull-mn",
@@ -10,7 +10,7 @@
             "lowest_windchill": -58,
             "record_date": "Jan 20, 2026",
             "all_time_low": -43,
-            "all_time_date": "Jan 20, 2026"
+            "all_time_windchill": -58
         },
         {
             "id": "tower-mn",
@@ -21,7 +21,7 @@
             "lowest_windchill": -55,
             "record_date": "Jan 18, 2026",
             "all_time_low": -60,
-            "all_time_date": "Feb 2, 1996"
+            "all_time_windchill": -71
         },
         {
             "id": "fairbanks-ak",
@@ -32,7 +32,7 @@
             "lowest_windchill": -52,
             "record_date": "Jan 12, 2026",
             "all_time_low": -66,
-            "all_time_date": "Jan 14, 1934"
+            "all_time_windchill": -75
         },
         {
             "id": "grand-forks-nd",
@@ -43,7 +43,7 @@
             "lowest_windchill": -50,
             "record_date": "Jan 21, 2026",
             "all_time_low": -43,
-            "all_time_date": "Jan 30, 2004"
+            "all_time_windchill": -65
         },
         {
             "id": "fargo-nd",
@@ -54,7 +54,7 @@
             "lowest_windchill": -48,
             "record_date": "Dec 14, 2025",
             "all_time_low": -39,
-            "all_time_date": "Feb 1, 1996"
+            "all_time_windchill": -55
         },
         {
             "id": "embarrass-mn",
@@ -65,7 +65,7 @@
             "lowest_windchill": -45,
             "record_date": "Jan 19, 2026",
             "all_time_low": -64,
-            "all_time_date": "Feb 2, 1996"
+            "all_time_windchill": -71
         },
         {
             "id": "intl-falls-mn",
@@ -76,7 +76,7 @@
             "lowest_windchill": -42,
             "record_date": "Jan 22, 2026",
             "all_time_low": -55,
-            "all_time_date": "Jan 6, 1909"
+            "all_time_windchill": -65
         },
         {
             "id": "bismarck-nd",
@@ -87,7 +87,7 @@
             "lowest_windchill": -45,
             "record_date": "Jan 20, 2026",
             "all_time_low": -45,
-            "all_time_date": "Feb 16, 1936"
+            "all_time_windchill": -60
         },
         {
             "id": "minneapolis-mn",
@@ -98,7 +98,7 @@
             "lowest_windchill": -41,
             "record_date": "Jan 21, 2026",
             "all_time_low": -34,
-            "all_time_date": "Jan 19, 1970"
+            "all_time_windchill": -67
         },
         {
             "id": "flint-mi",
@@ -109,7 +109,7 @@
             "lowest_windchill": -38,
             "record_date": "Jan 24, 2026",
             "all_time_low": -25,
-            "all_time_date": "Feb 20, 2015"
+            "all_time_windchill": -45
         },
         {
             "id": "casper-wy",
@@ -120,7 +120,7 @@
             "lowest_windchill": -40,
             "record_date": "Jan 15, 2026",
             "all_time_low": -42,
-            "all_time_date": "Dec 22, 2022"
+            "all_time_windchill": -63
         },
         {
             "id": "bozeman-mt",
@@ -131,7 +131,7 @@
             "lowest_windchill": -35,
             "record_date": "Jan 14, 2026",
             "all_time_low": -46,
-            "all_time_date": "Feb 1983"
+            "all_time_windchill": -55
         },
         {
             "id": "grand-rapids-mi",
@@ -142,7 +142,7 @@
             "lowest_windchill": -33,
             "record_date": "Jan 24, 2026",
             "all_time_low": -24,
-            "all_time_date": "Feb 14, 1899"
+            "all_time_windchill": -40
         },
         {
             "id": "milwaukee-wi",
@@ -153,7 +153,7 @@
             "lowest_windchill": -30,
             "record_date": "Jan 21, 2026",
             "all_time_low": -26,
-            "all_time_date": "Feb 3, 1996"
+            "all_time_windchill": -58
         },
         {
             "id": "burlington-vt",
@@ -164,7 +164,7 @@
             "lowest_windchill": -32,
             "record_date": "Jan 25, 2026",
             "all_time_low": -30,
-            "all_time_date": "Feb 12, 1979"
+            "all_time_windchill": -45
         },
         {
             "id": "syracuse-ny",
@@ -175,7 +175,7 @@
             "lowest_windchill": -28,
             "record_date": "Jan 29, 2026",
             "all_time_low": -29,
-            "all_time_date": "Jan 19, 1904"
+            "all_time_windchill": -38
         },
         {
             "id": "cleveland-oh",
@@ -186,7 +186,7 @@
             "lowest_windchill": -25,
             "record_date": "Jan 30, 2026",
             "all_time_low": -20,
-            "all_time_date": "Jan 19, 1994"
+            "all_time_windchill": -35
         },
         {
             "id": "erie-pa",
@@ -197,7 +197,7 @@
             "lowest_windchill": -22,
             "record_date": "Jan 30, 2026",
             "all_time_low": -18,
-            "all_time_date": "Feb 16, 2015"
+            "all_time_windchill": -35
         },
         {
             "id": "chicago-il",
@@ -208,7 +208,7 @@
             "lowest_windchill": -20,
             "record_date": "Jan 21, 2026",
             "all_time_low": -27,
-            "all_time_date": "Jan 20, 1985"
+            "all_time_windchill": -60
         },
         {
             "id": "denver-co",
@@ -219,7 +219,7 @@
             "lowest_windchill": -18,
             "record_date": "Jan 15, 2026",
             "all_time_low": -25,
-            "all_time_date": "Dec 22, 1990"
+            "all_time_windchill": -35
         }
     ]
 }
