@@ -20,8 +20,8 @@ const Leaderboard = () => {
     return (
         <div className="leaderboard-container glass-panel">
             <div className="lb-header">
-                <div className="flex flex-col gap-1">
-                    <div className="flex items-center gap-3 mb-2">
+                <div className="flex flex-col gap-0.5">
+                    <div className="flex items-center gap-3 mb-1">
                         <button
                             onClick={() => { setDataset('snow'); setFilter('all'); }}
                             className={`px-3 py-1 rounded-lg text-sm font-bold transition-all ${isSnow ? 'bg-sky-600 text-white shadow-lg' : 'bg-white/50 text-slate-600 hover:bg-white/80'}`}
@@ -95,12 +95,12 @@ const Leaderboard = () => {
                                     </div>
                                 </td>
                                 <td className="text-right">
-                                    <div className="flex flex-col">
-                                        <span className={`font-mono font-bold ${!isSnow && 'text-blue-700'}`}>
+                                    <div className="flex flex-col items-end">
+                                        <span className={`font-mono font-bold ${!isSnow ? 'text-blue-700' : 'val-total'}`}>
                                             {isSnow ? `${city.total_snow}"` : `${city.lowest_temp}°F`}
                                         </span>
                                         {!isSnow && city.all_time_low !== undefined && (
-                                            <span className="text-[10px] text-slate-400 font-medium">
+                                            <span className="text-[10px] text-slate-500 font-semibold uppercase tracking-tight">
                                                 Ever: {city.all_time_low}°F
                                             </span>
                                         )}
@@ -113,7 +113,7 @@ const Leaderboard = () => {
                                                 else if (pct >= 80) progressColor = 'text-sky-600';
 
                                                 return (
-                                                    <div className="text-[10px] mt-0.5 font-medium flex justify-end gap-1">
+                                                    <div className="text-[10px] mt-0.5 font-semibold uppercase tracking-tight flex justify-end gap-1">
                                                         <span className="text-slate-500">Avg: {avg}"</span>
                                                         <span className={progressColor}>
                                                             ({pct}%)
@@ -125,7 +125,7 @@ const Leaderboard = () => {
                                     </div>
                                 </td>
                                 <td className="text-right">
-                                    <div className="flex flex-col">
+                                    <div className="flex flex-col items-end">
                                         {isSnow ? (
                                             city.last_24h > 0 ? (
                                                 <span className="font-mono val-recent">+{city.last_24h}"</span>
@@ -136,7 +136,7 @@ const Leaderboard = () => {
                                             <>
                                                 <span className="font-mono text-blue-900 font-bold">{city.lowest_windchill}°F</span>
                                                 {city.all_time_windchill !== undefined && (
-                                                    <span className="text-[10px] text-slate-400 font-medium">
+                                                    <span className="text-[10px] text-slate-500 font-semibold uppercase tracking-tight">
                                                         Ever: {city.all_time_windchill}°F
                                                     </span>
                                                 )}

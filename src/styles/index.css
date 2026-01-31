@@ -278,9 +278,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     border-bottom: 2px solid rgba(0, 93, 171, 0.1);
-    padding-bottom: 1rem;
+    padding-bottom: 0.75rem;
 }
 
 /* -- Info Icon Tooltip -- */
@@ -289,10 +289,12 @@ body {
     cursor: help;
     display: inline-flex;
     align-items: center;
+    line-height: 1;
+    /* Match title alignment */
 }
 
 .info-icon {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--color-text-muted);
     opacity: 0.6;
     transition: opacity 0.2s;
