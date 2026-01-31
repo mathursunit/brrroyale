@@ -84,6 +84,7 @@ async function fetchOfficialSnow() {
                 state: city.state,
                 id: city.id,
                 tags: city.tags || [],
+                avg_annual: city.annual_average || 0, // Pass-through static normal
                 total_snow: parseFloat(totalSnow.toFixed(1)),
                 last_24h: parseFloat(last24h.toFixed(1)),
                 history_20_years: []

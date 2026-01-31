@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-31T03:31:11.165Z",
+  "last_updated": "2026-01-31T04:06:26.069Z",
   "source": "NOAA GHCN-Daily",
   "season_start": "2025-09-01",
   "season_end": "2026-01-31",
@@ -13,6 +13,7 @@
         "NY_Top10",
         "Snow_Belt"
       ],
+      "avg_annual": 127.8,
       "total_snow": 109.9,
       "last_24h": 0,
       "history_20_years": []
@@ -25,6 +26,7 @@
       "tags": [
         "NY_Top10"
       ],
+      "avg_annual": 102,
       "total_snow": 77.2,
       "last_24h": 0,
       "history_20_years": []
@@ -38,6 +40,7 @@
         "NY_Top10",
         "Snow_Belt"
       ],
+      "avg_annual": 95.4,
       "total_snow": 63,
       "last_24h": 0,
       "history_20_years": []
@@ -51,6 +54,7 @@
         "US_Top50",
         "Snow_Belt"
       ],
+      "avg_annual": 77.9,
       "total_snow": 57.3,
       "last_24h": 0,
       "history_20_years": []
@@ -63,6 +67,7 @@
       "tags": [
         "NY_Top10"
       ],
+      "avg_annual": 86.5,
       "total_snow": 49.5,
       "last_24h": 0,
       "history_20_years": []
@@ -75,6 +80,7 @@
       "tags": [
         "NY_Top10"
       ],
+      "avg_annual": 59.2,
       "total_snow": 44.4,
       "last_24h": 0,
       "history_20_years": []
@@ -87,6 +93,7 @@
       "tags": [
         "US_Top50"
       ],
+      "avg_annual": 44.1,
       "total_snow": 35.5,
       "last_24h": 0,
       "history_20_years": []
@@ -99,6 +106,7 @@
       "tags": [
         "US_Top50"
       ],
+      "avg_annual": 49.2,
       "total_snow": 34.1,
       "last_24h": 0,
       "history_20_years": []
@@ -111,6 +119,7 @@
       "tags": [
         "US_Top50"
       ],
+      "avg_annual": 45,
       "total_snow": 33.5,
       "last_24h": 0,
       "history_20_years": []
@@ -123,6 +132,7 @@
       "tags": [
         "US_Top50"
       ],
+      "avg_annual": 38.8,
       "total_snow": 28.6,
       "last_24h": 0,
       "history_20_years": []
@@ -135,6 +145,7 @@
       "tags": [
         "US_Top50"
       ],
+      "avg_annual": 51.2,
       "total_snow": 27.9,
       "last_24h": 0,
       "history_20_years": []
@@ -148,6 +159,7 @@
         "NY_Top10",
         "US_Top50"
       ],
+      "avg_annual": 29.8,
       "total_snow": 21.1,
       "last_24h": 0,
       "history_20_years": []
@@ -160,6 +172,7 @@
       "tags": [
         "US_Top50"
       ],
+      "avg_annual": 49,
       "total_snow": 13.4,
       "last_24h": 0,
       "history_20_years": []
@@ -172,6 +185,7 @@
       "tags": [
         "US_Top50"
       ],
+      "avg_annual": 51.9,
       "total_snow": 0.1,
       "last_24h": 0,
       "history_20_years": []

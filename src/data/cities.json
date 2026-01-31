@@ -9,7 +9,8 @@
         "tags": [
             "NY_Top10",
             "Snow_Belt"
-        ]
+        ],
+        "annual_average": 127.8
     },
     {
         "id": "buffalo_ny",
@@ -21,7 +22,8 @@
         "tags": [
             "NY_Top10",
             "Snow_Belt"
-        ]
+        ],
+        "annual_average": 95.4
     },
     {
         "id": "rochester_ny",
@@ -32,7 +34,8 @@
         "station_id": "GHCND:USW00014768",
         "tags": [
             "NY_Top10"
-        ]
+        ],
+        "annual_average": 102.0
     },
     {
         "id": "albany_ny",
@@ -43,7 +46,8 @@
         "station_id": "GHCND:USW00014735",
         "tags": [
             "NY_Top10"
-        ]
+        ],
+        "annual_average": 59.2
     },
     {
         "id": "binghamton_ny",
@@ -54,7 +58,8 @@
         "station_id": "GHCND:USW00004725",
         "tags": [
             "NY_Top10"
-        ]
+        ],
+        "annual_average": 86.5
     },
     {
         "id": "new_york_ny",
@@ -66,7 +71,8 @@
         "tags": [
             "NY_Top10",
             "US_Top50"
-        ]
+        ],
+        "annual_average": 29.8
     },
     {
         "id": "boston_ma",
@@ -77,7 +83,8 @@
         "station_id": "GHCND:USW00014739",
         "tags": [
             "US_Top50"
-        ]
+        ],
+        "annual_average": 49.2
     },
     {
         "id": "chicago_il",
@@ -88,7 +95,8 @@
         "station_id": "GHCND:USW00094846",
         "tags": [
             "US_Top50"
-        ]
+        ],
+        "annual_average": 38.8
     },
     {
         "id": "denver_co",
@@ -99,7 +107,8 @@
         "station_id": "GHCND:USW00003017",
         "tags": [
             "US_Top50"
-        ]
+        ],
+        "annual_average": 49.0
     },
     {
         "id": "minneapolis_mn",
@@ -110,7 +119,8 @@
         "station_id": "GHCND:USW00014922",
         "tags": [
             "US_Top50"
-        ]
+        ],
+        "annual_average": 51.2
     },
     {
         "id": "detroit_mi",
@@ -121,7 +131,8 @@
         "station_id": "GHCND:USW00094847",
         "tags": [
             "US_Top50"
-        ]
+        ],
+        "annual_average": 45.0
     },
     {
         "id": "anchorage_ak",
@@ -133,7 +144,8 @@
         "tags": [
             "US_Top50",
             "Snow_Belt"
-        ]
+        ],
+        "annual_average": 77.9
     },
     {
         "id": "salt_lake_city_ut",
@@ -144,7 +156,8 @@
         "station_id": "GHCND:USW00024127",
         "tags": [
             "US_Top50"
-        ]
+        ],
+        "annual_average": 51.9
     },
     {
         "id": "pittsburgh_pa",
@@ -155,6 +168,7 @@
         "station_id": "GHCND:USW00094823",
         "tags": [
             "US_Top50"
-        ]
+        ],
+        "annual_average": 44.1
     }
 ]

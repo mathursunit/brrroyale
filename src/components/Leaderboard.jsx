@@ -1,37 +1,8 @@
 import { useState, useEffect } from 'react';
 import '../styles/index.css';
 import currentSeasonData from '../../public/data/season_current.json';
-import historyData from '../../public/data/history.json'; // Need history for calculation
+// Helper removed - we now use official NOAA normals from the data property city.avg_annual
 import CityHistory from './CityHistory';
-
-// Helper: Calculate average snowfall up to today's date across all available years
-const getHistoricalComparison = (cityId, currentTotal) => {
-    const years = historyData.cities[cityId];
-    if (!years) return null;
-
-    const totals = Object.values(years);
-    if (totals.length === 0) return null;
-
-    // Use a simple average of total seasonal snowfall (approximation for now as daily history is heavy)
-    // A better approach would be "average to date", but we only have season totals in history.json
-    // Let's use the season total average as a benchmark for "Pace" or just compare to average season total.
-
-    // Actually, to get "Above/Below Average", we really need "Average FOR THIS DATE".
-    // We don't have daily history loaded in the frontend (it's huge). 
-    // We only have seasonal totals.
-    // So let's show "Season Average" context. e.g. "Avg Season: 90in"
-
-    const sum = totals.reduce((a, b) => a + b, 0);
-    const avg = sum / totals.length;
-
-    // Pace calculation: We are roughly 5 months into a 9 month season (Sep-May). 
-    // Let's just show the raw Average Season Total for context.
-
-    return {
-        avgSeason: avg.toFixed(1),
-        diff: (currentTotal - avg).toFixed(1)
-    };
-};
 
 const Leaderboard = () => {
     const [data, setData] = useState(null);
@@ -124,18 +95,18 @@ const Leaderboard = () => {
                                                 {city.total_snow}"
                                             </span>
                                             {(() => {
-                                                const stats = getHistoricalComparison(city.id, city.total_snow);
-                                                if (stats) {
-                                                    const diffVal = parseFloat(stats.diff);
-                                                    const isAhead = diffVal >= 0;
+                                                const avg = city.avg_annual;
+                                                if (avg > 0) {
+                                                    const diff = (city.total_snow - avg).toFixed(1);
+                                                    const isAhead = diff >= 0;
                                                     const colorClass = isAhead ? 'text-emerald-600' : 'text-rose-500';
                                                     const sign = isAhead ? '+' : '';
 
                                                     return (
                                                         <div className="text-xs text-slate-500 mt-1 font-medium flex justify-end gap-2">
-                                                            <span>Avg: {stats.avgSeason}"</span>
+                                                            <span>Avg: {avg}"</span>
                                                             <span className={colorClass}>
-                                                                ({sign}{stats.diff}")
+                                                                ({sign}{diff}")
                                                             </span>
                                                         </div>
                                                     )
