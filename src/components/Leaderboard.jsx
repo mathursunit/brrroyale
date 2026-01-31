@@ -45,6 +45,16 @@ const Leaderboard = ({ dataset, setDataset }) => {
                             COLDEST
                         </button>
                     </div>
+
+                    {!isHof && (
+                        <div className="flex items-center gap-1.5 ml-1 mb-2">
+                            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                            <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">
+                                Live: {new Date(data.last_updated).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}
+                            </span>
+                        </div>
+                    )}
+
                     <div className="flex items-center gap-2">
                         <h2 className="lb-title">
                             {isHof ? 'NY Snowfall Hall of Fame' : (isSnow ? 'Current Snowfall Standings' : '2025-2026 Season Lows')}
@@ -54,7 +64,7 @@ const Leaderboard = ({ dataset, setDataset }) => {
                             <div className="info-tooltip">
                                 {isHof
                                     ? 'All-Time Multi-Decadal Records • Updated: 2026'
-                                    : `Source: NOAA NCEI • Live Data • Updated: ${new Date(data.last_updated).toLocaleTimeString()}`}
+                                    : `Source: NOAA NCEI • Updated: ${new Date(data.last_updated).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`}
                             </div>
                         </div>
                     </div>
