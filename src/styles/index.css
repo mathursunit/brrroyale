@@ -1,3 +1,6 @@
+@import './mobile.css';
+@import './hof-modal.css';
+
 :root {
     /* -- Home Portal Inspired Palette -- */
     --color-bg-primary: #F0F4F8;
@@ -136,8 +139,7 @@ body {
     top: -50px;
 }
 
-@import './hof-modal.css';
-@import './mobile.css';
+
 
 .particle.snow {
     animation: snowfall linear infinite;
