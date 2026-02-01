@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-31T11:25:53.849Z",
+  "last_updated": "2026-02-01T11:26:46.694Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -117,6 +117,20 @@
       "rank": 8
     },
     {
+      "id": "jamestown_ny",
+      "city": "Jamestown",
+      "state": "NY",
+      "lowest_temp": -11,
+      "lowest_windchill": -16,
+      "record_date": "Jan 30, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10"
+      ],
+      "rank": 9
+    },
+    {
       "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
@@ -129,20 +143,6 @@
         "NY_Top10",
         "Snow_Belt",
         "US_Top10"
-      ],
-      "rank": 9
-    },
-    {
-      "id": "jamestown_ny",
-      "city": "Jamestown",
-      "state": "NY",
-      "lowest_temp": -7,
-      "lowest_windchill": -12,
-      "record_date": "Dec 9, 2025",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
-      "tags": [
-        "NY_Top10"
       ],
       "rank": 10
     },
