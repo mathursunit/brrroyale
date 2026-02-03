@@ -1,36 +1,46 @@
-/* -- Mobile Responsiveness -- */
+/* ========================================
+   FROZEN KINGDOM - Mobile Responsiveness
+======================================== */
+
 @media (max-width: 768px) {
 
     /* -- Top Banner & Header -- */
     .top-banner {
-        font-size: 0.75rem;
-        padding: 0.5rem;
+        font-size: 0.65rem;
+        padding: 0.5rem 0.75rem;
+        letter-spacing: 0.05em;
     }
 
     .header-logo {
-        max-width: 90%;
-        margin-bottom: 0.5rem;
+        max-width: 85%;
+        margin-bottom: 1rem;
     }
 
     .hero-subtitle {
-        font-size: 0.95rem;
-        max-width: 90%;
+        font-size: 0.9rem;
+        max-width: 95%;
         margin-bottom: 0.5rem;
-    }
-
-    /* -- Layout -- */
-    .app-container {
-        padding-bottom: 1rem;
-    }
-
-    .main-content {
-        padding: 0.5rem;
-        gap: 1rem;
     }
 
     .hero {
         padding: 1.5rem 1rem;
         border-radius: 1rem;
+    }
+
+    .hero::after {
+        font-size: 1.5rem;
+        top: -3px;
+        right: 10px;
+    }
+
+    /* -- Layout -- */
+    .app-container {
+        padding-bottom: 1.5rem;
+    }
+
+    .main-content {
+        padding: 0.75rem;
+        gap: 1.25rem;
     }
 
     /* -- Leaderboard Component -- */
@@ -46,30 +56,37 @@
     }
 
     .lb-title {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     .filter-group {
         width: 100%;
         overflow-x: auto;
         white-space: nowrap;
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.25rem;
         justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
     }
 
     .filter-btn {
-        padding: 0.4rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.4rem 0.9rem;
+        font-size: 0.8rem;
+        flex-shrink: 0;
     }
 
     /* -- Table Adjustments -- */
     .lb-table th,
     .lb-table td {
-        padding: 0.5rem 0.25rem;
+        padding: 0.6rem 0.4rem;
     }
 
     .lb-table th {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
+        letter-spacing: 0.08em;
+    }
+
+    .lb-table tbody tr:hover {
+        transform: translateX(2px);
     }
 
     .city-name {
@@ -77,23 +94,28 @@
     }
 
     .city-state {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
     }
 
     .val-total {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .rank-badge {
         width: 1.75rem;
         height: 1.75rem;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .rank-1 {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 0.9rem;
+    }
+
+    .rank-1::before {
+        font-size: 0.75rem;
+        top: -14px;
     }
 
     /* -- Modal -- */
@@ -102,18 +124,131 @@
         max-height: 85vh;
         width: 95%;
         margin: 0 auto;
+        border-radius: 1rem;
     }
 
     .modal-title {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
-    .stats-grid {
+    .modal-header {
+        flex-direction: column;
         gap: 0.75rem;
+        align-items: flex-start;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    /* -- Stats Grid -- */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .stat-card {
+        padding: 1.25rem 1rem;
+    }
+
+    .stat-value {
+        font-size: 1.75rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+    }
+
+    /* -- Mode Toggle Buttons -- */
+    .mode-toggle-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    /* -- Aurora Layers (reduce complexity on mobile) -- */
+    .aurora-layer-2,
+    .aurora-layer-3 {
+        opacity: 0.5;
+    }
+
+    /* -- Particles (reduce count on mobile) -- */
+    .particles-container .particle:nth-child(n+50) {
+        display: none;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .top-banner {
+        font-size: 0.55rem;
+        padding: 0.4rem 0.5rem;
+    }
+
+    .header-logo {
+        max-width: 90%;
+    }
+
+    .hero {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .lb-title {
+        font-size: 1rem;
+    }
+
+    .filter-btn {
+        padding: 0.35rem 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    .city-name {
+        font-size: 0.85rem;
+    }
+
+    .val-total {
+        font-size: 1rem;
+    }
+
+    .rank-badge {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.65rem;
+    }
+
+    .rank-1 {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .rank-1::before {
+        font-size: 0.6rem;
+        top: -12px;
+    }
+
+    .glass-panel {
+        padding: 0.75rem;
+    }
+}
+
+/* Landscape phones */
+@media (max-width: 768px) and (orientation: landscape) {
+    .modal-content {
+        max-height: 95vh;
         padding: 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
     }
 
     .stat-value {

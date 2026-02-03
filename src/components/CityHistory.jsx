@@ -1,22 +1,16 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, Area, AreaChart } from 'recharts';
 import '../styles/index.css';
-import historyData from '../../public/data/history.json'; // Direct import for now
+import historyData from '../../public/data/history.json';
+import cityInfoData from '../../public/data/city_info.json';
 
 const CityHistory = ({ cityId, onClose, inline = false, cityName = '' }) => {
     const [chartData, setChartData] = useState([]);
-    const [cityMeta, setCityMeta] = useState(null);
+    const [viewMode, setViewMode] = useState('stats'); // 'stats' or 'info'
 
     useEffect(() => {
-        // The cityId passed from Leaderboard is like "syracuse_ny" (from cities.json).
-        // public/data/history.json keys are also like "syracuse_ny".
-        // HOWEVER, we need to make sure they match exactly.
-
         let dataKey = cityId;
-
-        // Debug check: console.log('Looking for history for:', cityId);
-
         if (historyData.cities && historyData.cities[dataKey]) {
             const rawSeasons = historyData.cities[dataKey];
             const processed = Object.keys(rawSeasons).map(year => ({
@@ -26,11 +20,13 @@ const CityHistory = ({ cityId, onClose, inline = false, cityName = '' }) => {
             setChartData(processed);
         } else {
             console.warn(`No history found for ID: ${cityId}`);
-            // Fallback: try finding by name if IDs drifted? (Not needed if cities.json IDs are stable)
         }
     }, [cityId]);
 
-    // Calculate stats - added outside useEffect
+    // Check if we have additional info for this city
+    const hasInfo = cityInfoData[cityId];
+
+    // Calculate stats
     const values = chartData.map(d => d.snow);
     const maxSnow = values.length ? Math.max(...values) : 0;
     const maxYear = chartData.find(d => d.snow === maxSnow)?.year;
@@ -40,67 +36,175 @@ const CityHistory = ({ cityId, onClose, inline = false, cityName = '' }) => {
 
     if (!chartData.length) return null;
 
+    // Custom tooltip for the chart
+    const CustomTooltip = ({ active, payload, label }) => {
+        if (active && payload && payload.length) {
+            return (
+                <div style={{
+                    background: 'linear-gradient(135deg, rgba(13, 27, 42, 0.95), rgba(30, 27, 75, 0.9))',
+                    border: '1px solid rgba(125, 211, 252, 0.3)',
+                    borderRadius: '0.75rem',
+                    padding: '0.75rem 1rem',
+                    boxShadow: '0 8px 25px rgba(0, 0, 0, 0.3)',
+                    color: '#f0f9ff'
+                }}>
+                    <p style={{ margin: 0, fontWeight: 700, fontSize: '0.9rem', color: '#7dd3fc' }}>
+                        {label} Season
+                    </p>
+                    <p style={{ margin: '0.25rem 0 0', fontSize: '1.25rem', fontWeight: 800, fontFamily: 'Cinzel, serif' }}>
+                        {payload[0].value}"
+                    </p>
+                </div>
+            );
+        }
+        return null;
+    };
+
     const Content = () => (
         <>
             <div className={`modal-header ${inline ? 'border-0 pb-0 mb-4' : ''}`}>
-                <h2 className="modal-title text-xl">
-                    {cityName ? `${cityName} Analysis` : (inline ? 'City Analysis' : 'Snowfall History')}
-                    <span className="text-slate-400 text-sm font-normal ml-2 block sm:inline">(2005-2025)</span>
-                </h2>
-                {!inline && (
-                    <button onClick={onClose} className="modal-close">
-                        ✕ Close
-                    </button>
-                )}
+                <div className="flex flex-col gap-2 w-full">
+                    <div className="flex justify-between items-start w-full">
+                        <h2 className="modal-title">
+                            ❄️ {cityName ? cityName : (inline ? 'City Analysis' : 'Snowfall History')}
+                        </h2>
+                        {!inline && (
+                            <button onClick={onClose} className="modal-close">
+                                ✕ Close
+                            </button>
+                        )}
+                    </div>
+
+                    {/* View Switcher Tabs */}
+                    {hasInfo && (
+                        <div className="flex gap-2 mt-2 border-b border-slate-200 w-full">
+                            <button
+                                onClick={() => setViewMode('stats')}
+                                className={`px-4 py-2 text-sm font-bold border-b-2 transition-colors ${viewMode === 'stats' ? 'border-sky-600 text-sky-700' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+                            >
+                                📊 Analysis
+                            </button>
+                            <button
+                                onClick={() => setViewMode('info')}
+                                className={`px-4 py-2 text-sm font-bold border-b-2 transition-colors ${viewMode === 'info' ? 'border-indigo-600 text-indigo-700' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+                            >
+                                ℹ️ City Facts
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
 
-            {/* Stats Grid */}
-            <div className="stats-grid">
-                <div className="stat-card">
-                    <div className="stat-label">Record High</div>
-                    <div className="stat-value text-high">{maxSnow}"</div>
-                    <div className="stat-sub">{maxYear} Season</div>
-                </div>
-                <div className="stat-card">
-                    <div className="stat-label">Record Low</div>
-                    <div className="stat-value text-low">{minSnow}"</div>
-                    <div className="stat-sub">{minYear} Season</div>
-                </div>
-                <div className="stat-card">
-                    <div className="stat-label">20-Year Avg</div>
-                    <div className="stat-value text-avg">{avgSnow}"</div>
-                    <div className="stat-sub">Annual</div>
-                </div>
-            </div>
+            {viewMode === 'stats' ? (
+                <>
+                    {/* Stats Cards */}
+                    <div className="stats-grid">
+                        <div className="stat-card">
+                            <div className="stat-label">Record High</div>
+                            <div className="stat-value text-high">{maxSnow}"</div>
+                            <div className="stat-sub">{maxYear} Season</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-label">Record Low</div>
+                            <div className="stat-value text-low">{minSnow}"</div>
+                            <div className="stat-sub">{minYear} Season</div>
+                        </div>
+                        <div className="stat-card">
+                            <div className="stat-label">20-Year Avg</div>
+                            <div className="stat-value text-avg">{avgSnow}"</div>
+                            <div className="stat-sub">Annual</div>
+                        </div>
+                    </div>
 
-            <div style={{ height: inline ? '300px' : '350px' }} className="w-full">
-                <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={chartData}>
-                        <CartesianGrid strokeDasharray="3 3" stroke="#cbd5e1" />
-                        <XAxis dataKey="year" stroke="#475569" fontSize={10} tick={{ fill: '#475569' }} />
-                        <YAxis stroke="#475569" fontSize={10} tick={{ fill: '#475569' }} width={30} />
-                        <Tooltip
-                            contentStyle={{ backgroundColor: '#ffffff', borderColor: '#e2e8f0', color: '#1e293b', borderRadius: '0.5rem', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
-                            itemStyle={{ color: '#0284c7' }}
-                        />
-                        <Legend wrapperStyle={{ paddingTop: '10px' }} />
-                        <Line
-                            type="monotone"
-                            dataKey="snow"
-                            name="Snowfall (in)"
-                            stroke="#0284c7"
-                            strokeWidth={3}
-                            dot={{ r: 3, fill: '#0284c7' }}
-                            activeDot={{ r: 5, stroke: '#e0f2fe', strokeWidth: 3 }}
-                        />
-                    </LineChart>
-                </ResponsiveContainer>
-            </div>
+                    {/* Chart */}
+                    <div style={{ height: inline ? '300px' : '350px' }} className="w-full">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <AreaChart data={chartData}>
+                                <defs>
+                                    <linearGradient id="snowGradient" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="5%" stopColor="#7dd3fc" stopOpacity={0.4} />
+                                        <stop offset="95%" stopColor="#7dd3fc" stopOpacity={0.05} />
+                                    </linearGradient>
+                                </defs>
+                                <CartesianGrid strokeDasharray="3 3" stroke="rgba(125, 211, 252, 0.15)" />
+                                <XAxis
+                                    dataKey="year"
+                                    stroke="#64748b"
+                                    fontSize={10}
+                                    tick={{ fill: '#64748b' }}
+                                    axisLine={{ stroke: 'rgba(125, 211, 252, 0.2)' }}
+                                />
+                                <YAxis
+                                    stroke="#64748b"
+                                    fontSize={10}
+                                    tick={{ fill: '#64748b' }}
+                                    width={35}
+                                    axisLine={{ stroke: 'rgba(125, 211, 252, 0.2)' }}
+                                />
+                                <Tooltip content={<CustomTooltip />} />
+                                <Legend
+                                    wrapperStyle={{ paddingTop: '10px', color: '#93c5fd' }}
+                                    formatter={(value) => <span style={{ color: '#93c5fd' }}>{value}</span>}
+                                />
+                                <Area
+                                    type="monotone"
+                                    dataKey="snow"
+                                    name="Snowfall (in)"
+                                    stroke="#7dd3fc"
+                                    strokeWidth={3}
+                                    fill="url(#snowGradient)"
+                                    dot={{ r: 4, fill: '#7dd3fc', stroke: '#0d1b2a', strokeWidth: 2 }}
+                                    activeDot={{ r: 6, stroke: '#7dd3fc', strokeWidth: 2, fill: '#0d1b2a' }}
+                                />
+                            </AreaChart>
+                        </ResponsiveContainer>
+                    </div>
 
-            <div className="mt-4 text-xs text-slate-400 text-center flex flex-col gap-1">
-                <p>Source used: <a href="https://www.ncdc.noaa.gov/cdo-web/" target="_blank" className="underline hover:text-sky-600">NOAA NCEI</a></p>
-                <p className="opacity-70">Station: {cityId ? historyData.cities[cityId]?.station_id || 'GHCND' : ''}</p>
-            </div>
+                    {/* Source Attribution */}
+                    <div className="mt-4 text-xs text-slate-400 text-center flex flex-col gap-1">
+                        <p>Source: <a href="https://www.ncdc.noaa.gov/cdo-web/" target="_blank" className="underline hover:text-sky-600">NOAA NCEI</a></p>
+                        <p className="opacity-70">Station: {cityId ? historyData.cities[cityId]?.station_id || 'GHCND' : ''}</p>
+                    </div>
+                </>
+            ) : (
+                <div className="animate-fade-in p-2">
+                    <div className="hof-grid" style={{ gridTemplateColumns: '1fr' }}>
+                        {/* Frozen Facts Section */}
+                        <div className="bg-indigo-50 p-6 rounded-xl border border-indigo-100 mb-6">
+                            <h3 className="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">
+                                <span className="text-2xl">☃️</span> Frozen Facts
+                            </h3>
+                            <ul className="space-y-4">
+                                {hasInfo.fun_facts.map((fact, i) => (
+                                    <li key={i} className="flex gap-3 text-slate-700 leading-relaxed bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                                        <span className="text-indigo-500 font-bold">❄</span>
+                                        {fact}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Explore More Links */}
+                        <div className="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                            <h3 className="text-md font-bold text-slate-600 mb-4 uppercase tracking-wider">Explore More</h3>
+                            <div className="flex flex-wrap gap-3">
+                                {hasInfo.links.map((link, i) => (
+                                    <a
+                                        key={i}
+                                        href={link.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="flex items-center gap-2 bg-white hover:bg-sky-50 text-slate-700 hover:text-sky-700 px-4 py-3 rounded-lg border border-slate-200 hover:border-sky-200 transition-all shadow-sm font-medium"
+                                    >
+                                        {link.label}
+                                        <span className="text-slate-400 text-xs">↗</span>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </>
     );
 

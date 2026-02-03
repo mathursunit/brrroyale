@@ -2,32 +2,46 @@ import { useState, useEffect } from 'react'
 import './styles/index.css'
 import Leaderboard from './components/Leaderboard'
 
-const DynamicBackground = ({ mode }) => {
+// Aurora Background with multiple animated layers
+const AuroraBackground = () => {
+  return (
+    <>
+      <div className="wallpaper">
+        <div className="aurora-layer-2" />
+        <div className="aurora-layer-3" />
+      </div>
+    </>
+  );
+};
+
+// Enhanced Snow/Frost Particles
+const DynamicParticles = ({ mode }) => {
   const [particles, setParticles] = useState([]);
 
   useEffect(() => {
     const isCold = mode === 'cold';
-    const count = isCold ? 50 : 100;
+    // More particles for a magical effect
+    const count = isCold ? 60 : 80;
     const p = Array.from({ length: count }).map((_, i) => ({
       id: i,
-      size: isCold ? Math.random() * 3 + 1 : Math.random() * 6 + 2,
+      size: isCold ? Math.random() * 2 + 1 : Math.random() * 5 + 2,
       left: Math.random() * 100,
-      duration: isCold ? Math.random() * 15 + 15 : Math.random() * 10 + 10,
-      delay: Math.random() * 10,
-      opacity: isCold ? 0.3 + Math.random() * 0.4 : 0.5 + Math.random() * 0.4
+      duration: isCold ? Math.random() * 20 + 15 : Math.random() * 15 + 10,
+      delay: Math.random() * 15,
+      opacity: isCold ? 0.2 + Math.random() * 0.4 : 0.4 + Math.random() * 0.5
     }));
     setParticles(p);
   }, [mode]);
 
   return (
-    <div className={`particles-container ${mode}`}>
+    <div className="particles-container">
       {particles.map(p => (
         <div
           key={p.id}
           className={`particle ${mode === 'cold' ? 'frost' : 'snow'}`}
           style={{
-            width: mode === 'cold' ? `${p.size}px` : `${p.size}px`,
-            height: mode === 'cold' ? `${p.size * 4}px` : `${p.size}px`,
+            width: `${p.size}px`,
+            height: mode === 'cold' ? `${p.size * 5}px` : `${p.size}px`,
             left: `${p.left}%`,
             animationDuration: `${p.duration}s`,
             animationDelay: `${p.delay}s`,
@@ -41,32 +55,67 @@ const DynamicBackground = ({ mode }) => {
 
 function App() {
   const [dataset, setDataset] = useState('snow'); // 'snow' or 'cold'
+  const [theme, setTheme] = useState('dark');
+
+  // Handle Theme Switch
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  // Dynamic banner messages
+  const bannerMessages = {
+    snow: {
+      alert: '❄️ SNOWFALL WATCH',
+      message: 'RECORD BREAKING ACCUMULATION IN NEW YORK'
+    },
+    cold: {
+      alert: '🥶 DEEP FREEZE ALERT',
+      message: 'ARCTIC BLAST SWEEPING THE MIDWEST'
+    }
+  };
+
+  const currentBanner = bannerMessages[dataset];
 
   return (
-    <div className={`app-container ${dataset}-mode`}>
+    <div className="app-container">
+      {/* Top Alert Banner */}
       <div className="top-banner">
-        ❄️ {dataset === 'snow' ? 'SNOWFALL WATCH' : 'DEEP FREEZE ALERT'}: <span>{dataset === 'snow' ? 'RECORD BREAKING ACCUMULATION IN NEW YORK' : 'ARCTIC BLAST SWEEPING THE MIDWEST'}</span> • UPDATED REAL-TIME via NOAA NCEI
+        <div>{currentBanner.alert}: <span>{currentBanner.message}</span> • UPDATED REAL-TIME via NOAA NCEI</div>
+        <button
+          className="theme-toggle"
+          onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
+          title="Toggle Theme"
+        >
+          {theme === 'dark' ? '☀️ Light' : '🌙 Dark'}
+        </button>
       </div>
 
-      <DynamicBackground mode={dataset} />
-      <div className={`wallpaper ${dataset}`} />
+      {/* Aurora Borealis Background - Only in Dark Mode */}
+      {theme === 'dark' && <AuroraBackground />}
 
-      {/* Main Content (Centered) */}
+      {/* Dynamic Particles */}
+      <DynamicParticles mode={dataset} />
+
+      {/* Main Content */}
       <main className="main-content">
+        {/* Hero Header with Ice Crown Logo */}
         <header className="hero">
-          <img src="assets/logo-banner-trans.png" alt="Battle Brrr-oyale Logo" className="header-logo" />
-          <p className="hero-subtitle">
-            {dataset === 'snow'
-              ? 'The ultimate snowfall showdown. Tracking the top US cities to see who freezes first.'
-              : 'The 2025-2026 Deep Freeze. Tracking the coldest temperatures and windchills across America.'}
-          </p>
+          <img
+            src="assets/logo-banner-trans.png"
+            alt="Battle Brrr-oyale - The Ultimate Winter Showdown"
+            className="header-logo"
+          />
         </header>
 
-        <Leaderboard dataset={dataset} setDataset={setDataset} />
 
+
+        {/* Main Leaderboard */}
+        <Leaderboard dataset={dataset} setDataset={setDataset} theme={theme} />
+
+        {/* Footer */}
         <footer className="footer">
           <p>Official Weather Data provided by <strong>NOAA National Centers for Environmental Information (NCEI)</strong></p>
-          <p className="mt-1 opacity-50">© 2026 Battle Brrr-oyale Dashboard • All Rights Reserved</p>
+          <p className="mt-1 opacity-50">© 2026 Battle Brrr-oyale • The Frozen Kingdom Dashboard • All Rights Reserved</p>
         </footer>
       </main>
     </div>

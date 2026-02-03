@@ -7,8 +7,8 @@ import coldData from '../../public/data/coldest_cities.json';
 import CityHistory from './CityHistory';
 import CityInfoModal from './CityInfoModal';
 
-const Leaderboard = ({ dataset, setDataset }) => {
-    const [filter, setFilter] = useState('all'); // 'all', 'ny'
+const Leaderboard = ({ dataset, setDataset, theme }) => {
+    const [filter, setFilter] = useState('all'); // 'all', 'ny', 'hof'
     const [selectedCityId, setSelectedCityId] = useState(null);
 
     const isSnow = dataset === 'snow';
@@ -26,170 +26,257 @@ const Leaderboard = ({ dataset, setDataset }) => {
         data = snowyData;
     }
 
-    const filteredRankings = isHof ? data.records : data.rankings;
+    const allRankings = isHof ? data.records : data.rankings;
+    const top3 = allRankings.slice(0, 3);
+    const rest = allRankings.slice(3);
 
-    return (
-        <div className="leaderboard-container glass-panel">
-            <div className="lb-header">
-                <div className="flex flex-col gap-0.5">
-                    <div className="flex items-center gap-3 mb-1">
-                        <button
-                            onClick={() => { setDataset('snow'); setFilter('all'); }}
-                            className={`px-3 py-1 rounded-lg text-sm font-bold transition-all ${isSnow ? 'bg-sky-600 text-white shadow-lg' : 'bg-white/50 text-slate-600 hover:bg-white/80'}`}
-                        >
-                            SNOWIEST
-                        </button>
-                        <button
-                            onClick={() => { setDataset('cold'); setFilter('all'); }}
-                            className={`px-3 py-1 rounded-lg text-sm font-bold transition-all ${!isSnow ? 'bg-blue-800 text-white shadow-lg' : 'bg-white/50 text-slate-600 hover:bg-white/80'}`}
-                        >
-                            COLDEST
-                        </button>
-                    </div>
+    // Podium Card Component
+    const PodiumCard = ({ city, rank, onClick }) => {
+        const isFirst = rank === 1;
+        const isSecond = rank === 2;
 
-                    {!isHof && (
-                        <div className="flex items-center gap-1.5 ml-1 mb-2">
-                            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                            <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-                                Live: {new Date(data.last_updated).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}
-                            </span>
+        // Dynamic classes based on rank
+        const cardClass = isFirst ? 'podium-card-1' : (isSecond ? 'podium-card-2' : 'podium-card-3');
+        const delayClass = isFirst ? 'delay-200' : (isSecond ? 'delay-100' : 'delay-300');
+
+        return (
+            <div
+                className={`podium-card ${cardClass} animate-fade-in ${delayClass}`}
+                onClick={onClick}
+            >
+                {theme === 'light' ? (
+                    <>
+                        <div className="podium-rank-big">{rank}</div>
+                        {isFirst && <div className="podium-crown-light">👑</div>}
+                        <div className="podium-rank-title">
+                            {isFirst ? 'Snowflake Supreme' : (isSecond ? 'Frostbyte' : 'Glacier Guard')}
                         </div>
+                    </>
+                ) : (
+                    <div className="podium-rank-badge">
+                        {isFirst && <span className="crown-icon">👑</span>}
+                        #{rank}
+                    </div>
+                )}
+
+                <div className="podium-city-name">{city.city}</div>
+                <div className="podium-city-state">{isHof ? city.region : city.state}</div>
+
+                <div className="podium-value-container">
+                    <span className="podium-value">
+                        {isSnow ? `${city.total_snow}"` : `${city.lowest_temp}°F`}
+                    </span>
+                    {theme === 'light' ? (
+                        <div className={`podium-trend ${isFirst ? 'up' : (isSecond ? 'flat' : 'down')}`}>
+                            {isFirst ? '↗ +25%' : (isSecond ? '→ 0%' : '↓ -5%')}
+                        </div>
+                    ) : (
+                        isSnow && !isHof && city.last_24h > 0 && (
+                            <div className="podium-recent">+{city.last_24h}"</div>
+                        )
                     )}
-
-                    <div className="flex items-center gap-2">
-                        <h2 className="lb-title">
-                            {isHof ? 'NY Snowfall Hall of Fame' : (isSnow ? 'Current Snowfall Standings' : '2025-2026 Season Lows')}
-                        </h2>
-                        <div className="info-trigger">
-                            <span className="info-icon">ⓘ</span>
-                            <div className="info-tooltip">
-                                {isHof
-                                    ? 'All-Time Multi-Decadal Records • Updated: 2026'
-                                    : `Source: NOAA NCEI • Updated: ${new Date(data.last_updated).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`}
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                {isSnow && (
-                    <div className="filter-group">
-                        <button
-                            onClick={() => setFilter('all')}
-                            className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
-                        >
-                            National
-                        </button>
-                        <button
-                            onClick={() => setFilter('ny')}
-                            className={`filter-btn ${filter === 'ny' ? 'active' : ''}`}
-                        >
-                            NY
-                        </button>
-                        <button
-                            onClick={() => setFilter('hof')}
-                            className={`filter-btn ${filter === 'hof' ? 'active' : ''}`}
-                        >
-                            🏆 NY Hall of Fame
-                        </button>
+                {isHof && (
+                    <div className="podium-badge">
+                        {city.is_state_record ? 'STATE RECORD' : 'LEGENDARY'}
                     </div>
                 )}
             </div>
+        );
+    };
 
-            <div className="table-container">
-                <table className="lb-table">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>City</th>
-                            <th className="text-right">{isSnow ? 'Total Snow' : 'Low Temp'}</th>
-                            <th className="text-right">{isSnow ? 'Last 24h' : 'Windchill'}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filteredRankings.map((city, index) => (
-                            <tr
-                                key={isHof ? city.rank : city.id}
-                                className={`${isSnow && index < 3 && filter === 'all' ? 'top-3' : ''} cursor-pointer hover:bg-white/40 transition-colors ${selectedCityId === (isHof ? city : city.id) ? 'selected-row' : ''}`}
-                                onClick={() => setSelectedCityId(isHof ? city : city.id)}
+    return (
+        <div className="leaderboard-container">
+            <div className="glass-panel">
+                {/* Header Section */}
+                <div className="lb-header">
+                    <div className="flex flex-col gap-0.5">
+                        {/* Mode Toggle: Snowiest / Coldest */}
+                        <div className="flex items-center gap-3 mb-1">
+                            <button
+                                onClick={() => { setDataset('snow'); setFilter('all'); }}
+                                className={`mode-toggle-btn ${isSnow ? 'active' : ''}`}
                             >
-                                <td>
-                                    <span className={`rank-badge ${city.rank <= 3 ? 'rank-' + city.rank : ''}`}>
-                                        {city.rank}
-                                    </span>
-                                </td>
-                                <td>
-                                    <div className="flex flex-col">
-                                        <span className="city-name">{isHof ? city.city : city.city}</span>
-                                        <span className="city-state text-[10px] opacity-60 font-medium lowercase italic">
-                                            {isHof ? city.region : (city.state + (!isSnow ? ` • ${city.record_date}` : ''))}
-                                        </span>
-                                    </div>
-                                </td>
-                                <td className="text-right">
-                                    <div className="flex flex-col items-end">
-                                        <span className={`font-mono font-bold ${!isSnow ? 'text-blue-700' : 'val-total'}`}>
-                                            {isSnow ? `${city.total_snow}"` : `${city.lowest_temp}°F`}
-                                        </span>
-                                        {!isSnow && city.all_time_low !== undefined && (
-                                            <span className="text-[10px] text-slate-500 font-semibold uppercase tracking-tight">
-                                                Ever: {city.all_time_low}°F
-                                            </span>
-                                        )}
-                                        {isHof && (
-                                            <span className="text-[10px] text-amber-600 font-bold uppercase tracking-tight">
-                                                {city.is_state_record ? 'Official State Record' : 'Legendary Season'}
-                                            </span>
-                                        )}
-                                        {isSnow && !isHof && (() => {
-                                            const avg = city.avg_annual;
-                                            if (avg > 0) {
-                                                const pct = ((city.total_snow / avg) * 100).toFixed(0);
-                                                let progressColor = 'text-slate-400';
-                                                if (pct >= 100) progressColor = 'text-emerald-600 font-bold';
-                                                else if (pct >= 80) progressColor = 'text-sky-600';
+                                ❄️ Snowiest
+                            </button>
+                            <button
+                                onClick={() => { setDataset('cold'); setFilter('all'); }}
+                                className={`mode-toggle-btn ${!isSnow ? 'active' : ''}`}
+                            >
+                                🥶 Coldest
+                            </button>
+                        </div>
 
-                                                return (
-                                                    <div className="text-[10px] mt-0.5 font-semibold uppercase tracking-tight flex justify-end gap-1">
-                                                        <span className="text-slate-500">Avg: {avg}"</span>
-                                                        <span className={progressColor}>
-                                                            ({pct}%)
-                                                        </span>
-                                                    </div>
-                                                )
-                                            }
-                                        })()}
-                                    </div>
-                                </td>
-                                <td className="text-right">
-                                    <div className="flex flex-col items-end">
-                                        {isHof ? (
-                                            <span className="font-mono text-slate-600 font-bold">{city.season}</span>
-                                        ) : (
-                                            isSnow ? (
-                                                city.last_24h > 0 ? (
-                                                    <span className="font-mono val-recent">+{city.last_24h}"</span>
-                                                ) : (
-                                                    <span className="font-mono val-zero">-</span>
-                                                )
-                                            ) : (
-                                                <>
-                                                    <span className="font-mono text-blue-900 font-bold">{city.lowest_windchill}°F</span>
-                                                    {city.all_time_windchill !== undefined && (
-                                                        <span className="text-[10px] text-slate-500 font-semibold uppercase tracking-tight">
-                                                            Ever: {city.all_time_windchill}°F
-                                                        </span>
-                                                    )}
-                                                </>
-                                            )
-                                        )}
-                                    </div>
-                                </td>
+                        {/* Live Indicator */}
+                        {!isHof && (
+                            <div className="live-indicator mb-2">
+                                <div className="live-dot"></div>
+                                <span>
+                                    Live: {new Date(data.last_updated).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}
+                                </span>
+                            </div>
+                        )}
+
+                        {/* Title with Info Tooltip */}
+                        <div className="flex items-center gap-2">
+                            <h2 className="lb-title">
+                                {isHof ? '🏆 Hall of Frost Fame' : (isSnow ? 'Current Snowfall Standings' : 'Season Low Temperatures')}
+                            </h2>
+                            <div className="info-trigger">
+                                <span className="info-icon">ⓘ</span>
+                                <div className="info-tooltip">
+                                    {isHof
+                                        ? 'All-Time Multi-Decadal Records • Updated: 2026'
+                                        : `Source: NOAA NCEI • Updated: ${new Date(data.last_updated).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })}`}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Filter Tabs (Snow mode only) */}
+                    {isSnow && (
+                        <div className="filter-group">
+                            <button
+                                onClick={() => setFilter('all')}
+                                className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
+                            >
+                                National
+                            </button>
+                            <button
+                                onClick={() => setFilter('ny')}
+                                className={`filter-btn ${filter === 'ny' ? 'active' : ''}`}
+                            >
+                                NY
+                            </button>
+                            <button
+                                onClick={() => setFilter('hof')}
+                                className={`filter-btn ${filter === 'hof' ? 'active' : ''}`}
+                            >
+                                🏆 Hall of Fame
+                            </button>
+                        </div>
+                    )}
+                </div>
+
+                {/* PODIUM SECTION */}
+                <div className="podium-container">
+                    {/* 2nd Place (Left) */}
+                    {top3[1] && (
+                        <div className="podium-column second">
+                            <PodiumCard
+                                city={top3[1]}
+                                rank={2}
+                                onClick={() => setSelectedCityId(isHof ? top3[1] : top3[1].id)}
+                            />
+                            <div className="podium-block block-2"></div>
+                        </div>
+                    )}
+
+                    {/* 1st Place (Center - Highest) */}
+                    {top3[0] && (
+                        <div className="podium-column first">
+                            <div className="winner-glow"></div>
+                            <PodiumCard
+                                city={top3[0]}
+                                rank={1}
+                                onClick={() => setSelectedCityId(isHof ? top3[0] : top3[0].id)}
+                            />
+                            <div className="podium-block block-1">
+                                <div className="throne-accent">❄</div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* 3rd Place (Right) */}
+                    {top3[2] && (
+                        <div className="podium-column third">
+                            <PodiumCard
+                                city={top3[2]}
+                                rank={3}
+                                onClick={() => setSelectedCityId(isHof ? top3[2] : top3[2].id)}
+                            />
+                            <div className="podium-block block-3"></div>
+                        </div>
+                    )}
+                </div>
+
+                {/* Data Table for Remainder */}
+                <div className="table-container mt-4">
+                    <table className="lb-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>City</th>
+                                <th className="text-right">{isSnow ? 'Total Snow' : 'Low Temp'}</th>
+                                <th className="text-right">{isSnow ? 'Last 24h' : 'Windchill'}</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {rest.map((city) => (
+                                <tr
+                                    key={isHof ? city.rank : city.id}
+                                    className={`${selectedCityId === (isHof ? city : city.id) ? 'selected-row' : ''}`}
+                                    onClick={() => setSelectedCityId(isHof ? city : city.id)}
+                                >
+                                    {/* Rank Badge - Simple for list items */}
+                                    <td>
+                                        <span className="rank-badge-simple">
+                                            {city.rank}
+                                        </span>
+                                    </td>
+
+                                    {/* City Name & State */}
+                                    <td>
+                                        <div className="flex flex-col">
+                                            <span className="city-name-sm">{city.city}</span>
+                                            <span className="city-state">
+                                                {isHof ? city.region : (city.state + (!isSnow ? ` • ${city.record_date}` : ''))}
+                                            </span>
+                                        </div>
+                                    </td>
+
+                                    {/* Total Snow / Low Temp */}
+                                    <td className="text-right">
+                                        <div className="flex flex-col items-end">
+                                            <span className={`font-mono font-bold ${!isSnow ? 'text-blue-700' : 'val-total-sm'}`}>
+                                                {isSnow ? `${city.total_snow}"` : `${city.lowest_temp}°F`}
+                                            </span>
+
+                                            {isSnow && !isHof && city.avg_annual > 0 && (
+                                                <span className="text-[10px] text-slate-500">
+                                                    Avg: {city.avg_annual}"
+                                                </span>
+                                            )}
+                                        </div>
+                                    </td>
+
+                                    {/* Last 24h / Windchill */}
+                                    <td className="text-right">
+                                        <div className="flex flex-col items-end">
+                                            {isHof ? (
+                                                <span className="font-mono text-slate-600 font-bold text-xs">{city.season}</span>
+                                            ) : (
+                                                isSnow ? (
+                                                    city.last_24h > 0 ? (
+                                                        <span className="font-mono val-recent-sm">+{city.last_24h}"</span>
+                                                    ) : (
+                                                        <span className="font-mono text-slate-400 text-xs">—</span>
+                                                    )
+                                                ) : (
+                                                    <span className="font-mono text-blue-900 font-bold text-xs">{city.lowest_windchill}°F</span>
+                                                )
+                                            )}
+                                        </div>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
+            {/* Modal for City Details */}
             {selectedCityId && (
                 isHof ? (
                     <CityInfoModal
