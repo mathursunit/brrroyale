@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-04T11:37:26.972Z",
+  "last_updated": "2026-02-05T11:38:52.888Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -162,6 +162,20 @@
       "rank": 11
     },
     {
+      "id": "auburn_ny",
+      "city": "Auburn",
+      "state": "NY",
+      "lowest_temp": -5,
+      "lowest_windchill": -10,
+      "record_date": "Feb 2, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10"
+      ],
+      "rank": 12
+    },
+    {
       "id": "buffalo_ny",
       "city": "Buffalo",
       "state": "NY",
@@ -175,7 +189,7 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 12
+      "rank": 13
     },
     {
       "id": "binghamton_ny",
@@ -189,20 +203,6 @@
       "tags": [
         "NY_Top10",
         "US_Top10"
-      ],
-      "rank": 13
-    },
-    {
-      "id": "auburn_ny",
-      "city": "Auburn",
-      "state": "NY",
-      "lowest_temp": -1,
-      "lowest_windchill": -6,
-      "record_date": "Jan 24, 2026",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
-      "tags": [
-        "NY_Top10"
       ],
       "rank": 14
     }
