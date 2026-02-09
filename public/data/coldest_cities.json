@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-08T11:27:43.823Z",
+  "last_updated": "2026-02-09T00:42:44.252Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -7,7 +7,7 @@
       "state": "AK",
       "lowest_temp": -50,
       "lowest_windchill": -55,
-      "record_date": "Jan 4, 2026",
+      "record_date": "Jan 3, 2026",
       "all_time_low": -66,
       "all_time_windchill": -76,
       "tags": [
@@ -21,7 +21,7 @@
       "state": "MN",
       "lowest_temp": -36,
       "lowest_windchill": -41,
-      "record_date": "Jan 24, 2026",
+      "record_date": "Jan 23, 2026",
       "all_time_low": -55,
       "all_time_windchill": -65,
       "tags": [
@@ -36,7 +36,7 @@
       "state": "NY",
       "lowest_temp": -34,
       "lowest_windchill": -39,
-      "record_date": "Jan 24, 2026",
+      "record_date": "Jan 23, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
@@ -50,7 +50,7 @@
       "state": "NY",
       "lowest_temp": -29,
       "lowest_windchill": -34,
-      "record_date": "Jan 25, 2026",
+      "record_date": "Jan 24, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
@@ -64,7 +64,7 @@
       "state": "ND",
       "lowest_temp": -20,
       "lowest_windchill": -25,
-      "record_date": "Jan 22, 2026",
+      "record_date": "Jan 21, 2026",
       "all_time_low": -39,
       "all_time_windchill": -49,
       "tags": [
@@ -78,7 +78,7 @@
       "state": "ME",
       "lowest_temp": -19,
       "lowest_windchill": -24,
-      "record_date": "Jan 25, 2026",
+      "record_date": "Jan 24, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
@@ -92,7 +92,7 @@
       "state": "AK",
       "lowest_temp": -17,
       "lowest_windchill": -22,
-      "record_date": "Jan 8, 2026",
+      "record_date": "Jan 7, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
@@ -107,7 +107,7 @@
       "state": "MI",
       "lowest_temp": -13,
       "lowest_windchill": -18,
-      "record_date": "Jan 24, 2026",
+      "record_date": "Jan 23, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
@@ -122,7 +122,7 @@
       "state": "NY",
       "lowest_temp": -11,
       "lowest_windchill": -16,
-      "record_date": "Jan 30, 2026",
+      "record_date": "Jan 29, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
@@ -136,7 +136,7 @@
       "state": "NY",
       "lowest_temp": -9,
       "lowest_windchill": -14,
-      "record_date": "Jan 24, 2026",
+      "record_date": "Jan 23, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
@@ -152,7 +152,7 @@
       "state": "NY",
       "lowest_temp": -6,
       "lowest_windchill": -11,
-      "record_date": "Jan 24, 2026",
+      "record_date": "Jan 23, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
@@ -167,7 +167,7 @@
       "state": "NY",
       "lowest_temp": -5,
       "lowest_windchill": -10,
-      "record_date": "Feb 2, 2026",
+      "record_date": "Feb 1, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
@@ -181,7 +181,7 @@
       "state": "NY",
       "lowest_temp": -4,
       "lowest_windchill": -9,
-      "record_date": "Jan 24, 2026",
+      "record_date": "Jan 23, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
@@ -197,7 +197,7 @@
       "state": "NY",
       "lowest_temp": -3,
       "lowest_windchill": -8,
-      "record_date": "Jan 24, 2026",
+      "record_date": "Jan 23, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
