@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-02-10T11:54:11.196Z",
+  "last_updated": "2026-02-11T11:49:24.053Z",
   "rankings": [
     {
       "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
-      "total_snow": 115.8,
+      "total_snow": 119.2,
       "last_24h": 0,
       "avg_annual": 127.8,
       "tags": [
@@ -19,7 +19,7 @@
       "id": "rochester_ny",
       "city": "Rochester",
       "state": "NY",
-      "total_snow": 86.5,
+      "total_snow": 92.9,
       "last_24h": 0,
       "avg_annual": 102,
       "tags": [
@@ -32,7 +32,7 @@
       "id": "buffalo_ny",
       "city": "Buffalo",
       "state": "NY",
-      "total_snow": 74,
+      "total_snow": 76.9,
       "last_24h": 0,
       "avg_annual": 95.4,
       "tags": [
@@ -46,7 +46,7 @@
       "id": "marquette_mi",
       "city": "Marquette",
       "state": "MI",
-      "total_snow": 63.6,
+      "total_snow": 64.6,
       "last_24h": 0,
       "avg_annual": 141.2,
       "tags": [
@@ -59,7 +59,7 @@
       "id": "caribou_me",
       "city": "Caribou",
       "state": "ME",
-      "total_snow": 59.8,
+      "total_snow": 59.9,
       "last_24h": 0,
       "avg_annual": 108.6,
       "tags": [
@@ -84,7 +84,7 @@
       "id": "binghamton_ny",
       "city": "Binghamton",
       "state": "NY",
-      "total_snow": 51.1,
+      "total_snow": 54.3,
       "last_24h": 0,
       "avg_annual": 86.5,
       "tags": [
