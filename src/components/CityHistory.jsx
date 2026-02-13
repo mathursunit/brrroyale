@@ -4,6 +4,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import '../styles/index.css';
 import historyData from '../../public/data/history.json';
 import cityInfoData from '../../public/data/city_info.json';
+import Icon from './Icon';
 
 const CityHistory = ({ cityId, onClose, inline = false, cityName = '' }) => {
     const [chartData, setChartData] = useState([]);
@@ -66,11 +67,11 @@ const CityHistory = ({ cityId, onClose, inline = false, cityName = '' }) => {
                 <div className="flex flex-col gap-2 w-full">
                     <div className="flex justify-between items-start w-full">
                         <h2 className="modal-title">
-                            ❄️ {cityName ? cityName : (inline ? 'City Analysis' : 'Snowfall History')}
+                            <Icon name="snow" className="title-icon" /> {cityName ? cityName : (inline ? 'City Analysis' : 'Snowfall History')}
                         </h2>
                         {!inline && (
-                            <button onClick={onClose} className="modal-close">
-                                ✕ Close
+                            <button onClick={onClose} className="modal-close" aria-label="Close modal">
+                                <Icon name="close" className="btn-icon" /> Close
                             </button>
                         )}
                     </div>
@@ -82,13 +83,13 @@ const CityHistory = ({ cityId, onClose, inline = false, cityName = '' }) => {
                                 onClick={() => setViewMode('stats')}
                                 className={`px-4 py-2 text-sm font-bold border-b-2 transition-colors ${viewMode === 'stats' ? 'border-sky-600 text-sky-700' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
                             >
-                                📊 Analysis
+                                <Icon name="chart" className="btn-icon" /> Analysis
                             </button>
                             <button
                                 onClick={() => setViewMode('info')}
                                 className={`px-4 py-2 text-sm font-bold border-b-2 transition-colors ${viewMode === 'info' ? 'border-indigo-600 text-indigo-700' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
                             >
-                                ℹ️ City Facts
+                                <Icon name="info" className="btn-icon" /> City Facts
                             </button>
                         </div>
                     )}
@@ -172,12 +173,12 @@ const CityHistory = ({ cityId, onClose, inline = false, cityName = '' }) => {
                         {/* Frozen Facts Section */}
                         <div className="bg-indigo-50 p-6 rounded-xl border border-indigo-100 mb-6">
                             <h3 className="text-lg font-bold text-slate-700 mb-4 flex items-center gap-2">
-                                <span className="text-2xl">☃️</span> Frozen Facts
+                                <Icon name="snow" className="inline-icon" /> Frozen Facts
                             </h3>
                             <ul className="space-y-4">
                                 {hasInfo.fun_facts.map((fact, i) => (
                                     <li key={i} className="flex gap-3 text-slate-700 leading-relaxed bg-white p-4 rounded-lg shadow-sm border border-slate-100">
-                                        <span className="text-indigo-500 font-bold">❄</span>
+                                        <span className="text-indigo-500 font-bold">•</span>
                                         {fact}
                                     </li>
                                 ))}
@@ -197,7 +198,7 @@ const CityHistory = ({ cityId, onClose, inline = false, cityName = '' }) => {
                                         className="flex items-center gap-2 bg-white hover:bg-sky-50 text-slate-700 hover:text-sky-700 px-4 py-3 rounded-lg border border-slate-200 hover:border-sky-200 transition-all shadow-sm font-medium"
                                     >
                                         {link.label}
-                                        <span className="text-slate-400 text-xs">↗</span>
+                                        <Icon name="arrow-up-right" className="inline-icon icon-trailing" />
                                     </a>
                                 ))}
                             </div>

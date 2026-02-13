@@ -1,5 +1,6 @@
 import { createPortal } from 'react-dom';
 import '../styles/index.css';
+import Icon from './Icon';
 
 const CityInfoModal = ({ city, onClose }) => {
     const modalContent = (
@@ -9,17 +10,18 @@ const CityInfoModal = ({ city, onClose }) => {
                 <div className="hof-modal-header">
                     <div>
                         <h2 className="hof-title">
-                            👑 {city.city}
+                            <Icon name="crown" className="title-icon" />
+                            {city.city}
                             <span className="hof-region-pill">
                                 {city.region}
                             </span>
                         </h2>
                         <div className="hof-subtitle">
-                            <span className="hof-season">❄️ {city.season} Season</span>
+                            <span className="hof-season"><Icon name="snow" className="inline-icon" /> {city.season} Season</span>
                         </div>
                     </div>
-                    <button onClick={onClose} className="modal-close-btn">
-                        ✕
+                    <button onClick={onClose} className="modal-close-btn" aria-label="Close modal">
+                        <Icon name="close" />
                     </button>
                 </div>
 
@@ -28,13 +30,13 @@ const CityInfoModal = ({ city, onClose }) => {
                     <div className="hof-column">
                         {/* Giant Snowfall Stat */}
                         <div className="hof-stat-card">
-                            <div className="hof-stat-bg-icon">❄</div>
+                            <Icon name="snow" className="hof-stat-bg-icon" />
                             <div className="hof-stat-content">
                                 <div className="hof-stat-label">Seasonal Total</div>
                                 <div className="hof-stat-value">{city.total_snow}"</div>
                                 {city.is_state_record && (
                                     <div className="hof-record-badge">
-                                        <span>🏆</span> NY State Record
+                                        <Icon name="trophy" className="inline-icon" /> NY State Record
                                     </div>
                                 )}
                             </div>
@@ -43,12 +45,12 @@ const CityInfoModal = ({ city, onClose }) => {
                         {/* Frozen Facts */}
                         <div>
                             <h3 className="hof-section-title">
-                                <span className="text-xl">☃️</span> Frozen Facts
+                                <Icon name="snow" className="inline-icon" /> Frozen Facts
                             </h3>
                             <ul className="hof-facts-list">
                                 {city.fun_facts && city.fun_facts.map((fact, i) => (
                                     <li key={i} className="hof-fact-item">
-                                        <span className="hof-bullet">❄</span>
+                                        <span className="hof-bullet">•</span>
                                         {fact}
                                     </li>
                                 ))}
@@ -61,8 +63,8 @@ const CityInfoModal = ({ city, onClose }) => {
                         {/* Explore Card */}
                         <div className="hof-explore-card group">
                             <div className="hof-explore-bg"></div>
-                            <div className="hof-explore-content">
-                                <h3 className="hof-explore-title">🔍 Explore {city.city}</h3>
+                                <div className="hof-explore-content">
+                                <h3 className="hof-explore-title"><Icon name="search" className="inline-icon" /> Explore {city.city}</h3>
                                 <p className="hof-explore-desc">Discover winter adventures, tourism guides, and historical records from this legendary snow destination.</p>
 
                                 <div className="hof-links-list">
@@ -75,7 +77,7 @@ const CityInfoModal = ({ city, onClose }) => {
                                             className="hof-link-item"
                                         >
                                             <span className="font-medium text-sm">{link.label}</span>
-                                            <span className="hof-link-arrow">↗</span>
+                                            <Icon name="arrow-up-right" className="hof-link-arrow" />
                                         </a>
                                     ))}
                                 </div>
@@ -85,7 +87,7 @@ const CityInfoModal = ({ city, onClose }) => {
                         {/* Did You Know Trivia */}
                         <div className="hof-trivia-card">
                             <h4 className="hof-trivia-title">
-                                <span>💡</span> Did You Know?
+                                <Icon name="info" className="inline-icon" /> Did You Know?
                             </h4>
                             <p className="hof-trivia-text">
                                 {city.region === 'Tug Hill Plateau'

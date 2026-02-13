@@ -11,6 +11,16 @@
         letter-spacing: 0.05em;
     }
 
+    .banner-content {
+        flex-wrap: wrap;
+        gap: 0.4rem 0.6rem;
+        text-align: center;
+    }
+
+    .banner-source {
+        display: none;
+    }
+
     .header-logo {
         max-width: 85%;
         margin-bottom: 1rem;
@@ -72,6 +82,27 @@
         padding: 0.4rem 0.9rem;
         font-size: 0.8rem;
         flex-shrink: 0;
+    }
+
+    .summary-bar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        padding: 0.7rem 0.8rem;
+    }
+
+    .controls-row {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+
+    .limit-group {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .microcards-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
     }
 
     /* -- Table Adjustments -- */
@@ -178,6 +209,29 @@
     /* -- Particles (reduce count on mobile) -- */
     .particles-container .particle:nth-child(n+50) {
         display: none;
+    }
+
+    /* -- Storm Ticker -- */
+    .storm-ticker {
+        padding: 0.3rem 0;
+    }
+
+    .storm-ticker-item {
+        font-size: 0.65rem;
+    }
+
+    /* -- Rank Changes & Progress -- */
+    .rank-change {
+        font-size: 0.55rem;
+        padding: 0.05rem 0.25rem;
+    }
+
+    .season-progress {
+        min-width: 60px;
+    }
+
+    .trend-badge {
+        font-size: 0.55rem;
     }
 }
 

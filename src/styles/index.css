@@ -300,21 +300,41 @@ body {
     background: linear-gradient(90deg, rgba(13, 27, 42, 0.95), rgba(30, 27, 75, 0.9), rgba(13, 27, 42, 0.95));
     color: var(--color-text-secondary);
     padding: 0.6rem 1.5rem;
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(125, 211, 252, 0.15);
     position: relative;
     z-index: 100;
-    text-transform: uppercase;
 }
 
-.top-banner span {
-    color: var(--color-gold-accent);
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: none;
+}
+
+.banner-pill {
+    background: rgba(125, 211, 252, 0.15);
+    color: var(--color-frost-blue);
+    border: 1px solid rgba(125, 211, 252, 0.3);
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+}
+
+.banner-message {
+    color: var(--color-text-primary);
+    font-weight: 700;
+}
+
+.banner-source {
+    color: var(--color-text-muted);
+    font-weight: 600;
+    letter-spacing: 0.02em;
 }
 
 /* ========================================
@@ -373,15 +393,7 @@ body {
 
 /* Ice crystals at corners */
 .hero::after {
-    content: '❄';
-    position: absolute;
-    top: -5px;
-    right: 20px;
-    font-size: 2.5rem;
-    opacity: 0.15;
-    color: var(--color-frost-blue);
-    text-shadow: 0 0 20px var(--color-frost-blue);
-    animation: crystalFloat 6s ease-in-out infinite;
+    content: '';
 }
 
 @keyframes crystalFloat {
@@ -474,11 +486,11 @@ body {
 }
 
 .lb-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--color-text-primary);
     font-family: var(--font-family-display);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
     text-shadow: 0 0 20px rgba(125, 211, 252, 0.2);
 }
 
@@ -489,13 +501,16 @@ body {
     font-size: 0.85rem;
     font-weight: 700;
     font-family: var(--font-family-sans);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    text-transform: none;
+    letter-spacing: 0.01em;
     border: 1px solid rgba(125, 211, 252, 0.2);
     background: rgba(13, 27, 42, 0.6);
     color: var(--color-text-secondary);
     cursor: pointer;
     transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .mode-toggle-btn:hover {
@@ -517,10 +532,10 @@ body {
     align-items: center;
     gap: 0.4rem;
     font-size: 0.7rem;
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: 700;
     color: var(--color-aurora-teal);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.04em;
 }
 
 .live-dot {
@@ -569,6 +584,11 @@ body {
     font-size: 0.85rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-family: var(--font-family-sans);
+    text-transform: none;
+    letter-spacing: 0.01em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .filter-btn:hover {
@@ -594,7 +614,8 @@ body {
 }
 
 .info-icon {
-    font-size: 0.9rem;
+    width: 0.95rem;
+    height: 0.95rem;
     color: var(--color-text-muted);
     opacity: 0.6;
     transition: all 0.2s;
@@ -642,6 +663,153 @@ body {
 }
 
 /* ========================================
+   SUMMARY BAR
+======================================== */
+.summary-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    background: rgba(13, 27, 42, 0.4);
+    border: 1px solid rgba(125, 211, 252, 0.12);
+    border-radius: 1rem;
+    padding: 0.85rem 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.summary-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: none;
+    color: var(--color-text-muted);
+    font-weight: 700;
+}
+
+.summary-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+/* ========================================
+   CONTROLS
+======================================== */
+.controls-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr auto;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    align-items: center;
+}
+
+.search-wrap {
+    position: relative;
+}
+
+.search-input,
+.select-input {
+    width: 100%;
+    padding: 0.6rem 0.85rem 0.6rem 2.1rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(125, 211, 252, 0.2);
+    background: rgba(13, 27, 42, 0.6);
+    color: var(--color-text-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.select-input {
+    cursor: pointer;
+    padding-left: 0.85rem;
+}
+
+.search-input::placeholder {
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.65rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.9rem;
+    height: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.search-clear {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.limit-group {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.limit-btn {
+    padding: 0.45rem 0.75rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(125, 211, 252, 0.2);
+    background: rgba(13, 27, 42, 0.6);
+    color: var(--color-text-secondary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.limit-btn.active {
+    background: linear-gradient(135deg, var(--color-frost-blue) 0%, var(--color-aurora-teal) 100%);
+    color: var(--color-deep-navy);
+    border-color: transparent;
+    box-shadow: 0 0 15px rgba(125, 211, 252, 0.35);
+}
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+.empty-state {
+    background: rgba(13, 27, 42, 0.5);
+    border: 1px solid rgba(125, 211, 252, 0.2);
+    padding: 1.25rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.empty-title {
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.empty-subtitle {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+}
+
+/* ========================================
    TABLE STYLING
 ======================================== */
 .table-container {
@@ -659,10 +827,15 @@ body {
     color: var(--color-text-muted);
     font-weight: 700;
     font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-transform: none;
     text-align: left;
     font-family: var(--font-family-sans);
+    position: sticky;
+    top: 0;
+    background: rgba(10, 14, 26, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 5;
 }
 
 .lb-table th.text-right {
@@ -737,13 +910,7 @@ body {
 }
 
 .rank-1::before {
-    content: '👑';
-    position: absolute;
-    top: -18px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1rem;
-    animation: crownBounce 2s ease-in-out infinite;
+    content: '';
 }
 
 @keyframes crownGlow {
@@ -792,10 +959,10 @@ body {
 .city-name {
     font-weight: 700;
     color: var(--color-text-primary);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     display: block;
     font-family: var(--font-family-display);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 
 .city-state {
@@ -808,10 +975,10 @@ body {
 .val-total {
     font-weight: 800;
     color: var(--color-frost-blue);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: var(--font-family-display);
     text-shadow: 0 0 10px rgba(125, 211, 252, 0.3);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 
 .val-recent {
@@ -869,15 +1036,15 @@ body {
 
 .stat-label {
     font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    text-transform: none;
+    letter-spacing: 0.04em;
     font-weight: 700;
     color: var(--color-text-muted);
     margin-bottom: 0.5rem;
 }
 
 .stat-value {
-    font-size: 2.25rem;
+    font-size: 2.1rem;
     font-weight: 800;
     margin-bottom: 0.25rem;
     font-family: var(--font-family-display);
@@ -1026,7 +1193,7 @@ body {
     font-weight: 700;
     color: var(--color-text-primary);
     font-family: var(--font-family-display);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 
 .modal-close {
@@ -1040,6 +1207,9 @@ body {
     border-radius: 0.75rem;
     transition: all 0.2s;
     font-family: var(--font-family-sans);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
 .modal-close:hover {
@@ -1162,6 +1332,32 @@ body {
 
 .text-right {
     text-align: right;
+}
+
+/* ========================================
+   ACCESSIBILITY & MOTION
+======================================== */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--color-frost-blue);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+    .particles-container,
+    .wallpaper,
+    .aurora-layer-2,
+    .aurora-layer-3 {
+        display: none !important;
+    }
 }
 
 .text-center {
@@ -1543,9 +1739,16 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
     opacity: 0.5;
     text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+.throne-accent svg {
+    width: 100%;
+    height: 100%;
+    color: var(--color-gold-accent);
 }
 
 /* ========================================
@@ -1645,7 +1848,8 @@ body {
 }
 
 .crown-icon {
-    font-size: 1.2em;
+    width: 1.1rem;
+    height: 1.1rem;
     filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
 }
 
@@ -1656,11 +1860,11 @@ body {
     color: var(--color-text-primary);
     margin-top: 0.5rem;
     line-height: 1.2;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 
 .podium-card-1 .podium-city-name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
@@ -1668,8 +1872,8 @@ body {
     font-size: 0.75rem;
     color: var(--color-text-muted);
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    text-transform: none;
+    letter-spacing: 0.02em;
 }
 
 .podium-value-container {
@@ -1709,8 +1913,8 @@ body {
     margin-top: 0.5rem;
     font-size: 0.6rem;
     font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    text-transform: none;
+    letter-spacing: 0.03em;
     color: var(--color-gold-accent);
     background: rgba(251, 191, 36, 0.1);
     padding: 0.2rem 0.5rem;
@@ -1968,8 +2172,15 @@ body {
     position: absolute;
     top: 1rem;
     right: 1.5rem;
-    font-size: 1.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
     filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+.podium-crown-light svg {
+    width: 100%;
+    height: 100%;
+    color: #0ea5e9;
 }
 
 [data-theme='light'] .podium-card {
@@ -2010,9 +2221,44 @@ body {
     background: rgba(0, 0, 0, 0.02);
 }
 
+[data-theme='light'] .lb-table th {
+    background: rgba(235, 236, 240, 0.9);
+}
+
 [data-theme='light'] .rank-badge-simple {
     background: rgba(203, 213, 225, 0.3);
     color: var(--color-text-secondary);
+}
+
+/* Light Theme: Controls & Summary */
+[data-theme='light'] .summary-bar {
+    background: #ebecf0;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: -5px -5px 12px rgba(255, 255, 255, 0.9), 5px 5px 12px rgba(174, 174, 192, 0.25);
+}
+
+[data-theme='light'] .search-input,
+[data-theme='light'] .select-input {
+    background: #f3f4f7;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--color-text-primary);
+}
+
+[data-theme='light'] .limit-btn {
+    background: #f3f4f7;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--color-text-secondary);
+}
+
+[data-theme='light'] .empty-state {
+    background: #f3f4f7;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .microcard {
+    background: #f3f4f7;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: -4px -4px 10px rgba(255, 255, 255, 0.9), 4px 4px 10px rgba(174, 174, 192, 0.2);
 }
 
 /* Theme Toggle Button */
@@ -2037,7 +2283,36 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.35rem;
     z-index: 200;
+}
+
+.ui-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.btn-icon {
+    width: 0.95rem;
+    height: 0.95rem;
+}
+
+.inline-icon {
+    width: 0.95rem;
+    height: 0.95rem;
+    vertical-align: text-bottom;
+    margin-right: 0.35rem;
+}
+
+.icon-trailing {
+    margin-right: 0;
+    margin-left: 0.35rem;
+}
+
+.title-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-right: 0.35rem;
 }
 
 .theme-toggle:hover {
@@ -2194,13 +2469,7 @@ body {
 
 /* Graphics: Rank 2/3 Snowflakes */
 [data-theme='light'] .podium-column:not(.first) .podium-card::before {
-    content: '❄';
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.25rem;
-    color: #94a3b8;
-    opacity: 0.3;
+    content: '';
 }
 
 /* Typography Matching */
@@ -2250,8 +2519,8 @@ body {
 [data-theme='light'] .lb-table th {
     color: #94a3b8;
     font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    text-transform: none;
+    letter-spacing: 0.03em;
     font-weight: 700;
 }
 
@@ -2259,3 +2528,294 @@ body {
     font-weight: 700;
     color: #64748b;
 }
+.microcards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.microcard {
+    background: rgba(13, 27, 42, 0.55);
+    border: 1px solid rgba(125, 211, 252, 0.15);
+    border-radius: 0.9rem;
+    padding: 0.9rem 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.micro-label {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.micro-value {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    margin-top: 0.2rem;
+}
+
+.micro-sub {
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+/* ========================================
+   STORM TICKER - Scrolling Marquee
+======================================== */
+.storm-ticker {
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(13, 27, 42, 0.95), rgba(30, 27, 75, 0.85), rgba(13, 27, 42, 0.95));
+    border-bottom: 1px solid rgba(125, 211, 252, 0.12);
+    padding: 0.4rem 0;
+    position: relative;
+    z-index: 99;
+}
+
+.storm-ticker::before,
+.storm-ticker::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3rem;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.storm-ticker::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(13, 27, 42, 1), transparent);
+}
+
+.storm-ticker::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(13, 27, 42, 1), transparent);
+}
+
+.storm-ticker-track {
+    display: flex;
+    gap: 2.5rem;
+    animation: tickerScroll 45s linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.storm-ticker-track:hover {
+    animation-play-state: paused;
+}
+
+.storm-ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.02em;
+    flex-shrink: 0;
+}
+
+.ticker-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-text-muted);
+    flex-shrink: 0;
+}
+
+.ticker-dot.active {
+    background: var(--color-aurora-teal);
+    box-shadow: 0 0 8px var(--color-aurora-teal);
+    animation: livePulse 2s ease-in-out infinite;
+}
+
+@keyframes tickerScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Light theme ticker */
+[data-theme='light'] .storm-ticker {
+    background: rgba(235, 236, 240, 0.95);
+    border-bottom: 1px solid rgba(203, 213, 225, 0.5);
+}
+
+[data-theme='light'] .storm-ticker::before {
+    background: linear-gradient(90deg, #ebecf0, transparent);
+}
+
+[data-theme='light'] .storm-ticker::after {
+    background: linear-gradient(270deg, #ebecf0, transparent);
+}
+
+/* ========================================
+   RANK CHANGE BADGES
+======================================== */
+.rank-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.rank-change {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 0.1rem 0.35rem;
+    border-radius: 999px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.rank-change-icon {
+    width: 0.6rem !important;
+    height: 0.6rem !important;
+}
+
+.rank-up {
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.12);
+    border: 1px solid rgba(52, 211, 153, 0.25);
+}
+
+.rank-down {
+    color: #f87171;
+    background: rgba(248, 113, 113, 0.12);
+    border: 1px solid rgba(248, 113, 113, 0.25);
+}
+
+.rank-flat {
+    color: var(--color-text-muted);
+    background: rgba(100, 116, 139, 0.1);
+    border: 1px solid rgba(100, 116, 139, 0.15);
+}
+
+/* Light theme rank badges */
+[data-theme='light'] .rank-up {
+    color: #059669;
+    background: rgba(5, 150, 105, 0.08);
+    border-color: rgba(5, 150, 105, 0.2);
+}
+
+[data-theme='light'] .rank-down {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.08);
+    border-color: rgba(220, 38, 38, 0.2);
+}
+
+/* ========================================
+   SEASON PROGRESS BAR
+======================================== */
+.season-progress {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.35rem;
+    width: 100%;
+    min-width: 80px;
+}
+
+.season-progress-track {
+    flex: 1;
+    height: 4px;
+    background: rgba(100, 116, 139, 0.2);
+    border-radius: 999px;
+    overflow: hidden;
+    min-width: 40px;
+}
+
+.season-progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.season-progress-fill.behind {
+    background: linear-gradient(90deg, #7dd3fc, #38bdf8);
+}
+
+.season-progress-fill.on-pace {
+    background: linear-gradient(90deg, #34d399, #2dd4bf);
+}
+
+.season-progress-fill.over {
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+    box-shadow: 0 0 6px rgba(251, 191, 36, 0.4);
+}
+
+.season-progress-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    min-width: 2rem;
+    text-align: right;
+    font-family: var(--font-mono);
+}
+
+/* On podium cards, make progress bar wider */
+.podium-card .season-progress {
+    margin-top: 0.5rem;
+    padding: 0 0.5rem;
+}
+
+.podium-card .season-progress-track {
+    height: 5px;
+}
+
+/* Light theme progress bars */
+[data-theme='light'] .season-progress-track {
+    background: rgba(203, 213, 225, 0.5);
+}
+
+/* ========================================
+   TREND BADGES
+======================================== */
+.trend-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.35rem;
+    margin-top: 0.15rem;
+    letter-spacing: 0.02em;
+}
+
+.trend-up {
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.1);
+}
+
+.trend-down {
+    color: #f87171;
+    background: rgba(248, 113, 113, 0.1);
+}
+
+.trend-flat {
+    color: var(--color-text-muted);
+    background: rgba(100, 116, 139, 0.08);
+}
+
+/* Light theme trend badges */
+[data-theme='light'] .trend-up {
+    color: #059669;
+    background: rgba(5, 150, 105, 0.08);
+}
+
+[data-theme='light'] .trend-down {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.08);
+}
+
