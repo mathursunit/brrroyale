@@ -1,23 +1,24 @@
 {
-  "last_updated": "2026-02-13T11:35:03.704Z",
+  "last_updated": "2026-02-14T11:27:18.314Z",
   "rankings": [
     {
       "id": "lake_placid_ny",
       "city": "Lake Placid",
       "state": "NY",
-      "total_snow": 134,
+      "total_snow": 137.4,
       "last_24h": 0,
       "avg_annual": 104.1,
       "tags": [
         "NY_Top10"
       ],
-      "rank": 1
+      "rank": 1,
+      "previous_rank": 1
     },
     {
       "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
-      "total_snow": 119.5,
+      "total_snow": 119.9,
       "last_24h": 0,
       "avg_annual": 127.8,
       "tags": [
@@ -25,20 +26,22 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 2
+      "rank": 2,
+      "previous_rank": 2
     },
     {
       "id": "rochester_ny",
       "city": "Rochester",
       "state": "NY",
-      "total_snow": 93.9,
+      "total_snow": 95.2,
       "last_24h": 0,
       "avg_annual": 102,
       "tags": [
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 3
+      "rank": 3,
+      "previous_rank": 3
     },
     {
       "id": "jamestown_ny",
@@ -50,13 +53,14 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 4
+      "rank": 4,
+      "previous_rank": 4
     },
     {
       "id": "buffalo_ny",
       "city": "Buffalo",
       "state": "NY",
-      "total_snow": 77.4,
+      "total_snow": 77.6,
       "last_24h": 0,
       "avg_annual": 95.4,
       "tags": [
@@ -64,7 +68,8 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 5
+      "rank": 5,
+      "previous_rank": 5
     },
     {
       "id": "auburn_ny",
@@ -76,7 +81,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 6
+      "rank": 6,
+      "previous_rank": 6
     },
     {
       "id": "binghamton_ny",
@@ -89,19 +95,21 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 7
+      "rank": 7,
+      "previous_rank": 7
     },
     {
       "id": "old_forge_ny",
       "city": "Old Forge",
       "state": "NY",
-      "total_snow": 14.5,
+      "total_snow": 48.5,
       "last_24h": 0,
       "avg_annual": 157.9,
       "tags": [
         "NY_Top10"
       ],
-      "rank": 8
+      "rank": 8,
+      "previous_rank": 8
     },
     {
       "id": "watertown_ny",
@@ -113,7 +121,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 9
+      "rank": 9,
+      "previous_rank": 9
     },
     {
       "id": "sherman_ny",
@@ -125,7 +134,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 10
+      "rank": 10,
+      "previous_rank": 10
     }
   ]
 }
