@@ -6,6 +6,7 @@ import nyHofData from '../../public/data/ny_hof.json';
 import coldData from '../../public/data/coldest_cities.json';
 import CityHistory from './CityHistory';
 import CityInfoModal from './CityInfoModal';
+import SnowMap from './SnowMap';
 import Icon from './Icon';
 
 /**
@@ -97,9 +98,6 @@ const TrendBadge = ({ city }) => {
 const Leaderboard = ({ dataset, setDataset, theme }) => {
     const [filter, setFilter] = useState('all'); // 'all', 'ny', 'hof'
     const [selectedCityId, setSelectedCityId] = useState(null);
-    const [searchTerm, setSearchTerm] = useState('');
-    const [regionFilter, setRegionFilter] = useState('all');
-    const [limit, setLimit] = useState('all'); // 'all' | 10 | 25
 
     const isSnow = dataset === 'snow';
     const isHof = isSnow && filter === 'hof';
@@ -118,24 +116,8 @@ const Leaderboard = ({ dataset, setDataset, theme }) => {
 
     const baseRankings = isHof ? data.records : data.rankings;
 
-    const regions = Array.from(new Set(baseRankings.map(r => (isHof ? r.region : r.state)).filter(Boolean))).sort();
-
-    const filteredRankings = baseRankings.filter((city) => {
-        const cityName = (city.city || '').toLowerCase();
-        const regionName = (isHof ? city.region : city.state || '').toLowerCase();
-        const query = searchTerm.trim().toLowerCase();
-
-        const matchesSearch = !query || cityName.includes(query) || regionName.includes(query);
-        const matchesRegion = regionFilter === 'all' || regionName === regionFilter.toLowerCase();
-        return matchesSearch && matchesRegion;
-    });
-
-    const limitedRankings = limit === 'all'
-        ? filteredRankings
-        : filteredRankings.slice(0, Number(limit));
-
-    const top3 = limitedRankings.slice(0, 3);
-    const rest = limitedRankings.slice(3);
+    const top3 = baseRankings.slice(0, 3);
+    const rest = baseRankings.slice(3);
 
     const lastUpdatedText = !isHof
         ? new Date(data.last_updated).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })
@@ -146,7 +128,7 @@ const Leaderboard = ({ dataset, setDataset, theme }) => {
     const metricKey = isSnow ? 'total_snow' : 'lowest_temp';
     const metricUnit = isSnow ? '"' : '°F';
 
-    const metricValues = limitedRankings.map(r => Number(r[metricKey]) || 0);
+    const metricValues = baseRankings.map(r => Number(r[metricKey]) || 0);
     const metricAvg = metricValues.length ? (metricValues.reduce((a, b) => a + b, 0) / metricValues.length).toFixed(1) : '—';
     const metricMax = metricValues.length ? Math.max(...metricValues).toFixed(1) : '—';
     const metricMin = metricValues.length ? Math.min(...metricValues).toFixed(1) : '—';
@@ -311,47 +293,14 @@ const Leaderboard = ({ dataset, setDataset, theme }) => {
                     </div>
                 </div>
 
-                {/* Search & Filters */}
-                <div className="controls-row">
-                    <div className="search-wrap">
-                        <Icon name="search" className="search-icon" />
-                        <input
-                            className="search-input"
-                            placeholder={`Search ${isHof ? 'city or region' : 'city or state'}...`}
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            aria-label="Search cities"
-                        />
-                        {searchTerm && (
-                            <button className="search-clear" onClick={() => setSearchTerm('')} aria-label="Clear search">
-                                <Icon name="close" className="btn-icon" />
-                            </button>
-                        )}
-                    </div>
-                    <select
-                        className="select-input"
-                        value={regionFilter}
-                        onChange={(e) => setRegionFilter(e.target.value)}
-                        aria-label={isHof ? 'Filter by region' : 'Filter by state'}
-                    >
-                        <option value="all">{isHof ? 'All Regions' : 'All States'}</option>
-                        {regions.map((r) => (
-                            <option key={r} value={r}>{r}</option>
-                        ))}
-                    </select>
-                    <div className="limit-group">
-                        <button className={`limit-btn ${limit === 10 ? 'active' : ''}`} onClick={() => setLimit(10)}>Top 10</button>
-                        <button className={`limit-btn ${limit === 25 ? 'active' : ''}`} onClick={() => setLimit(25)}>Top 25</button>
-                        <button className={`limit-btn ${limit === 'all' ? 'active' : ''}`} onClick={() => setLimit('all')}>All</button>
-                    </div>
-                </div>
+
 
                 {/* Microcards */}
                 <div className="microcards-grid">
                     <div className="microcard">
                         <div className="micro-label">Average</div>
                         <div className="micro-value">{metricAvg}{metricUnit}</div>
-                        <div className="micro-sub">Across {limitedRankings.length || 0} entries</div>
+                        <div className="micro-sub">Across {baseRankings.length || 0} entries</div>
                     </div>
                     <div className="microcard">
                         <div className="micro-label">Maximum</div>
@@ -364,6 +313,14 @@ const Leaderboard = ({ dataset, setDataset, theme }) => {
                         <div className="micro-sub">Lowest recorded value</div>
                     </div>
                 </div>
+
+                {/* Interactive Map - show for live data views (not HOF) */}
+                {!isHof && (
+                    <SnowMap
+                        dataset={dataset}
+                        onCityClick={(id) => setSelectedCityId(id)}
+                    />
+                )}
 
                 {/* PODIUM SECTION */}
                 <div className="podium-container">
@@ -409,12 +366,7 @@ const Leaderboard = ({ dataset, setDataset, theme }) => {
 
                 {/* Data Table for Remainder */}
                 <div className="table-container mt-4">
-                    {limitedRankings.length === 0 && (
-                        <div className="empty-state">
-                            <div className="empty-title">No results</div>
-                            <div className="empty-subtitle">Try a different search or filter.</div>
-                        </div>
-                    )}
+
                     <table className="lb-table">
                         <thead>
                             <tr>
