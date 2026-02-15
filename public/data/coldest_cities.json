@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-14T11:27:18.315Z",
+  "last_updated": "2026-02-15T11:27:48.464Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -17,6 +17,21 @@
       "previous_rank": 1
     },
     {
+      "id": "watertown_ny",
+      "city": "Watertown",
+      "state": "NY",
+      "lowest_temp": -36,
+      "lowest_windchill": -41,
+      "record_date": "Feb 8, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10"
+      ],
+      "rank": 2,
+      "previous_rank": 3
+    },
+    {
       "id": "intl_falls_mn",
       "city": "International Falls",
       "state": "MN",
@@ -28,21 +43,6 @@
       "tags": [
         "Coldest_Cities",
         "US_Top50"
-      ],
-      "rank": 2,
-      "previous_rank": 3
-    },
-    {
-      "id": "watertown_ny",
-      "city": "Watertown",
-      "state": "NY",
-      "lowest_temp": -34,
-      "lowest_windchill": -39,
-      "record_date": "Jan 24, 2026",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
-      "tags": [
-        "NY_Top10"
       ],
       "rank": 3,
       "previous_rank": 2
@@ -171,7 +171,7 @@
         "US_Top10"
       ],
       "rank": 11,
-      "previous_rank": 14
+      "previous_rank": 11
     },
     {
       "id": "rochester_ny",
@@ -202,7 +202,7 @@
         "NY_Top10"
       ],
       "rank": 13,
-      "previous_rank": 11
+      "previous_rank": 13
     },
     {
       "id": "binghamton_ny",
@@ -218,7 +218,7 @@
         "US_Top10"
       ],
       "rank": 14,
-      "previous_rank": 13
+      "previous_rank": 14
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-02-14T11:27:18.314Z",
+  "last_updated": "2026-02-15T11:27:48.464Z",
   "storm_events": [],
   "rankings": [
     {
       "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
-      "total_snow": 119.9,
+      "total_snow": 127.5,
       "last_24h": 0,
       "avg_annual": 127.8,
       "tags": [
@@ -21,7 +21,7 @@
       "id": "rochester_ny",
       "city": "Rochester",
       "state": "NY",
-      "total_snow": 95.2,
+      "total_snow": 100.8,
       "last_24h": 0,
       "avg_annual": 102,
       "tags": [
@@ -35,7 +35,7 @@
       "id": "buffalo_ny",
       "city": "Buffalo",
       "state": "NY",
-      "total_snow": 77.6,
+      "total_snow": 80.8,
       "last_24h": 0,
       "avg_annual": 95.4,
       "tags": [
@@ -50,7 +50,7 @@
       "id": "marquette_mi",
       "city": "Marquette",
       "state": "MI",
-      "total_snow": 66.8,
+      "total_snow": 67,
       "last_24h": 0,
       "avg_annual": 141.2,
       "tags": [
@@ -61,28 +61,28 @@
       "previous_rank": 4
     },
     {
-      "id": "anchorage_ak",
-      "city": "Anchorage",
-      "state": "AK",
-      "total_snow": 61.7,
+      "id": "caribou_me",
+      "city": "Caribou",
+      "state": "ME",
+      "total_snow": 64.9,
       "last_24h": 0,
-      "avg_annual": 77.9,
+      "avg_annual": 108.6,
       "tags": [
-        "US_Top10",
-        "Snow_Belt"
+        "US_Top10"
       ],
       "rank": 5,
       "previous_rank": 6
     },
     {
-      "id": "caribou_me",
-      "city": "Caribou",
-      "state": "ME",
-      "total_snow": 59.9,
+      "id": "anchorage_ak",
+      "city": "Anchorage",
+      "state": "AK",
+      "total_snow": 63.7,
       "last_24h": 0,
-      "avg_annual": 108.6,
+      "avg_annual": 77.9,
       "tags": [
-        "US_Top10"
+        "US_Top10",
+        "Snow_Belt"
       ],
       "rank": 6,
       "previous_rank": 5
@@ -91,7 +91,7 @@
       "id": "binghamton_ny",
       "city": "Binghamton",
       "state": "NY",
-      "total_snow": 54.4,
+      "total_snow": 58.8,
       "last_24h": 0,
       "avg_annual": 86.5,
       "tags": [
