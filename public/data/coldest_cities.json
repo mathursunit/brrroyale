@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-17T11:42:40.053Z",
+  "last_updated": "2026-02-18T11:42:30.723Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -45,7 +45,7 @@
         "US_Top50"
       ],
       "rank": 3,
-      "previous_rank": 2
+      "previous_rank": 3
     },
     {
       "id": "lake_placid_ny",
@@ -60,7 +60,7 @@
         "NY_Top10"
       ],
       "rank": 4,
-      "previous_rank": 3
+      "previous_rank": 4
     },
     {
       "id": "fargo_nd",
@@ -75,7 +75,7 @@
         "Coldest_Cities"
       ],
       "rank": 5,
-      "previous_rank": 4
+      "previous_rank": 5
     },
     {
       "id": "jamestown_ny",
@@ -90,7 +90,7 @@
         "NY_Top10"
       ],
       "rank": 6,
-      "previous_rank": 5
+      "previous_rank": 6
     },
     {
       "id": "caribou_me",
@@ -105,7 +105,7 @@
         "US_Top10"
       ],
       "rank": 7,
-      "previous_rank": 6
+      "previous_rank": 7
     },
     {
       "id": "anchorage_ak",
@@ -121,7 +121,7 @@
         "Snow_Belt"
       ],
       "rank": 8,
-      "previous_rank": 7
+      "previous_rank": 8
     },
     {
       "id": "marquette_mi",
@@ -137,7 +137,7 @@
         "Snow_Belt"
       ],
       "rank": 9,
-      "previous_rank": 8
+      "previous_rank": 9
     },
     {
       "id": "syracuse_ny",
@@ -154,7 +154,7 @@
         "US_Top10"
       ],
       "rank": 10,
-      "previous_rank": 9
+      "previous_rank": 10
     },
     {
       "id": "buffalo_ny",
@@ -171,7 +171,7 @@
         "US_Top10"
       ],
       "rank": 11,
-      "previous_rank": 10
+      "previous_rank": 11
     },
     {
       "id": "rochester_ny",
@@ -187,7 +187,7 @@
         "US_Top10"
       ],
       "rank": 12,
-      "previous_rank": 11
+      "previous_rank": 12
     },
     {
       "id": "auburn_ny",
@@ -202,7 +202,7 @@
         "NY_Top10"
       ],
       "rank": 13,
-      "previous_rank": 12
+      "previous_rank": 13
     },
     {
       "id": "binghamton_ny",
@@ -218,7 +218,7 @@
         "US_Top10"
       ],
       "rank": 14,
-      "previous_rank": 13
+      "previous_rank": 14
     }
   ]
 }
