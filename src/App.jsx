@@ -56,8 +56,19 @@ const DynamicParticles = ({ mode }) => {
 };
 
 function App() {
-  const [dataset, setDataset] = useState('snow'); // 'snow' or 'cold'
+  // Change 2: Initialize dataset from URL so mode is bookmarkable/shareable
+  const [dataset, setDataset] = useState(() => {
+    const mode = new URLSearchParams(window.location.search).get('mode');
+    return mode === 'cold' ? 'cold' : 'snow';
+  });
   const [theme, setTheme] = useState('dark');
+
+  // Change 2: Sync dataset → URL
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search);
+    p.set('mode', dataset);
+    window.history.replaceState(null, '', `?${p.toString()}`);
+  }, [dataset]);
 
   // Handle Theme Switch
   useEffect(() => {
