@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-22T11:26:14.566Z",
+  "last_updated": "2026-02-23T11:42:06.702Z",
   "storm_events": [],
   "rankings": [
     {
@@ -61,6 +61,19 @@
       "previous_rank": 4
     },
     {
+      "id": "caribou_me",
+      "city": "Caribou",
+      "state": "ME",
+      "total_snow": 67,
+      "last_24h": 0,
+      "avg_annual": 108.6,
+      "tags": [
+        "US_Top10"
+      ],
+      "rank": 5,
+      "previous_rank": 7
+    },
+    {
       "id": "anchorage_ak",
       "city": "Anchorage",
       "state": "AK",
@@ -71,8 +84,8 @@
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 5,
-      "previous_rank": 6
+      "rank": 6,
+      "previous_rank": 5
     },
     {
       "id": "binghamton_ny",
@@ -85,21 +98,8 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 6,
-      "previous_rank": 7
-    },
-    {
-      "id": "caribou_me",
-      "city": "Caribou",
-      "state": "ME",
-      "total_snow": 0,
-      "last_24h": 0,
-      "avg_annual": 108.6,
-      "tags": [
-        "US_Top10"
-      ],
       "rank": 7,
-      "previous_rank": 5
+      "previous_rank": 6
     }
   ]
 }
