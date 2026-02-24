@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-02-23T11:42:06.702Z",
+  "last_updated": "2026-02-24T11:43:38.248Z",
   "storm_events": [],
   "rankings": [
     {
       "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
-      "total_snow": 127.8,
+      "total_snow": 128.1,
       "last_24h": 0,
       "avg_annual": 127.8,
       "tags": [
@@ -21,7 +21,7 @@
       "id": "rochester_ny",
       "city": "Rochester",
       "state": "NY",
-      "total_snow": 101.1,
+      "total_snow": 101.3,
       "last_24h": 0,
       "avg_annual": 102,
       "tags": [
@@ -32,10 +32,24 @@
       "previous_rank": 2
     },
     {
+      "id": "marquette_mi",
+      "city": "Marquette",
+      "state": "MI",
+      "total_snow": 84.4,
+      "last_24h": 0,
+      "avg_annual": 141.2,
+      "tags": [
+        "US_Top10",
+        "Snow_Belt"
+      ],
+      "rank": 3,
+      "previous_rank": 4
+    },
+    {
       "id": "buffalo_ny",
       "city": "Buffalo",
       "state": "NY",
-      "total_snow": 81.6,
+      "total_snow": 81.9,
       "last_24h": 0,
       "avg_annual": 95.4,
       "tags": [
@@ -43,22 +57,8 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 3,
-      "previous_rank": 3
-    },
-    {
-      "id": "marquette_mi",
-      "city": "Marquette",
-      "state": "MI",
-      "total_snow": 75.9,
-      "last_24h": 0,
-      "avg_annual": 141.2,
-      "tags": [
-        "US_Top10",
-        "Snow_Belt"
-      ],
       "rank": 4,
-      "previous_rank": 4
+      "previous_rank": 3
     },
     {
       "id": "caribou_me",
@@ -71,7 +71,7 @@
         "US_Top10"
       ],
       "rank": 5,
-      "previous_rank": 7
+      "previous_rank": 5
     },
     {
       "id": "anchorage_ak",
@@ -85,13 +85,13 @@
         "Snow_Belt"
       ],
       "rank": 6,
-      "previous_rank": 5
+      "previous_rank": 6
     },
     {
       "id": "binghamton_ny",
       "city": "Binghamton",
       "state": "NY",
-      "total_snow": 59.1,
+      "total_snow": 60.2,
       "last_24h": 0,
       "avg_annual": 86.5,
       "tags": [
@@ -99,7 +99,7 @@
         "US_Top10"
       ],
       "rank": 7,
-      "previous_rank": 6
+      "previous_rank": 7
     }
   ]
 }

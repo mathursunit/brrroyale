@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-02-23T11:42:06.702Z",
+  "last_updated": "2026-02-24T11:43:38.249Z",
   "rankings": [
     {
       "id": "lake_placid_ny",
       "city": "Lake Placid",
       "state": "NY",
-      "total_snow": 145.9,
+      "total_snow": 157.2,
       "last_24h": 0,
       "avg_annual": 104.1,
       "tags": [
@@ -18,7 +18,7 @@
       "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
-      "total_snow": 127.8,
+      "total_snow": 128.1,
       "last_24h": 0,
       "avg_annual": 127.8,
       "tags": [
@@ -33,7 +33,7 @@
       "id": "rochester_ny",
       "city": "Rochester",
       "state": "NY",
-      "total_snow": 101.1,
+      "total_snow": 101.3,
       "last_24h": 0,
       "avg_annual": 102,
       "tags": [
@@ -47,7 +47,7 @@
       "id": "jamestown_ny",
       "city": "Jamestown",
       "state": "NY",
-      "total_snow": 89.4,
+      "total_snow": 90.8,
       "last_24h": 0,
       "avg_annual": 98.4,
       "tags": [
@@ -57,10 +57,23 @@
       "previous_rank": 4
     },
     {
+      "id": "auburn_ny",
+      "city": "Auburn",
+      "state": "NY",
+      "total_snow": 82,
+      "last_24h": 0,
+      "avg_annual": 109.4,
+      "tags": [
+        "NY_Top10"
+      ],
+      "rank": 5,
+      "previous_rank": 6
+    },
+    {
       "id": "buffalo_ny",
       "city": "Buffalo",
       "state": "NY",
-      "total_snow": 81.6,
+      "total_snow": 81.9,
       "last_24h": 0,
       "avg_annual": 95.4,
       "tags": [
@@ -68,27 +81,14 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 5,
-      "previous_rank": 5
-    },
-    {
-      "id": "auburn_ny",
-      "city": "Auburn",
-      "state": "NY",
-      "total_snow": 81.6,
-      "last_24h": 0,
-      "avg_annual": 109.4,
-      "tags": [
-        "NY_Top10"
-      ],
       "rank": 6,
-      "previous_rank": 6
+      "previous_rank": 5
     },
     {
       "id": "binghamton_ny",
       "city": "Binghamton",
       "state": "NY",
-      "total_snow": 59.1,
+      "total_snow": 60.2,
       "last_24h": 0,
       "avg_annual": 86.5,
       "tags": [
