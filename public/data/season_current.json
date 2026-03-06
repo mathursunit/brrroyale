@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-03-05T11:37:33.625Z",
+  "last_updated": "2026-03-06T11:34:16.453Z",
   "storm_events": [],
   "rankings": [
     {
       "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
-      "total_snow": 134.4,
+      "total_snow": 134.6,
       "last_24h": 0,
       "avg_annual": 127.8,
       "tags": [
@@ -64,7 +64,7 @@
       "id": "binghamton_ny",
       "city": "Binghamton",
       "state": "NY",
-      "total_snow": 69.4,
+      "total_snow": 69.7,
       "last_24h": 0,
       "avg_annual": 86.5,
       "tags": [
@@ -72,7 +72,7 @@
         "US_Top10"
       ],
       "rank": 5,
-      "previous_rank": 6
+      "previous_rank": 5
     },
     {
       "id": "caribou_me",
@@ -85,7 +85,7 @@
         "US_Top10"
       ],
       "rank": 6,
-      "previous_rank": 5
+      "previous_rank": 6
     },
     {
       "id": "anchorage_ak",
