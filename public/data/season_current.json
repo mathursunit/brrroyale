@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-07T11:24:49.941Z",
+  "last_updated": "2026-03-08T11:25:51.445Z",
   "storm_events": [],
   "rankings": [
     {
@@ -21,7 +21,7 @@
       "id": "rochester_ny",
       "city": "Rochester",
       "state": "NY",
-      "total_snow": 107.6,
+      "total_snow": 107.9,
       "last_24h": 0,
       "avg_annual": 102,
       "tags": [
@@ -35,7 +35,7 @@
       "id": "marquette_mi",
       "city": "Marquette",
       "state": "MI",
-      "total_snow": 90.4,
+      "total_snow": 98.4,
       "last_24h": 0,
       "avg_annual": 141.2,
       "tags": [
