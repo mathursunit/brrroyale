@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-03-09T11:37:37.693Z",
+  "last_updated": "2026-03-10T11:36:46.603Z",
   "storm_events": [],
   "rankings": [
     {
       "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
-      "total_snow": 134.6,
+      "total_snow": 0,
       "last_24h": 0,
       "avg_annual": 127.8,
       "tags": [
@@ -18,24 +18,10 @@
       "previous_rank": 1
     },
     {
-      "id": "rochester_ny",
-      "city": "Rochester",
-      "state": "NY",
-      "total_snow": 107.9,
-      "last_24h": 0,
-      "avg_annual": 102,
-      "tags": [
-        "NY_Top10",
-        "US_Top10"
-      ],
-      "rank": 2,
-      "previous_rank": 2
-    },
-    {
       "id": "buffalo_ny",
       "city": "Buffalo",
       "state": "NY",
-      "total_snow": 88.3,
+      "total_snow": 0,
       "last_24h": 0,
       "avg_annual": 95.4,
       "tags": [
@@ -43,49 +29,50 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 3,
-      "previous_rank": 4
+      "rank": 2,
+      "previous_rank": 3
     },
     {
-      "id": "anchorage_ak",
-      "city": "Anchorage",
-      "state": "AK",
-      "total_snow": 69.8,
+      "id": "rochester_ny",
+      "city": "Rochester",
+      "state": "NY",
+      "total_snow": 0,
       "last_24h": 0,
-      "avg_annual": 77.9,
+      "avg_annual": 102,
       "tags": [
-        "US_Top10",
-        "Snow_Belt"
+        "NY_Top10",
+        "US_Top10"
       ],
-      "rank": 4,
-      "previous_rank": 7
+      "rank": 3,
+      "previous_rank": 2
     },
     {
       "id": "binghamton_ny",
       "city": "Binghamton",
       "state": "NY",
-      "total_snow": 69.7,
+      "total_snow": 0,
       "last_24h": 0,
       "avg_annual": 86.5,
       "tags": [
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 5,
+      "rank": 4,
       "previous_rank": 5
     },
     {
-      "id": "caribou_me",
-      "city": "Caribou",
-      "state": "ME",
-      "total_snow": 69.3,
+      "id": "anchorage_ak",
+      "city": "Anchorage",
+      "state": "AK",
+      "total_snow": 0,
       "last_24h": 0,
-      "avg_annual": 108.6,
+      "avg_annual": 77.9,
       "tags": [
-        "US_Top10"
+        "US_Top10",
+        "Snow_Belt"
       ],
-      "rank": 6,
-      "previous_rank": 6
+      "rank": 5,
+      "previous_rank": 4
     },
     {
       "id": "marquette_mi",
@@ -98,8 +85,21 @@
         "US_Top10",
         "Snow_Belt"
       ],
+      "rank": 6,
+      "previous_rank": 7
+    },
+    {
+      "id": "caribou_me",
+      "city": "Caribou",
+      "state": "ME",
+      "total_snow": 0,
+      "last_24h": 0,
+      "avg_annual": 108.6,
+      "tags": [
+        "US_Top10"
+      ],
       "rank": 7,
-      "previous_rank": 3
+      "previous_rank": 6
     }
   ]
 }
