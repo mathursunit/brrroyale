@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-11T11:37:06.718Z",
+  "last_updated": "2026-03-12T11:35:03.458Z",
   "rankings": [
     {
       "id": "lake_placid_ny",
@@ -12,7 +12,7 @@
         "NY_Top10"
       ],
       "rank": 1,
-      "previous_rank": 8
+      "previous_rank": 1
     },
     {
       "id": "syracuse_ny",
@@ -27,21 +27,7 @@
         "US_Top10"
       ],
       "rank": 2,
-      "previous_rank": 1
-    },
-    {
-      "id": "rochester_ny",
-      "city": "Rochester",
-      "state": "NY",
-      "total_snow": 107.9,
-      "last_24h": 0,
-      "avg_annual": 102,
-      "tags": [
-        "NY_Top10",
-        "US_Top10"
-      ],
-      "rank": 3,
-      "previous_rank": 3
+      "previous_rank": 2
     },
     {
       "id": "jamestown_ny",
@@ -53,8 +39,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 4,
-      "previous_rank": 6
+      "rank": 3,
+      "previous_rank": 4
     },
     {
       "id": "auburn_ny",
@@ -66,8 +52,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 5,
-      "previous_rank": 9
+      "rank": 4,
+      "previous_rank": 5
     },
     {
       "id": "buffalo_ny",
@@ -81,8 +67,8 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 6,
-      "previous_rank": 2
+      "rank": 5,
+      "previous_rank": 6
     },
     {
       "id": "old_forge_ny",
@@ -94,8 +80,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 7,
-      "previous_rank": 4
+      "rank": 6,
+      "previous_rank": 7
     },
     {
       "id": "binghamton_ny",
@@ -108,8 +94,22 @@
         "NY_Top10",
         "US_Top10"
       ],
+      "rank": 7,
+      "previous_rank": 8
+    },
+    {
+      "id": "rochester_ny",
+      "city": "Rochester",
+      "state": "NY",
+      "total_snow": 0,
+      "last_24h": 0,
+      "avg_annual": 102,
+      "tags": [
+        "NY_Top10",
+        "US_Top10"
+      ],
       "rank": 8,
-      "previous_rank": 7
+      "previous_rank": 3
     },
     {
       "id": "watertown_ny",
@@ -122,7 +122,7 @@
         "NY_Top10"
       ],
       "rank": 9,
-      "previous_rank": 5
+      "previous_rank": 9
     },
     {
       "id": "sherman_ny",
