@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-03-19T11:39:30.853Z",
+  "last_updated": "2026-03-20T11:35:45.033Z",
   "storm_events": [],
   "rankings": [
     {
       "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
-      "total_snow": 136.1,
+      "total_snow": 138.4,
       "last_24h": 0,
       "avg_annual": 127.8,
       "tags": [
@@ -18,38 +18,38 @@
       "previous_rank": 1
     },
     {
-      "id": "rochester_ny",
-      "city": "Rochester",
-      "state": "NY",
-      "total_snow": 109.6,
-      "last_24h": 0,
-      "avg_annual": 102,
-      "tags": [
-        "NY_Top10",
-        "US_Top10"
-      ],
-      "rank": 2,
-      "previous_rank": 2
-    },
-    {
       "id": "marquette_mi",
       "city": "Marquette",
       "state": "MI",
-      "total_snow": 107.6,
+      "total_snow": 125.6,
       "last_24h": 0,
       "avg_annual": 141.2,
       "tags": [
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 3,
+      "rank": 2,
       "previous_rank": 3
+    },
+    {
+      "id": "rochester_ny",
+      "city": "Rochester",
+      "state": "NY",
+      "total_snow": 113,
+      "last_24h": 0,
+      "avg_annual": 102,
+      "tags": [
+        "NY_Top10",
+        "US_Top10"
+      ],
+      "rank": 3,
+      "previous_rank": 2
     },
     {
       "id": "buffalo_ny",
       "city": "Buffalo",
       "state": "NY",
-      "total_snow": 89.1,
+      "total_snow": 92.3,
       "last_24h": 0,
       "avg_annual": 95.4,
       "tags": [
@@ -71,7 +71,7 @@
         "US_Top10"
       ],
       "rank": 5,
-      "previous_rank": 7
+      "previous_rank": 5
     },
     {
       "id": "anchorage_ak",
@@ -85,13 +85,13 @@
         "Snow_Belt"
       ],
       "rank": 6,
-      "previous_rank": 5
+      "previous_rank": 6
     },
     {
       "id": "binghamton_ny",
       "city": "Binghamton",
       "state": "NY",
-      "total_snow": 71.5,
+      "total_snow": 0,
       "last_24h": 0,
       "avg_annual": 86.5,
       "tags": [
@@ -99,7 +99,7 @@
         "US_Top10"
       ],
       "rank": 7,
-      "previous_rank": 6
+      "previous_rank": 7
     }
   ]
 }
