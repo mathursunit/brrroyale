@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-20T11:35:45.034Z",
+  "last_updated": "2026-03-21T11:29:02.733Z",
   "rankings": [
     {
       "id": "lake_placid_ny",
@@ -98,6 +98,20 @@
       "previous_rank": 7
     },
     {
+      "id": "binghamton_ny",
+      "city": "Binghamton",
+      "state": "NY",
+      "total_snow": 73.4,
+      "last_24h": 0,
+      "avg_annual": 86.5,
+      "tags": [
+        "NY_Top10",
+        "US_Top10"
+      ],
+      "rank": 8,
+      "previous_rank": 9
+    },
+    {
       "id": "watertown_ny",
       "city": "Watertown",
       "state": "NY",
@@ -106,20 +120,6 @@
       "avg_annual": 116.4,
       "tags": [
         "NY_Top10"
-      ],
-      "rank": 8,
-      "previous_rank": 9
-    },
-    {
-      "id": "binghamton_ny",
-      "city": "Binghamton",
-      "state": "NY",
-      "total_snow": 0,
-      "last_24h": 0,
-      "avg_annual": 86.5,
-      "tags": [
-        "NY_Top10",
-        "US_Top10"
       ],
       "rank": 9,
       "previous_rank": 8
