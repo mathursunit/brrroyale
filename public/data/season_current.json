@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-03-21T11:29:02.732Z",
+  "last_updated": "2026-03-22T11:28:21.949Z",
   "storm_events": [],
   "rankings": [
     {
       "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
-      "total_snow": 138.4,
+      "total_snow": 141.2,
       "last_24h": 0,
       "avg_annual": 127.8,
       "tags": [
@@ -21,7 +21,7 @@
       "id": "marquette_mi",
       "city": "Marquette",
       "state": "MI",
-      "total_snow": 125.6,
+      "total_snow": 125.8,
       "last_24h": 0,
       "avg_annual": 141.2,
       "tags": [
@@ -35,7 +35,7 @@
       "id": "rochester_ny",
       "city": "Rochester",
       "state": "NY",
-      "total_snow": 113,
+      "total_snow": 113.6,
       "last_24h": 0,
       "avg_annual": 102,
       "tags": [
@@ -49,7 +49,7 @@
       "id": "buffalo_ny",
       "city": "Buffalo",
       "state": "NY",
-      "total_snow": 92.3,
+      "total_snow": 92.5,
       "last_24h": 0,
       "avg_annual": 95.4,
       "tags": [
@@ -74,32 +74,32 @@
       "previous_rank": 5
     },
     {
-      "id": "anchorage_ak",
-      "city": "Anchorage",
-      "state": "AK",
-      "total_snow": 73.8,
-      "last_24h": 0,
-      "avg_annual": 77.9,
-      "tags": [
-        "US_Top10",
-        "Snow_Belt"
-      ],
-      "rank": 6,
-      "previous_rank": 6
-    },
-    {
       "id": "binghamton_ny",
       "city": "Binghamton",
       "state": "NY",
-      "total_snow": 73.4,
+      "total_snow": 74,
       "last_24h": 0,
       "avg_annual": 86.5,
       "tags": [
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 7,
+      "rank": 6,
       "previous_rank": 7
+    },
+    {
+      "id": "anchorage_ak",
+      "city": "Anchorage",
+      "state": "AK",
+      "total_snow": 73.9,
+      "last_24h": 0,
+      "avg_annual": 77.9,
+      "tags": [
+        "US_Top10",
+        "Snow_Belt"
+      ],
+      "rank": 7,
+      "previous_rank": 6
     }
   ]
 }
