@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-22T11:28:21.949Z",
+  "last_updated": "2026-03-23T11:48:05.415Z",
   "storm_events": [],
   "rankings": [
     {
@@ -85,7 +85,7 @@
         "US_Top10"
       ],
       "rank": 6,
-      "previous_rank": 7
+      "previous_rank": 6
     },
     {
       "id": "anchorage_ak",
@@ -99,7 +99,7 @@
         "Snow_Belt"
       ],
       "rank": 7,
-      "previous_rank": 6
+      "previous_rank": 7
     }
   ]
 }
