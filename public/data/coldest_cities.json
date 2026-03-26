@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-25T11:45:23.143Z",
+  "last_updated": "2026-03-26T11:53:34.418Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -174,22 +174,6 @@
       "previous_rank": 11
     },
     {
-      "id": "rochester_ny",
-      "city": "Rochester",
-      "state": "NY",
-      "lowest_temp": -9,
-      "lowest_windchill": -14,
-      "record_date": "Feb 9, 2026",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
-      "tags": [
-        "NY_Top10",
-        "US_Top10"
-      ],
-      "rank": 12,
-      "previous_rank": 12
-    },
-    {
       "id": "auburn_ny",
       "city": "Auburn",
       "state": "NY",
@@ -201,24 +185,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 13,
+      "rank": 12,
       "previous_rank": 13
-    },
-    {
-      "id": "binghamton_ny",
-      "city": "Binghamton",
-      "state": "NY",
-      "lowest_temp": -5,
-      "lowest_windchill": -10,
-      "record_date": "Feb 8, 2026",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
-      "tags": [
-        "NY_Top10",
-        "US_Top10"
-      ],
-      "rank": 14,
-      "previous_rank": 14
     }
   ]
 }
