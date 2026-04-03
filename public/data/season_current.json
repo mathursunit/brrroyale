@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-02T11:50:47.384Z",
+  "last_updated": "2026-04-03T11:40:11.143Z",
   "storm_events": [],
   "rankings": [
     {
@@ -35,7 +35,7 @@
       "id": "rochester_ny",
       "city": "Rochester",
       "state": "NY",
-      "total_snow": 113.7,
+      "total_snow": 113.8,
       "last_24h": 0,
       "avg_annual": 102,
       "tags": [
@@ -64,7 +64,7 @@
       "id": "caribou_me",
       "city": "Caribou",
       "state": "ME",
-      "total_snow": 77.6,
+      "total_snow": 79.3,
       "last_24h": 0,
       "avg_annual": 108.6,
       "tags": [
@@ -77,7 +77,7 @@
       "id": "binghamton_ny",
       "city": "Binghamton",
       "state": "NY",
-      "total_snow": 74,
+      "total_snow": 75.1,
       "last_24h": 0,
       "avg_annual": 86.5,
       "tags": [
