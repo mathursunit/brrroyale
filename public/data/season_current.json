@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-07T11:55:58.031Z",
+  "last_updated": "2026-04-08T11:57:00.498Z",
   "storm_events": [],
   "rankings": [
     {
@@ -21,7 +21,7 @@
       "id": "marquette_mi",
       "city": "Marquette",
       "state": "MI",
-      "total_snow": 126.8,
+      "total_snow": 127.3,
       "last_24h": 0,
       "avg_annual": 141.2,
       "tags": [
