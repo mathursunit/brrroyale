@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-11T11:35:06.271Z",
+  "last_updated": "2026-04-12T11:37:36.910Z",
   "storm_events": [],
   "rankings": [
     {
@@ -91,7 +91,7 @@
       "id": "anchorage_ak",
       "city": "Anchorage",
       "state": "AK",
-      "total_snow": 73.9,
+      "total_snow": 74.7,
       "last_24h": 0,
       "avg_annual": 77.9,
       "tags": [
