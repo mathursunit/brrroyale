@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-17T11:54:27.189Z",
+  "last_updated": "2026-04-18T11:38:12.060Z",
   "storm_events": [],
   "rankings": [
     {
@@ -29,7 +29,7 @@
         "Snow_Belt"
       ],
       "rank": 2,
-      "previous_rank": 6
+      "previous_rank": 2
     },
     {
       "id": "rochester_ny",
@@ -58,7 +58,7 @@
         "US_Top10"
       ],
       "rank": 4,
-      "previous_rank": 2
+      "previous_rank": 4
     },
     {
       "id": "caribou_me",
@@ -71,7 +71,7 @@
         "US_Top10"
       ],
       "rank": 5,
-      "previous_rank": 7
+      "previous_rank": 5
     },
     {
       "id": "anchorage_ak",
@@ -85,7 +85,7 @@
         "Snow_Belt"
       ],
       "rank": 6,
-      "previous_rank": 5
+      "previous_rank": 6
     },
     {
       "id": "binghamton_ny",
@@ -99,7 +99,7 @@
         "US_Top10"
       ],
       "rank": 7,
-      "previous_rank": 4
+      "previous_rank": 7
     }
   ]
 }
