@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-19T11:38:34.683Z",
+  "last_updated": "2026-04-20T12:07:32.237Z",
   "storm_events": [],
   "rankings": [
     {
@@ -32,20 +32,6 @@
       "previous_rank": 2
     },
     {
-      "id": "rochester_ny",
-      "city": "Rochester",
-      "state": "NY",
-      "total_snow": 113.8,
-      "last_24h": 0,
-      "avg_annual": 102,
-      "tags": [
-        "NY_Top10",
-        "US_Top10"
-      ],
-      "rank": 3,
-      "previous_rank": 3
-    },
-    {
       "id": "buffalo_ny",
       "city": "Buffalo",
       "state": "NY",
@@ -57,7 +43,7 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 4,
+      "rank": 3,
       "previous_rank": 4
     },
     {
@@ -70,21 +56,21 @@
       "tags": [
         "US_Top10"
       ],
-      "rank": 5,
+      "rank": 4,
       "previous_rank": 5
     },
     {
       "id": "anchorage_ak",
       "city": "Anchorage",
       "state": "AK",
-      "total_snow": 76.6,
+      "total_snow": 76.7,
       "last_24h": 0,
       "avg_annual": 77.9,
       "tags": [
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 6,
+      "rank": 5,
       "previous_rank": 6
     },
     {
@@ -98,8 +84,22 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 7,
+      "rank": 6,
       "previous_rank": 7
+    },
+    {
+      "id": "rochester_ny",
+      "city": "Rochester",
+      "state": "NY",
+      "total_snow": 0,
+      "last_24h": 0,
+      "avg_annual": 102,
+      "tags": [
+        "NY_Top10",
+        "US_Top10"
+      ],
+      "rank": 7,
+      "previous_rank": 3
     }
   ]
 }
