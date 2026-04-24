@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-23T12:10:54.889Z",
+  "last_updated": "2026-04-24T12:00:18.421Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -78,21 +78,6 @@
       "previous_rank": 5
     },
     {
-      "id": "jamestown_ny",
-      "city": "Jamestown",
-      "state": "NY",
-      "lowest_temp": -19,
-      "lowest_windchill": -24,
-      "record_date": "Feb 9, 2026",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
-      "tags": [
-        "NY_Top10"
-      ],
-      "rank": 6,
-      "previous_rank": 6
-    },
-    {
       "id": "caribou_me",
       "city": "Caribou",
       "state": "ME",
@@ -104,7 +89,7 @@
       "tags": [
         "US_Top10"
       ],
-      "rank": 7,
+      "rank": 6,
       "previous_rank": 7
     },
     {
@@ -120,7 +105,7 @@
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 8,
+      "rank": 7,
       "previous_rank": 8
     },
     {
@@ -136,8 +121,42 @@
         "US_Top10",
         "Snow_Belt"
       ],
+      "rank": 8,
+      "previous_rank": 9
+    },
+    {
+      "id": "syracuse_ny",
+      "city": "Syracuse",
+      "state": "NY",
+      "lowest_temp": -9,
+      "lowest_windchill": -14,
+      "record_date": "Jan 24, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10",
+        "Snow_Belt",
+        "US_Top10"
+      ],
       "rank": 9,
       "previous_rank": 9
+    },
+    {
+      "id": "buffalo_ny",
+      "city": "Buffalo",
+      "state": "NY",
+      "lowest_temp": -9,
+      "lowest_windchill": -14,
+      "record_date": "Feb 9, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10",
+        "Snow_Belt",
+        "US_Top10"
+      ],
+      "rank": 10,
+      "previous_rank": 10
     },
     {
       "id": "rochester_ny",
@@ -152,7 +171,7 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 10,
+      "rank": 11,
       "previous_rank": 10
     },
     {
@@ -167,7 +186,7 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 11,
+      "rank": 12,
       "previous_rank": 11
     },
     {
@@ -183,7 +202,7 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 12,
+      "rank": 13,
       "previous_rank": 12
     }
   ]
