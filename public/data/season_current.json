@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-27T12:20:59.188Z",
+  "last_updated": "2026-04-28T12:24:58.421Z",
   "storm_events": [],
   "rankings": [
     {
@@ -85,7 +85,7 @@
         "Snow_Belt"
       ],
       "rank": 6,
-      "previous_rank": 7
+      "previous_rank": 6
     },
     {
       "id": "binghamton_ny",
@@ -99,7 +99,7 @@
         "US_Top10"
       ],
       "rank": 7,
-      "previous_rank": 6
+      "previous_rank": 7
     }
   ]
 }
