@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-30T12:16:38.489Z",
+  "last_updated": "2026-05-01T12:01:22.580Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -32,22 +32,6 @@
       "previous_rank": 2
     },
     {
-      "id": "intl_falls_mn",
-      "city": "International Falls",
-      "state": "MN",
-      "lowest_temp": -36,
-      "lowest_windchill": -41,
-      "record_date": "Jan 24, 2026",
-      "all_time_low": -55,
-      "all_time_windchill": -65,
-      "tags": [
-        "Coldest_Cities",
-        "US_Top50"
-      ],
-      "rank": 3,
-      "previous_rank": 3
-    },
-    {
       "id": "lake_placid_ny",
       "city": "Lake Placid",
       "state": "NY",
@@ -59,7 +43,7 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 4,
+      "rank": 3,
       "previous_rank": 4
     },
     {
@@ -74,40 +58,38 @@
       "tags": [
         "Coldest_Cities"
       ],
+      "rank": 4,
+      "previous_rank": 5
+    },
+    {
+      "id": "jamestown_ny",
+      "city": "Jamestown",
+      "state": "NY",
+      "lowest_temp": -19,
+      "lowest_windchill": -24,
+      "record_date": "Feb 9, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10"
+      ],
       "rank": 5,
       "previous_rank": 5
     },
     {
-      "id": "anchorage_ak",
-      "city": "Anchorage",
-      "state": "AK",
-      "lowest_temp": -17,
-      "lowest_windchill": -22,
-      "record_date": "Jan 8, 2026",
+      "id": "caribou_me",
+      "city": "Caribou",
+      "state": "ME",
+      "lowest_temp": -19,
+      "lowest_windchill": -24,
+      "record_date": "Jan 25, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
-        "US_Top10",
-        "Snow_Belt"
+        "US_Top10"
       ],
       "rank": 6,
       "previous_rank": 6
-    },
-    {
-      "id": "marquette_mi",
-      "city": "Marquette",
-      "state": "MI",
-      "lowest_temp": -13,
-      "lowest_windchill": -18,
-      "record_date": "Jan 24, 2026",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
-      "tags": [
-        "US_Top10",
-        "Snow_Belt"
-      ],
-      "rank": 7,
-      "previous_rank": 7
     },
     {
       "id": "syracuse_ny",
@@ -123,7 +105,7 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 8,
+      "rank": 7,
       "previous_rank": 8
     },
     {
@@ -139,6 +121,21 @@
         "NY_Top10",
         "Snow_Belt",
         "US_Top10"
+      ],
+      "rank": 8,
+      "previous_rank": 9
+    },
+    {
+      "id": "auburn_ny",
+      "city": "Auburn",
+      "state": "NY",
+      "lowest_temp": -7,
+      "lowest_windchill": -12,
+      "record_date": "Feb 9, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10"
       ],
       "rank": 9,
       "previous_rank": 9

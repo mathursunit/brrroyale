@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-30T12:16:38.488Z",
+  "last_updated": "2026-05-01T12:01:22.579Z",
   "storm_events": [],
   "rankings": [
     {
@@ -18,20 +18,6 @@
       "previous_rank": 1
     },
     {
-      "id": "marquette_mi",
-      "city": "Marquette",
-      "state": "MI",
-      "total_snow": 127.3,
-      "last_24h": 0,
-      "avg_annual": 141.2,
-      "tags": [
-        "US_Top10",
-        "Snow_Belt"
-      ],
-      "rank": 2,
-      "previous_rank": 2
-    },
-    {
       "id": "rochester_ny",
       "city": "Rochester",
       "state": "NY",
@@ -42,7 +28,7 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 3,
+      "rank": 2,
       "previous_rank": 3
     },
     {
@@ -57,7 +43,7 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 4,
+      "rank": 3,
       "previous_rank": 4
     },
     {
@@ -70,7 +56,7 @@
       "tags": [
         "US_Top10"
       ],
-      "rank": 5,
+      "rank": 4,
       "previous_rank": 5
     },
     {
@@ -84,7 +70,7 @@
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 6,
+      "rank": 5,
       "previous_rank": 6
     },
     {
@@ -98,8 +84,22 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 7,
+      "rank": 6,
       "previous_rank": 7
+    },
+    {
+      "id": "marquette_mi",
+      "city": "Marquette",
+      "state": "MI",
+      "total_snow": 0,
+      "last_24h": 0,
+      "avg_annual": 141.2,
+      "tags": [
+        "US_Top10",
+        "Snow_Belt"
+      ],
+      "rank": 7,
+      "previous_rank": 2
     }
   ]
 }
