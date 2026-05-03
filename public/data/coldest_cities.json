@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-02T11:49:46.580Z",
+  "last_updated": "2026-05-03T11:48:38.239Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -59,7 +59,7 @@
         "NY_Top10"
       ],
       "rank": 4,
-      "previous_rank": 5
+      "previous_rank": 4
     },
     {
       "id": "caribou_me",
@@ -74,7 +74,7 @@
         "US_Top10"
       ],
       "rank": 5,
-      "previous_rank": 6
+      "previous_rank": 5
     },
     {
       "id": "anchorage_ak",
@@ -123,7 +123,7 @@
         "US_Top10"
       ],
       "rank": 8,
-      "previous_rank": 7
+      "previous_rank": 8
     },
     {
       "id": "buffalo_ny",
@@ -140,7 +140,7 @@
         "US_Top10"
       ],
       "rank": 9,
-      "previous_rank": 8
+      "previous_rank": 9
     },
     {
       "id": "rochester_ny",
@@ -171,7 +171,7 @@
         "NY_Top10"
       ],
       "rank": 11,
-      "previous_rank": 9
+      "previous_rank": 11
     }
   ]
 }
