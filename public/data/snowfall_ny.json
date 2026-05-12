@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-11T13:49:12.625Z",
+  "last_updated": "2026-05-12T13:07:00.676Z",
   "rankings": [
     {
       "id": "lake_placid_ny",
@@ -47,7 +47,7 @@
       "id": "old_forge_ny",
       "city": "Old Forge",
       "state": "NY",
-      "total_snow": 109,
+      "total_snow": 114,
       "last_24h": 0,
       "avg_annual": 157.9,
       "tags": [
