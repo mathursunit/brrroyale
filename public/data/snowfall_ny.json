@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-26T13:55:17.566Z",
+  "last_updated": "2026-05-27T14:28:41.175Z",
   "rankings": [
     {
       "id": "lake_placid_ny",
@@ -12,7 +12,7 @@
         "NY_Top10"
       ],
       "rank": 1,
-      "previous_rank": 8
+      "previous_rank": 1
     },
     {
       "id": "syracuse_ny",
@@ -27,7 +27,7 @@
         "US_Top10"
       ],
       "rank": 2,
-      "previous_rank": 1
+      "previous_rank": 2
     },
     {
       "id": "rochester_ny",
@@ -41,7 +41,7 @@
         "US_Top10"
       ],
       "rank": 3,
-      "previous_rank": 2
+      "previous_rank": 3
     },
     {
       "id": "old_forge_ny",
@@ -54,7 +54,7 @@
         "NY_Top10"
       ],
       "rank": 4,
-      "previous_rank": 3
+      "previous_rank": 4
     },
     {
       "id": "jamestown_ny",
@@ -67,7 +67,20 @@
         "NY_Top10"
       ],
       "rank": 5,
-      "previous_rank": 4
+      "previous_rank": 5
+    },
+    {
+      "id": "auburn_ny",
+      "city": "Auburn",
+      "state": "NY",
+      "total_snow": 95.1,
+      "last_24h": 0,
+      "avg_annual": 109.4,
+      "tags": [
+        "NY_Top10"
+      ],
+      "rank": 6,
+      "previous_rank": 9
     },
     {
       "id": "buffalo_ny",
@@ -81,7 +94,7 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 6,
+      "rank": 7,
       "previous_rank": 6
     },
     {
@@ -95,8 +108,8 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 7,
-      "previous_rank": 5
+      "rank": 8,
+      "previous_rank": 7
     },
     {
       "id": "watertown_ny",
@@ -108,21 +121,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 8,
-      "previous_rank": 7
-    },
-    {
-      "id": "auburn_ny",
-      "city": "Auburn",
-      "state": "NY",
-      "total_snow": 0,
-      "last_24h": 0,
-      "avg_annual": 109.4,
-      "tags": [
-        "NY_Top10"
-      ],
       "rank": 9,
-      "previous_rank": 9
+      "previous_rank": 8
     },
     {
       "id": "sherman_ny",
