@@ -1,6 +1,19 @@
 {
-  "last_updated": "2026-05-30T12:05:38.024Z",
+  "last_updated": "2026-05-31T12:13:32.662Z",
   "rankings": [
+    {
+      "id": "lake_placid_ny",
+      "city": "Lake Placid",
+      "state": "NY",
+      "total_snow": 179.4,
+      "last_24h": 0,
+      "avg_annual": 104.1,
+      "tags": [
+        "NY_Top10"
+      ],
+      "rank": 1,
+      "previous_rank": 9
+    },
     {
       "id": "syracuse_ny",
       "city": "Syracuse",
@@ -13,8 +26,22 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 1,
+      "rank": 2,
       "previous_rank": 1
+    },
+    {
+      "id": "rochester_ny",
+      "city": "Rochester",
+      "state": "NY",
+      "total_snow": 114.1,
+      "last_24h": 0,
+      "avg_annual": 102,
+      "tags": [
+        "NY_Top10",
+        "US_Top10"
+      ],
+      "rank": 3,
+      "previous_rank": 7
     },
     {
       "id": "old_forge_ny",
@@ -26,8 +53,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 2,
-      "previous_rank": 3
+      "rank": 4,
+      "previous_rank": 2
     },
     {
       "id": "jamestown_ny",
@@ -39,8 +66,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 3,
-      "previous_rank": 4
+      "rank": 5,
+      "previous_rank": 3
     },
     {
       "id": "auburn_ny",
@@ -52,8 +79,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 4,
-      "previous_rank": 9
+      "rank": 6,
+      "previous_rank": 4
     },
     {
       "id": "buffalo_ny",
@@ -67,7 +94,7 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 5,
+      "rank": 7,
       "previous_rank": 5
     },
     {
@@ -81,22 +108,8 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 6,
+      "rank": 8,
       "previous_rank": 6
-    },
-    {
-      "id": "rochester_ny",
-      "city": "Rochester",
-      "state": "NY",
-      "total_snow": 0,
-      "last_24h": 0,
-      "avg_annual": 102,
-      "tags": [
-        "NY_Top10",
-        "US_Top10"
-      ],
-      "rank": 7,
-      "previous_rank": 2
     },
     {
       "id": "watertown_ny",
@@ -105,19 +118,6 @@
       "total_snow": 0,
       "last_24h": 0,
       "avg_annual": 116.4,
-      "tags": [
-        "NY_Top10"
-      ],
-      "rank": 8,
-      "previous_rank": 7
-    },
-    {
-      "id": "lake_placid_ny",
-      "city": "Lake Placid",
-      "state": "NY",
-      "total_snow": 0,
-      "last_24h": 0,
-      "avg_annual": 104.1,
       "tags": [
         "NY_Top10"
       ],
