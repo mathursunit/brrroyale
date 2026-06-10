@@ -1,21 +1,6 @@
 {
-  "last_updated": "2026-06-09T13:50:17.780Z",
+  "last_updated": "2026-06-10T14:25:58.474Z",
   "rankings": [
-    {
-      "id": "fairbanks_ak",
-      "city": "Fairbanks",
-      "state": "AK",
-      "lowest_temp": -50,
-      "lowest_windchill": -55,
-      "record_date": "Jan 4, 2026",
-      "all_time_low": -66,
-      "all_time_windchill": -76,
-      "tags": [
-        "Coldest_Cities"
-      ],
-      "rank": 1,
-      "previous_rank": 1
-    },
     {
       "id": "watertown_ny",
       "city": "Watertown",
@@ -27,6 +12,22 @@
       "all_time_windchill": -50,
       "tags": [
         "NY_Top10"
+      ],
+      "rank": 1,
+      "previous_rank": 2
+    },
+    {
+      "id": "intl_falls_mn",
+      "city": "International Falls",
+      "state": "MN",
+      "lowest_temp": -36,
+      "lowest_windchill": -41,
+      "record_date": "Jan 24, 2026",
+      "all_time_low": -55,
+      "all_time_windchill": -65,
+      "tags": [
+        "Coldest_Cities",
+        "US_Top50"
       ],
       "rank": 2,
       "previous_rank": 2
@@ -47,38 +48,6 @@
       "previous_rank": 3
     },
     {
-      "id": "anchorage_ak",
-      "city": "Anchorage",
-      "state": "AK",
-      "lowest_temp": -17,
-      "lowest_windchill": -22,
-      "record_date": "Jan 8, 2026",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
-      "tags": [
-        "US_Top10",
-        "Snow_Belt"
-      ],
-      "rank": 4,
-      "previous_rank": 5
-    },
-    {
-      "id": "marquette_mi",
-      "city": "Marquette",
-      "state": "MI",
-      "lowest_temp": -13,
-      "lowest_windchill": -18,
-      "record_date": "Jan 24, 2026",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
-      "tags": [
-        "US_Top10",
-        "Snow_Belt"
-      ],
-      "rank": 5,
-      "previous_rank": 5
-    },
-    {
       "id": "syracuse_ny",
       "city": "Syracuse",
       "state": "NY",
@@ -92,7 +61,7 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 6,
+      "rank": 4,
       "previous_rank": 6
     },
     {
@@ -109,7 +78,7 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 7,
+      "rank": 5,
       "previous_rank": 7
     },
     {
@@ -125,7 +94,7 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 8,
+      "rank": 6,
       "previous_rank": 8
     }
   ]
