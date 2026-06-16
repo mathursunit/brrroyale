@@ -1,17 +1,17 @@
 {
-  "last_updated": "2026-06-15T16:18:48.172Z",
+  "last_updated": "2026-06-16T15:59:18.484Z",
   "rankings": [
     {
-      "id": "fairbanks_ak",
-      "city": "Fairbanks",
-      "state": "AK",
-      "lowest_temp": -50,
-      "lowest_windchill": -55,
-      "record_date": "Jan 4, 2026",
-      "all_time_low": -66,
-      "all_time_windchill": -76,
+      "id": "watertown_ny",
+      "city": "Watertown",
+      "state": "NY",
+      "lowest_temp": -36,
+      "lowest_windchill": -41,
+      "record_date": "Feb 8, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
       "tags": [
-        "Coldest_Cities"
+        "NY_Top10"
       ],
       "rank": 1,
       "previous_rank": 1
@@ -30,19 +30,19 @@
         "US_Top50"
       ],
       "rank": 2,
-      "previous_rank": 3
+      "previous_rank": 2
     },
     {
-      "id": "lake_placid_ny",
-      "city": "Lake Placid",
-      "state": "NY",
-      "lowest_temp": -29,
-      "lowest_windchill": -34,
-      "record_date": "Jan 25, 2026",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
+      "id": "fargo_nd",
+      "city": "Fargo",
+      "state": "ND",
+      "lowest_temp": -20,
+      "lowest_windchill": -25,
+      "record_date": "Jan 22, 2026",
+      "all_time_low": -39,
+      "all_time_windchill": -49,
       "tags": [
-        "NY_Top10"
+        "Coldest_Cities"
       ],
       "rank": 3,
       "previous_rank": 3
