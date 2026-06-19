@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-18T14:12:34.506Z",
+  "last_updated": "2026-06-19T14:14:11.867Z",
   "rankings": [
     {
       "id": "lake_placid_ny",
@@ -43,20 +43,6 @@
       "previous_rank": 3
     },
     {
-      "id": "rochester_ny",
-      "city": "Rochester",
-      "state": "NY",
-      "total_snow": 114.1,
-      "last_24h": 0,
-      "avg_annual": 102,
-      "tags": [
-        "NY_Top10",
-        "US_Top10"
-      ],
-      "rank": 4,
-      "previous_rank": 4
-    },
-    {
       "id": "jamestown_ny",
       "city": "Jamestown",
       "state": "NY",
@@ -66,21 +52,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 5,
+      "rank": 4,
       "previous_rank": 5
-    },
-    {
-      "id": "auburn_ny",
-      "city": "Auburn",
-      "state": "NY",
-      "total_snow": 95.1,
-      "last_24h": 0,
-      "avg_annual": 109.4,
-      "tags": [
-        "NY_Top10"
-      ],
-      "rank": 6,
-      "previous_rank": 9
     },
     {
       "id": "buffalo_ny",
@@ -94,8 +67,8 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 7,
-      "previous_rank": 6
+      "rank": 5,
+      "previous_rank": 7
     },
     {
       "id": "binghamton_ny",
@@ -108,8 +81,22 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 8,
+      "rank": 6,
       "previous_rank": 8
+    },
+    {
+      "id": "rochester_ny",
+      "city": "Rochester",
+      "state": "NY",
+      "total_snow": 0,
+      "last_24h": 0,
+      "avg_annual": 102,
+      "tags": [
+        "NY_Top10",
+        "US_Top10"
+      ],
+      "rank": 7,
+      "previous_rank": 4
     },
     {
       "id": "watertown_ny",
@@ -121,8 +108,21 @@
       "tags": [
         "NY_Top10"
       ],
+      "rank": 8,
+      "previous_rank": 9
+    },
+    {
+      "id": "auburn_ny",
+      "city": "Auburn",
+      "state": "NY",
+      "total_snow": 0,
+      "last_24h": 0,
+      "avg_annual": 109.4,
+      "tags": [
+        "NY_Top10"
+      ],
       "rank": 9,
-      "previous_rank": 7
+      "previous_rank": 6
     },
     {
       "id": "sherman_ny",
