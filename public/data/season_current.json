@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-20T12:27:20.611Z",
+  "last_updated": "2026-06-21T13:10:14.394Z",
   "storm_events": [],
   "rankings": [
     {
@@ -43,21 +43,6 @@
         "US_Top10"
       ],
       "rank": 3,
-      "previous_rank": 7
-    },
-    {
-      "id": "buffalo_ny",
-      "city": "Buffalo",
-      "state": "NY",
-      "total_snow": 92.5,
-      "last_24h": 0,
-      "avg_annual": 95.4,
-      "tags": [
-        "NY_Top10",
-        "Snow_Belt",
-        "US_Top10"
-      ],
-      "rank": 4,
       "previous_rank": 3
     },
     {
@@ -70,8 +55,8 @@
       "tags": [
         "US_Top10"
       ],
-      "rank": 5,
-      "previous_rank": 4
+      "rank": 4,
+      "previous_rank": 5
     },
     {
       "id": "anchorage_ak",
@@ -84,8 +69,8 @@
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 6,
-      "previous_rank": 5
+      "rank": 5,
+      "previous_rank": 6
     },
     {
       "id": "binghamton_ny",
@@ -98,8 +83,23 @@
         "NY_Top10",
         "US_Top10"
       ],
+      "rank": 6,
+      "previous_rank": 7
+    },
+    {
+      "id": "buffalo_ny",
+      "city": "Buffalo",
+      "state": "NY",
+      "total_snow": 0,
+      "last_24h": 0,
+      "avg_annual": 95.4,
+      "tags": [
+        "NY_Top10",
+        "Snow_Belt",
+        "US_Top10"
+      ],
       "rank": 7,
-      "previous_rank": 6
+      "previous_rank": 4
     }
   ]
 }
