@@ -1,21 +1,6 @@
 {
-  "last_updated": "2026-06-24T13:24:51.498Z",
+  "last_updated": "2026-06-25T13:22:04.034Z",
   "rankings": [
-    {
-      "id": "fairbanks_ak",
-      "city": "Fairbanks",
-      "state": "AK",
-      "lowest_temp": -50,
-      "lowest_windchill": -55,
-      "record_date": "Jan 4, 2026",
-      "all_time_low": -66,
-      "all_time_windchill": -76,
-      "tags": [
-        "Coldest_Cities"
-      ],
-      "rank": 1,
-      "previous_rank": 1
-    },
     {
       "id": "watertown_ny",
       "city": "Watertown",
@@ -28,8 +13,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 2,
-      "previous_rank": 1
+      "rank": 1,
+      "previous_rank": 2
     },
     {
       "id": "intl_falls_mn",
@@ -44,38 +29,23 @@
         "Coldest_Cities",
         "US_Top50"
       ],
-      "rank": 3,
-      "previous_rank": 2
+      "rank": 2,
+      "previous_rank": 3
     },
     {
-      "id": "fargo_nd",
-      "city": "Fargo",
-      "state": "ND",
-      "lowest_temp": -20,
-      "lowest_windchill": -25,
-      "record_date": "Jan 22, 2026",
-      "all_time_low": -39,
-      "all_time_windchill": -49,
-      "tags": [
-        "Coldest_Cities"
-      ],
-      "rank": 4,
-      "previous_rank": 4
-    },
-    {
-      "id": "caribou_me",
-      "city": "Caribou",
-      "state": "ME",
-      "lowest_temp": -19,
-      "lowest_windchill": -24,
+      "id": "lake_placid_ny",
+      "city": "Lake Placid",
+      "state": "NY",
+      "lowest_temp": -29,
+      "lowest_windchill": -34,
       "record_date": "Jan 25, 2026",
       "all_time_low": -40,
       "all_time_windchill": -50,
       "tags": [
-        "US_Top10"
+        "NY_Top10"
       ],
-      "rank": 5,
-      "previous_rank": 5
+      "rank": 3,
+      "previous_rank": 3
     },
     {
       "id": "anchorage_ak",
@@ -90,7 +60,7 @@
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 6,
+      "rank": 4,
       "previous_rank": 6
     },
     {
@@ -106,8 +76,8 @@
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 7,
-      "previous_rank": 5
+      "rank": 5,
+      "previous_rank": 7
     },
     {
       "id": "syracuse_ny",
@@ -123,12 +93,12 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 8,
-      "previous_rank": 6
+      "rank": 6,
+      "previous_rank": 8
     },
     {
-      "id": "rochester_ny",
-      "city": "Rochester",
+      "id": "buffalo_ny",
+      "city": "Buffalo",
       "state": "NY",
       "lowest_temp": -9,
       "lowest_windchill": -14,
@@ -137,25 +107,11 @@
       "all_time_windchill": -50,
       "tags": [
         "NY_Top10",
+        "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 9,
-      "previous_rank": 9
-    },
-    {
-      "id": "auburn_ny",
-      "city": "Auburn",
-      "state": "NY",
-      "lowest_temp": -7,
-      "lowest_windchill": -12,
-      "record_date": "Feb 9, 2026",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
-      "tags": [
-        "NY_Top10"
-      ],
-      "rank": 10,
-      "previous_rank": 10
+      "rank": 7,
+      "previous_rank": 7
     },
     {
       "id": "binghamton_ny",
@@ -170,8 +126,8 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 11,
-      "previous_rank": 8
+      "rank": 8,
+      "previous_rank": 11
     }
   ]
 }
