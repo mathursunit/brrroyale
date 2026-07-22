@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-21T12:24:36.252Z",
+  "last_updated": "2026-07-22T12:27:09.361Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -45,7 +45,7 @@
         "US_Top50"
       ],
       "rank": 3,
-      "previous_rank": 2
+      "previous_rank": 3
     },
     {
       "id": "lake_placid_ny",
@@ -60,7 +60,7 @@
         "NY_Top10"
       ],
       "rank": 4,
-      "previous_rank": 3
+      "previous_rank": 4
     },
     {
       "id": "fargo_nd",
@@ -75,7 +75,7 @@
         "Coldest_Cities"
       ],
       "rank": 5,
-      "previous_rank": 4
+      "previous_rank": 5
     },
     {
       "id": "anchorage_ak",
@@ -91,7 +91,7 @@
         "Snow_Belt"
       ],
       "rank": 6,
-      "previous_rank": 7
+      "previous_rank": 6
     },
     {
       "id": "marquette_mi",
@@ -107,7 +107,7 @@
         "Snow_Belt"
       ],
       "rank": 7,
-      "previous_rank": 8
+      "previous_rank": 7
     },
     {
       "id": "syracuse_ny",
@@ -124,7 +124,7 @@
         "US_Top10"
       ],
       "rank": 8,
-      "previous_rank": 9
+      "previous_rank": 8
     },
     {
       "id": "buffalo_ny",
@@ -141,7 +141,7 @@
         "US_Top10"
       ],
       "rank": 9,
-      "previous_rank": 10
+      "previous_rank": 9
     },
     {
       "id": "binghamton_ny",
@@ -157,7 +157,7 @@
         "US_Top10"
       ],
       "rank": 10,
-      "previous_rank": 13
+      "previous_rank": 10
     }
   ]
 }
