@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24T11:32:25.677Z",
+  "last_updated": "2026-08-25T11:31:36.688Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -44,6 +44,21 @@
         "NY_Top10"
       ],
       "rank": 3,
+      "previous_rank": 3
+    },
+    {
+      "id": "jamestown_ny",
+      "city": "Jamestown",
+      "state": "NY",
+      "lowest_temp": -19,
+      "lowest_windchill": -24,
+      "record_date": "Feb 9, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10"
+      ],
+      "rank": 4,
       "previous_rank": 4
     },
     {
@@ -58,8 +73,8 @@
       "tags": [
         "US_Top10"
       ],
-      "rank": 4,
-      "previous_rank": 7
+      "rank": 5,
+      "previous_rank": 4
     },
     {
       "id": "anchorage_ak",
@@ -74,8 +89,8 @@
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 5,
-      "previous_rank": 8
+      "rank": 6,
+      "previous_rank": 5
     },
     {
       "id": "marquette_mi",
@@ -90,8 +105,8 @@
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 6,
-      "previous_rank": 9
+      "rank": 7,
+      "previous_rank": 6
     },
     {
       "id": "syracuse_ny",
@@ -107,8 +122,8 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 7,
-      "previous_rank": 10
+      "rank": 8,
+      "previous_rank": 7
     },
     {
       "id": "buffalo_ny",
@@ -124,8 +139,24 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 8,
-      "previous_rank": 11
+      "rank": 9,
+      "previous_rank": 8
+    },
+    {
+      "id": "rochester_ny",
+      "city": "Rochester",
+      "state": "NY",
+      "lowest_temp": -9,
+      "lowest_windchill": -14,
+      "record_date": "Feb 9, 2026",
+      "all_time_low": -40,
+      "all_time_windchill": -50,
+      "tags": [
+        "NY_Top10",
+        "US_Top10"
+      ],
+      "rank": 10,
+      "previous_rank": 10
     },
     {
       "id": "auburn_ny",
@@ -139,24 +170,8 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 9,
-      "previous_rank": 13
-    },
-    {
-      "id": "binghamton_ny",
-      "city": "Binghamton",
-      "state": "NY",
-      "lowest_temp": -5,
-      "lowest_windchill": -10,
-      "record_date": "Feb 8, 2026",
-      "all_time_low": -40,
-      "all_time_windchill": -50,
-      "tags": [
-        "NY_Top10",
-        "US_Top10"
-      ],
-      "rank": 10,
-      "previous_rank": 14
+      "rank": 11,
+      "previous_rank": 9
     }
   ]
 }
