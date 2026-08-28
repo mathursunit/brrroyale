@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-27T20:56:17.306Z",
+  "last_updated": "2026-08-28T21:19:50.572Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -48,6 +48,21 @@
       "previous_rank": 3
     },
     {
+      "id": "fargo_nd",
+      "city": "Fargo",
+      "state": "ND",
+      "lowest_temp": -20,
+      "lowest_windchill": -25,
+      "record_date": "Jan 22, 2026",
+      "all_time_low": -39,
+      "all_time_windchill": -49,
+      "tags": [
+        "Coldest_Cities"
+      ],
+      "rank": 4,
+      "previous_rank": 4
+    },
+    {
       "id": "jamestown_ny",
       "city": "Jamestown",
       "state": "NY",
@@ -59,7 +74,7 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 4,
+      "rank": 5,
       "previous_rank": 4
     },
     {
@@ -74,7 +89,7 @@
       "tags": [
         "US_Top10"
       ],
-      "rank": 5,
+      "rank": 6,
       "previous_rank": 5
     },
     {
@@ -90,7 +105,7 @@
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 6,
+      "rank": 7,
       "previous_rank": 6
     },
     {
@@ -106,7 +121,7 @@
         "US_Top10",
         "Snow_Belt"
       ],
-      "rank": 7,
+      "rank": 8,
       "previous_rank": 7
     },
     {
@@ -123,7 +138,7 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 8,
+      "rank": 9,
       "previous_rank": 8
     },
     {
@@ -140,7 +155,7 @@
         "Snow_Belt",
         "US_Top10"
       ],
-      "rank": 9,
+      "rank": 10,
       "previous_rank": 9
     },
     {
@@ -156,7 +171,7 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 10,
+      "rank": 11,
       "previous_rank": 10
     },
     {
@@ -171,7 +186,7 @@
       "tags": [
         "NY_Top10"
       ],
-      "rank": 11,
+      "rank": 12,
       "previous_rank": 11
     },
     {
@@ -187,7 +202,7 @@
         "NY_Top10",
         "US_Top10"
       ],
-      "rank": 12,
+      "rank": 13,
       "previous_rank": 12
     }
   ]
