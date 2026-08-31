@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-30T15:15:52.367Z",
+  "last_updated": "2026-08-31T17:56:54.378Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -202,7 +202,7 @@
         "NY_Top10"
       ],
       "rank": 13,
-      "previous_rank": 12
+      "previous_rank": 13
     },
     {
       "id": "binghamton_ny",
@@ -218,7 +218,7 @@
         "US_Top10"
       ],
       "rank": 14,
-      "previous_rank": 13
+      "previous_rank": 14
     }
   ]
 }
