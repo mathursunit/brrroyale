@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/index.css';
 import snowyData from '../../public/data/season_current.json';
 import snowyNYData from '../../public/data/snowfall_ny.json';
@@ -95,12 +95,92 @@ const TrendBadge = ({ city }) => {
     );
 };
 
+// Change 5: PodiumCard extracted outside Leaderboard — no longer recreated on every render
+const PodiumCard = ({ city, rank, onClick, theme, isSnow, isHof }) => {
+    const isFirst = rank === 1;
+    const isSecond = rank === 2;
+
+    const cardClass = isFirst ? 'podium-card-1' : (isSecond ? 'podium-card-2' : 'podium-card-3');
+    const delayClass = isFirst ? 'delay-200' : (isSecond ? 'delay-100' : 'delay-300');
+
+    return (
+        <div
+            className={`podium-card ${cardClass} animate-fade-in ${delayClass}`}
+            onClick={onClick}
+            tabIndex={0}
+            role="button"
+            onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onClick()}
+            aria-label={`${city.city}, rank ${rank}`}
+        >
+            {theme === 'light' ? (
+                <>
+                    <div className="podium-rank-big">{rank}</div>
+                    {isFirst && <div className="podium-crown-light"><Icon name="crown" /></div>}
+                    <div className="podium-rank-title">
+                        {isFirst ? 'Snowflake Supreme' : (isSecond ? 'Frostbyte' : 'Glacier Guard')}
+                    </div>
+                </>
+            ) : (
+                <div className="podium-rank-badge">
+                    {isFirst && <Icon name="crown" className="crown-icon" />}
+                    #{rank}
+                </div>
+            )}
+
+            <div className="podium-city-name">{city.city}</div>
+            <div className="podium-city-state">{isHof ? city.region : city.state}</div>
+
+            <div className="podium-value-container">
+                <span className="podium-value">
+                    {isSnow ? `${city.total_snow}"` : `${city.lowest_temp}°F`}
+                </span>
+
+                {isSnow && !isHof && <TrendBadge city={city} />}
+
+                {isSnow && !isHof && city.last_24h > 0 && (
+                    <div className="podium-recent">+{city.last_24h}"</div>
+                )}
+            </div>
+
+            {isSnow && !isHof && <SeasonProgressBar city={city} />}
+            {!isHof && <RankChangeBadge city={city} />}
+
+            {isHof && (
+                <div className="podium-badge">
+                    {city.is_state_record ? 'STATE RECORD' : 'LEGENDARY'}
+                </div>
+            )}
+        </div>
+    );
+};
+
 const Leaderboard = ({ dataset, setDataset, theme }) => {
-    const [filter, setFilter] = useState('all'); // 'all', 'ny', 'hof'
-    const [selectedCityId, setSelectedCityId] = useState(null);
+    // Change 2: Initialize state from URL params so views are bookmarkable/shareable
+    const getParam = (key, fallback) => new URLSearchParams(window.location.search).get(key) || fallback;
+
+    const [filter, setFilter] = useState(() => getParam('filter', 'all'));
+    const [selectedCityId, setSelectedCityId] = useState(() => getParam('city', null));
 
     const isSnow = dataset === 'snow';
     const isHof = isSnow && filter === 'hof';
+
+    // Change 2: Sync filter → URL
+    useEffect(() => {
+        const p = new URLSearchParams(window.location.search);
+        p.set('filter', filter);
+        window.history.replaceState(null, '', `?${p.toString()}`);
+    }, [filter]);
+
+    // Change 2: Sync selectedCityId → URL (only string IDs; HoF passes full objects)
+    useEffect(() => {
+        const p = new URLSearchParams(window.location.search);
+        if (selectedCityId && typeof selectedCityId === 'string') {
+            p.set('city', selectedCityId);
+        } else {
+            p.delete('city');
+        }
+        window.history.replaceState(null, '', `?${p.toString()}`);
+    }, [selectedCityId]);
 
     // Determine which dataset to use based on mode and filter
     let data;
@@ -133,69 +213,19 @@ const Leaderboard = ({ dataset, setDataset, theme }) => {
     const metricMax = metricValues.length ? Math.max(...metricValues).toFixed(1) : '—';
     const metricMin = metricValues.length ? Math.min(...metricValues).toFixed(1) : '—';
 
-    // Podium Card Component
-    const PodiumCard = ({ city, rank, onClick }) => {
-        const isFirst = rank === 1;
-        const isSecond = rank === 2;
+    // Change 3: Compute #1's lead over #2 to replace the redundant "Updated" summary item
+    const topLead = !isHof && top3.length >= 2
+        ? isSnow
+            ? `${(top3[0].total_snow - top3[1].total_snow).toFixed(1)}"`
+            : `${Math.abs(top3[0].lowest_temp - top3[1].lowest_temp).toFixed(1)}°F`
+        : '—';
 
-        // Dynamic classes based on rank
-        const cardClass = isFirst ? 'podium-card-1' : (isSecond ? 'podium-card-2' : 'podium-card-3');
-        const delayClass = isFirst ? 'delay-200' : (isSecond ? 'delay-100' : 'delay-300');
-
-        return (
-            <div
-                className={`podium-card ${cardClass} animate-fade-in ${delayClass}`}
-                onClick={onClick}
-                tabIndex={0}
-                role="button"
-                onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onClick()}
-                aria-label={`${city.city}, rank ${rank}`}
-            >
-                {theme === 'light' ? (
-                    <>
-                        <div className="podium-rank-big">{rank}</div>
-                        {isFirst && <div className="podium-crown-light"><Icon name="crown" /></div>}
-                        <div className="podium-rank-title">
-                            {isFirst ? 'Snowflake Supreme' : (isSecond ? 'Frostbyte' : 'Glacier Guard')}
-                        </div>
-                    </>
-                ) : (
-                    <div className="podium-rank-badge">
-                        {isFirst && <Icon name="crown" className="crown-icon" />}
-                        #{rank}
-                    </div>
-                )}
-
-                <div className="podium-city-name">{city.city}</div>
-                <div className="podium-city-state">{isHof ? city.region : city.state}</div>
-
-                <div className="podium-value-container">
-                    <span className="podium-value">
-                        {isSnow ? `${city.total_snow}"` : `${city.lowest_temp}°F`}
-                    </span>
-
-                    {/* Computed trend replaces old hardcoded values */}
-                    {isSnow && !isHof && <TrendBadge city={city} />}
-
-                    {isSnow && !isHof && city.last_24h > 0 && (
-                        <div className="podium-recent">+{city.last_24h}"</div>
-                    )}
-                </div>
-
-                {/* Season progress bar on podium cards */}
-                {isSnow && !isHof && <SeasonProgressBar city={city} />}
-
-                {/* Rank change indicator */}
-                {!isHof && <RankChangeBadge city={city} />}
-
-                {isHof && (
-                    <div className="podium-badge">
-                        {city.is_state_record ? 'STATE RECORD' : 'LEGENDARY'}
-                    </div>
-                )}
-            </div>
-        );
-    };
+    // Change 4: Context-aware microcard labels for cold mode
+    const avgLabel = isSnow ? 'Average' : 'Average Low';
+    const maxLabel = isSnow ? 'Maximum' : 'Warmest Low';
+    const minLabel = isSnow ? 'Minimum' : 'Coldest Low';
+    const maxSub = isSnow ? 'Current dataset peak' : 'Least cold recorded';
+    const minSub = isSnow ? 'Lowest recorded value' : 'Coldest recorded value';
 
     return (
         <div className="leaderboard-container">
@@ -273,56 +303,47 @@ const Leaderboard = ({ dataset, setDataset, theme }) => {
                     )}
                 </div>
 
-                {/* Summary Bar */}
+                {/* Change 3: Summary bar — replaced redundant "Updated" with "#1 Lead",
+                    replaced redundant "Mode" with "Updated" (now the only timestamp shown) */}
                 <div className="summary-bar">
                     <div className="summary-item">
                         <span className="summary-label">Top City</span>
                         <span className="summary-value">{top3[0]?.city || '—'}</span>
                     </div>
                     <div className="summary-item">
-                        <span className="summary-label">Updated</span>
-                        <span className="summary-value">{lastUpdatedText}</span>
+                        <span className="summary-label">#1 Lead</span>
+                        <span className="summary-value">{topLead}</span>
                     </div>
                     <div className="summary-item">
                         <span className="summary-label">{isHof ? 'Records' : 'Stations'}</span>
                         <span className="summary-value">{baseRankings.length}</span>
                     </div>
                     <div className="summary-item">
-                        <span className="summary-label">Mode</span>
-                        <span className="summary-value">{isHof ? 'Hall of Fame' : (isSnow ? 'Snowfall' : 'Cold')}</span>
+                        <span className="summary-label">Updated</span>
+                        <span className="summary-value">{lastUpdatedText}</span>
                     </div>
                 </div>
 
-
-
-                {/* Microcards */}
+                {/* Change 4: Microcards with context-aware labels for cold mode */}
                 <div className="microcards-grid">
                     <div className="microcard">
-                        <div className="micro-label">Average</div>
+                        <div className="micro-label">{avgLabel}</div>
                         <div className="micro-value">{metricAvg}{metricUnit}</div>
                         <div className="micro-sub">Across {baseRankings.length || 0} entries</div>
                     </div>
                     <div className="microcard">
-                        <div className="micro-label">Maximum</div>
+                        <div className="micro-label">{maxLabel}</div>
                         <div className="micro-value">{metricMax}{metricUnit}</div>
-                        <div className="micro-sub">Current dataset peak</div>
+                        <div className="micro-sub">{maxSub}</div>
                     </div>
                     <div className="microcard">
-                        <div className="micro-label">Minimum</div>
+                        <div className="micro-label">{minLabel}</div>
                         <div className="micro-value">{metricMin}{metricUnit}</div>
-                        <div className="micro-sub">Lowest recorded value</div>
+                        <div className="micro-sub">{minSub}</div>
                     </div>
                 </div>
 
-                {/* Interactive Map - show for live data views (not HOF) */}
-                {!isHof && (
-                    <SnowMap
-                        dataset={dataset}
-                        onCityClick={(id) => setSelectedCityId(id)}
-                    />
-                )}
-
-                {/* PODIUM SECTION */}
+                {/* Change 1: PODIUM now appears before the map so rankings are above the fold */}
                 <div className="podium-container">
                     {/* 2nd Place (Left) */}
                     {top3[1] && (
@@ -331,6 +352,9 @@ const Leaderboard = ({ dataset, setDataset, theme }) => {
                                 city={top3[1]}
                                 rank={2}
                                 onClick={() => setSelectedCityId(isHof ? top3[1] : top3[1].id)}
+                                theme={theme}
+                                isSnow={isSnow}
+                                isHof={isHof}
                             />
                             <div className="podium-block block-2"></div>
                         </div>
@@ -344,6 +368,9 @@ const Leaderboard = ({ dataset, setDataset, theme }) => {
                                 city={top3[0]}
                                 rank={1}
                                 onClick={() => setSelectedCityId(isHof ? top3[0] : top3[0].id)}
+                                theme={theme}
+                                isSnow={isSnow}
+                                isHof={isHof}
                             />
                             <div className="podium-block block-1">
                                 <div className="throne-accent"><Icon name="snow" /></div>
@@ -358,15 +385,25 @@ const Leaderboard = ({ dataset, setDataset, theme }) => {
                                 city={top3[2]}
                                 rank={3}
                                 onClick={() => setSelectedCityId(isHof ? top3[2] : top3[2].id)}
+                                theme={theme}
+                                isSnow={isSnow}
+                                isHof={isHof}
                             />
                             <div className="podium-block block-3"></div>
                         </div>
                     )}
                 </div>
 
+                {/* Change 1: Map now appears after the podium */}
+                {!isHof && (
+                    <SnowMap
+                        dataset={dataset}
+                        onCityClick={(id) => setSelectedCityId(id)}
+                    />
+                )}
+
                 {/* Data Table for Remainder */}
                 <div className="table-container mt-4">
-
                     <table className="lb-table">
                         <thead>
                             <tr>
