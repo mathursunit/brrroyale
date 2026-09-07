@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-06T14:01:52.897Z",
+  "last_updated": "2026-09-07T16:19:32.940Z",
   "rankings": [
     {
       "id": "fairbanks_ak",
@@ -91,7 +91,7 @@
         "Snow_Belt"
       ],
       "rank": 6,
-      "previous_rank": 8
+      "previous_rank": 6
     },
     {
       "id": "marquette_mi",
@@ -107,7 +107,7 @@
         "Snow_Belt"
       ],
       "rank": 7,
-      "previous_rank": 9
+      "previous_rank": 7
     },
     {
       "id": "syracuse_ny",
@@ -124,7 +124,7 @@
         "US_Top10"
       ],
       "rank": 8,
-      "previous_rank": 10
+      "previous_rank": 8
     },
     {
       "id": "buffalo_ny",
@@ -141,7 +141,7 @@
         "US_Top10"
       ],
       "rank": 9,
-      "previous_rank": 11
+      "previous_rank": 9
     },
     {
       "id": "binghamton_ny",
@@ -157,7 +157,7 @@
         "US_Top10"
       ],
       "rank": 10,
-      "previous_rank": 14
+      "previous_rank": 10
     }
   ]
 }
