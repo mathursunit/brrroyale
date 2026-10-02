@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-01T17:18:17.723Z",
+  "last_updated": "2026-10-02T16:33:33.502Z",
   "rankings": [
     {
       "id": "syracuse_ny",
@@ -14,7 +14,7 @@
         "US_Top10"
       ],
       "rank": 1,
-      "previous_rank": 2
+      "previous_rank": 1
     },
     {
       "id": "buffalo_ny",
@@ -29,7 +29,7 @@
         "US_Top10"
       ],
       "rank": 2,
-      "previous_rank": 7
+      "previous_rank": 2
     },
     {
       "id": "rochester_ny",
@@ -43,7 +43,7 @@
         "US_Top10"
       ],
       "rank": 3,
-      "previous_rank": 4
+      "previous_rank": 3
     },
     {
       "id": "old_forge_ny",
@@ -56,7 +56,7 @@
         "NY_Top10"
       ],
       "rank": 4,
-      "previous_rank": 3
+      "previous_rank": 4
     },
     {
       "id": "watertown_ny",
@@ -69,7 +69,7 @@
         "NY_Top10"
       ],
       "rank": 5,
-      "previous_rank": 9
+      "previous_rank": 5
     },
     {
       "id": "jamestown_ny",
@@ -82,7 +82,7 @@
         "NY_Top10"
       ],
       "rank": 6,
-      "previous_rank": 5
+      "previous_rank": 6
     },
     {
       "id": "binghamton_ny",
@@ -96,7 +96,7 @@
         "US_Top10"
       ],
       "rank": 7,
-      "previous_rank": 8
+      "previous_rank": 7
     },
     {
       "id": "lake_placid_ny",
@@ -109,7 +109,7 @@
         "NY_Top10"
       ],
       "rank": 8,
-      "previous_rank": 1
+      "previous_rank": 8
     },
     {
       "id": "auburn_ny",
@@ -122,7 +122,7 @@
         "NY_Top10"
       ],
       "rank": 9,
-      "previous_rank": 6
+      "previous_rank": 9
     },
     {
       "id": "sherman_ny",
